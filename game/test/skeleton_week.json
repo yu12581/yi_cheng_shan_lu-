@@ -1,0 +1,361 @@
+{
+  "__loopConfig__": {
+    "daysPerWeek": 2,
+    "tasks": {
+      "1": [
+        {
+          "id": "t_w1_main",
+          "title": "教学·校对图纸",
+          "target": 1,
+          "rewards": {
+            "effects": {
+              "integration": 5
+            }
+          },
+          "onMiss": {
+            "effects": {
+              "integration": -3
+            }
+          }
+        }
+      ],
+      "2": [
+        {
+          "id": "t_w2_main",
+          "title": "主线·风洞数据复核",
+          "target": 1,
+          "rewards": {
+            "effects": {
+              "integration": 6
+            },
+            "npcChanges": {
+              "chen": 5
+            }
+          },
+          "onMiss": {
+            "effects": {
+              "deviation": 12
+            }
+          }
+        }
+      ]
+    }
+  },
+  "__cards__": [
+    {
+      "id": "card_test_light",
+      "title": "测试·轻卡",
+      "desc": "轻卡：即时结算，融入度+3。",
+      "consumable": true,
+      "window": {
+        "from": 1,
+        "to": 99
+      },
+      "onPlay": {
+        "effects": {
+          "integration": 3
+        }
+      }
+    },
+    {
+      "id": "card_test_heavy",
+      "title": "测试·重卡",
+      "desc": "重卡：传送门进专属抉择节点，干预深度计价放分支。",
+      "consumable": true,
+      "window": {
+        "from": 2,
+        "to": 99
+      },
+      "onPlay": {
+        "goto": "card_scene_test"
+      }
+    }
+  ],
+  "w1_start": {
+    "phase": "WEEK_START",
+    "date": "1958年7月14日",
+    "time": "周一晨会",
+    "location": "教研室",
+    "narrative": "【骨架测试·第1周 残周教学档 AP=1/天 无夜选 无危机链】晨会。陈建国把一叠图纸拍在桌上：这周就一件事——校对。",
+    "choices": [
+      {
+        "text": "领下任务（进入第一天）",
+        "nextNode": "w1_d1_morning"
+      }
+    ]
+  },
+  "w1_d1_morning": {
+    "phase": "DAY_START",
+    "narrative": "第1周·第1天开始。（教学档：每天1行动点）",
+    "choices": [
+      {
+        "text": "开工",
+        "nextNode": "w1_d1_work"
+      }
+    ]
+  },
+  "w1_d1_work": {
+    "phase": "DAY_ACTION",
+    "narrative": "白天行动（AP=1）。选择一项行动：",
+    "choices": [
+      {
+        "text": "认真校对图纸（主线进度+1）",
+        "costAP": 1,
+        "work": true,
+        "progress": {
+          "t_w1_main": 1
+        },
+        "effects": {
+          "stamina": -2,
+          "integration": 2
+        },
+        "nextNode": "w1_d1_work2"
+      },
+      {
+        "text": "摸鱼混日子",
+        "costAP": 1,
+        "effects": {
+          "stamina": -1
+        },
+        "nextNode": "w1_d1_work2"
+      }
+    ]
+  },
+  "w1_d1_work2": {
+    "phase": "DAY_ACTION",
+    "narrative": "教学档第1天没有夜选，直接入睡进入次日。（dayAdvance 推进）",
+    "choices": [
+      {
+        "text": "收工入睡",
+        "costAP": 0,
+        "dayAdvance": true,
+        "nextNode": "w1_d2_morning"
+      }
+    ]
+  },
+  "w1_d2_morning": {
+    "phase": "DAY_START",
+    "narrative": "第1周·第2天开始。",
+    "choices": [
+      {
+        "text": "开工",
+        "nextNode": "w1_d2_work"
+      }
+    ]
+  },
+  "w1_d2_work": {
+    "phase": "DAY_ACTION",
+    "narrative": "第二天（测试捷径：直接结算）。",
+    "choices": [
+      {
+        "text": "直接结算（测试捷径）",
+        "costAP": 0,
+        "nextNode": "w1_settle"
+      }
+    ]
+  },
+  "w1_settle": {
+    "phase": "WEEK_SETTLE",
+    "date": "1958年7月19日",
+    "time": "周六",
+    "location": "教研室",
+    "narrative": "【第1周结算】任务验收、自动存档在此发生。",
+    "choices": [
+      {
+        "text": "进入第二周（全速档）",
+        "nextNode": "w2_start"
+      }
+    ]
+  },
+  "w2_start": {
+    "phase": "WEEK_START",
+    "date": "1958年7月21日",
+    "time": "周一晨会",
+    "location": "教研室",
+    "narrative": "【骨架测试·第2周 全速档 AP=2/天 夜选开启 主线牌时限】突击周开始，风洞数据必须本周复核完毕。",
+    "choices": [
+      {
+        "text": "投入战斗",
+        "nextNode": "w2_d1_morning"
+      }
+    ]
+  },
+  "w2_d1_morning": {
+    "phase": "DAY_START",
+    "narrative": "第2周·第1天开始。（AP=2，夜晚三选一）",
+    "choices": [
+      {
+        "text": "开工",
+        "nextNode": "w2_d1_work"
+      }
+    ]
+  },
+  "w2_d1_work": {
+    "phase": "DAY_ACTION",
+    "narrative": "白天行动（AP=2）。",
+    "choices": [
+      {
+        "text": "复核风洞数据（主线进度+1）",
+        "costAP": 1,
+        "progress": {
+          "t_w2_main": 1
+        },
+        "effects": {
+          "stamina": -2,
+          "integration": 2
+        },
+        "nextNode": "w2_d1_work2",
+        "work": true
+      },
+      {
+        "text": "去车间帮赵师傅（好感）",
+        "costAP": 1,
+        "npcChanges": {
+          "zhao": 5
+        },
+        "nextNode": "w2_d1_work2"
+      }
+    ]
+  },
+  "w2_d1_work2": {
+    "phase": "DAY_ACTION",
+    "narrative": "还有余力吗？（AP>0 可再行动一次；随时可收工入夜）",
+    "choices": [
+      {
+        "text": "继续干活（主线进度+1）",
+        "costAP": 1,
+        "progress": {
+          "t_w2_main": 1
+        },
+        "effects": {
+          "stamina": -2
+        },
+        "nextNode": "w2_d1_night",
+        "work": true
+      },
+      {
+        "text": "收工入夜",
+        "costAP": 0,
+        "nextNode": "w2_d1_night"
+      }
+    ]
+  },
+  "w2_d1_night": {
+    "phase": "NIGHT_CHOICE",
+    "time": "夜里",
+    "narrative": "夜选（三选一的简化两选）：休息回体力，熬夜加班换进度。",
+    "choices": [
+      {
+        "text": "休息（体力+3）",
+        "night": "rest",
+        "effects": {
+          "stamina": 3
+        },
+        "nextNode": "w2_d2_morning"
+      },
+      {
+        "text": "熬夜加班（体力-2，本周任务进度+1）",
+        "night": "overtime",
+        "effects": {
+          "stamina": -2
+        },
+        "nextNode": "w2_d2_morning"
+      }
+    ]
+  },
+  "w2_d2_morning": {
+    "phase": "DAY_START",
+    "narrative": "第2周·第2天开始（末日前夜）。",
+    "choices": [
+      {
+        "text": "开工",
+        "nextNode": "w2_d2_work"
+      }
+    ]
+  },
+  "w2_d2_work": {
+    "phase": "DAY_ACTION",
+    "narrative": "最后一天的白天。",
+    "choices": [
+      {
+        "text": "冲刺复核（主线进度+1）",
+        "costAP": 1,
+        "progress": {
+          "t_w2_main": 1
+        },
+        "effects": {
+          "stamina": -2
+        },
+        "nextNode": "w2_d2_night",
+        "work": true
+      },
+      {
+        "text": "躺平",
+        "costAP": 1,
+        "nextNode": "w2_d2_night"
+      }
+    ]
+  },
+  "w2_d2_night": {
+    "phase": "NIGHT_CHOICE",
+    "narrative": "最后一晚。熬不熬？",
+    "choices": [
+      {
+        "text": "休息（体力+3）",
+        "night": "rest",
+        "effects": {
+          "stamina": 3
+        },
+        "nextNode": "w2_settle"
+      },
+      {
+        "text": "熬夜加班（体力-2，本周任务进度+1）",
+        "night": "overtime",
+        "effects": {
+          "stamina": -2
+        },
+        "nextNode": "w2_settle"
+      }
+    ]
+  },
+  "w2_settle": {
+    "phase": "WEEK_SETTLE",
+    "date": "1958年7月26日",
+    "time": "周六",
+    "location": "教研室",
+    "narrative": "【第2周结算】主线牌验收：达成→捷报；逾期→修正危机flag+偏离惩罚。",
+    "autoNext": null,
+    "choices": [
+      {
+        "text": "（骨架到此为止）查看结算结果后刷新页面读档验证",
+        "costAP": 0,
+        "setFlag": "skeleton_done",
+        "nextNode": "w2_settle"
+      }
+    ]
+  },
+  "card_scene_test": {
+    "freeNode": true,
+    "phase": "DAY_ACTION",
+    "narrative": "【重卡传送门·专属抉择节点】你想起历史上这一批料的问题。干预多深？",
+    "choices": [
+      {
+        "text": "深度干预：直接指出问题所在（偏离+10）",
+        "effects": {
+          "deviation": 10
+        },
+        "npcChanges": {
+          "liu": -5
+        },
+        "nextNode": "w2_d1_work2"
+      },
+      {
+        "text": "浅度干预：旁敲侧击提醒（偏离+3）",
+        "effects": {
+          "deviation": 3
+        },
+        "nextNode": "w2_d1_work2"
+      }
+    ]
+  }
+}

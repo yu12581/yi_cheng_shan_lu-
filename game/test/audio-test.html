@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 声音层试听台 · 一程山路</title>
+<style>
+    body { font-family: "Microsoft YaHei", sans-serif; background: #f2ecd9; color: #2a2620; margin: 0; padding: 16px; }
+    h1 { font-size: 20px; border-bottom: 3px double #8b1e1e; padding-bottom: 8px; }
+    h2 { font-size: 15px; color: #8b1e1e; margin: 18px 0 8px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+    button { text-align: left; padding: 10px 12px; background: #fffaf0; border: 1px solid #b9ac91;
+             border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0 rgba(0,0,0,.12); font-size: 13px; }
+    button:active { transform: translate(1px,1px); box-shadow: none; }
+    button b { display: block; font-size: 14px; margin-bottom: 2px; }
+    .row { display: flex; align-items: center; gap: 10px; margin: 6px 0; flex-wrap: wrap; }
+    input[type=range] { flex: 1; min-width: 160px; }
+    code { background: #e7dfc8; padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+    .note { font-size: 12px; color: #6b6353; margin-top: 4px; }
+    .phasebtn.on { background: #8b1e1e; color: #fff; }
+    fieldset { border: 1px solid #b9ac91; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<h1>《一程山路》07 声音层试听台</h1>
+<p class="note">全部程序化 WebAudio 合成，零音频文件。首次点击任意按钮即解锁 AudioContext（模拟微信 H5 手势解锁）。</p>
+
+<fieldset>
+    <h2>① 环境音床（相位联动）——点下方相位按钮切换，听淡入淡出交叉过渡</h2>
+    <div class="row" id="phases"></div>
+    <p class="note">昼床 = 车间金属声浪（车床嗡呜底噪 + 工友交谈嗡嗡层 + 随机事件：叮当敲击 / 嗒嗒嗒铆枪 / 嘶拉嘶拉锯床 / 锉刀 / 滋滋电焊 / 哎—哎—哎插齿机 / 远处吆喝），整床进厂房混响；
+       夜床 = 蝉群颤翼（三组窄带振翅）+ 蛐蛐远近两只 + 双层风（阵风起落）+ 夜气底噪 + 远犬。WEEK_SETTLE 归夜床并自动响电铃。</p>
+</fieldset>
+
+<fieldset>
+    <h2>② UI 反馈音五件套</h2>
+    <div class="grid">
+        <button onclick="A.playPaperFlip()"><b>翻纸沙沙</b>节点推进时（UI线挂 playPaperFlip）</button>
+        <button onclick="A.playStampThud()"><b>图章咚</b>选择确认·与震屏同帧（playStampThud）</button>
+        <button onclick="A.playPencilScratch(0.6)"><b>铅笔沙沙</b>书写/标注（playPencilScratch）</button>
+        <button onclick="A.playSlideRuleClick(false)"><b>算尺咔哒（单）</b>滑尺对位（playSlideRuleClick）</button>
+        <button onclick="A.playSlideRuleClick(true)"><b>算尺咔哒（三连）</b>长滑变体</button>
+        <button onclick="A.playBlueprintUnroll(0.85)"><b>图纸展开摩擦</b>预知卡抽出（playBlueprintUnroll）</button>
+        <button onclick="A.playType()"><b>打字机哒</b>旁白逐字（保留原有）</button>
+        <button onclick="A.playBlip('chen')"><b>对话 blip</b>引号内逐字（保留原有）</button>
+    </div>
+</fieldset>
+
+<fieldset>
+    <h2>③ 循环结算音</h2>
+    <div class="grid">
+        <button onclick="A.playSettleBell()"><b>开炉电铃</b>WEEK_SETTLE 自动触发（每周期一次，读档不重放）；手动= playSettleBell</button>
+    </div>
+</fieldset>
+
+<fieldset>
+    <h2>④ 机制联动 A：偏离度 → 全局低通渐闷</h2>
+    <div class="row">
+        <span>偏离度：<b id="devVal">0</b></span>
+        <input type="range" min="0" max="10" step="1" value="0" id="devSlider"
+               oninput="document.getElementById('devVal').textContent=this.value; A.updateDeviation(+this.value)">
+        <button onclick="A.playPaperFlip()">翻纸听闷感</button>
+        <button onclick="A.playSettleBell()">电铃听闷感</button>
+    </div>
+    <p class="note">阈值取自 params.json：≥3(warning) 开始收窄 → ≥10(erase) 收至 ~650Hz。先切昼床再拖滑条对比最明显。</p>
+</fieldset>
+
+<fieldset>
+    <h2>⑤ 机制联动 B：12kHz 耳鸣</h2>
+    <div class="grid">
+        <button onclick="A.playTinnitusBurst({attack:1.5, hold:0.8, release:3})"><b>剧情耳鸣（一次性）</b>渐入-保持-渐出，绕过全局低通（颅内声）</button>
+    </div>
+    <p class="note">常驻耳鸣：偏离度 ≥6(drift) 渐入、向 10 渐强——拖上面滑条到 6+ 可持续听到；回落即退。</p>
+</fieldset>
+
+<fieldset>
+    <h2>⑥ 移动端适配自检</h2>
+    <div class="grid">
+        <button onclick="alert('AudioContext 状态：' + (A.ctx ? A.ctx.state : '未创建（尚未交互）') + '\n静音：' + A.muted + '\n当前音床：' + (A.currentBed || '无'))"><b>状态检查</b>ctx.state 应为 running</button>
+        <button onclick="alert('静音=' + A.toggleMute())"><b>静音切换</b>状态 localStorage 持久化（ycsl_audio_muted）</button>
+    </div>
+    <p class="note">iOS 静音键是系统级硬开关，WebAudio 无法检测/绕过；兜底 = 所有声音可缺席不影响游玩。详见 design/INTEGRATION-NOTES.md。</p>
+</fieldset>
+
+<script src="../js/core/AudioManager.js"></script>
+<script>
+    const A = new AudioManager();
+    window.game = window.game || {};
+    window.game.audioManager = A;
+
+    const PHASES = ['WEEK_START', 'DAY_START', 'DAY_ACTION', 'NIGHT_CHOICE', 'WEEK_SETTLE'];
+    const box = document.getElementById('phases');
+    PHASES.forEach(p => {
+        const b = document.createElement('button');
+        b.textContent = p;
+        b.onclick = () => {
+            box.querySelectorAll('button').forEach(x => x.classList.remove('on'));
+            b.classList.add('on');
+            A.activate();          // 模拟真实路径：手势 → activate → applyPhase
+            A.applyPhase(p);
+            if (p === 'WEEK_SETTLE') setTimeout(() => A.playSettleBell(), 300);
+        };
+        box.appendChild(b);
+    });
+</script>
+</body>
+</html>

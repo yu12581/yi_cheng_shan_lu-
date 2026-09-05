@@ -1,0 +1,31 @@
+# 开发过程与课程材料（不进入公开试玩仓库）
+workspace/
+ppt_projects/
+ppt_render/
+docs/
+*.txt
+/*.md
+!README.md
+/*.pptx
+findings.md
+progress.md
+task_plan.md
+progress_report.md
+analysis_summary.md
+code_review_issues.md
+optimization_priority_checklist.md
+DEMO_PIVOT_15MIN.md
+MINUTE_DEMO_EXPLANATION.md
+game_design_analysis.md
+game_script_act1.md
+game_script_act2_factory.md
+
+# 原始素材、参考图与录屏
+game/design/
+game/recordings/
+game/assets/**/_master/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini

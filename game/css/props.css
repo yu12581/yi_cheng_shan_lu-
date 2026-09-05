@@ -1,0 +1,202 @@
+/* ============================================================
+   props.css —— 《一程山路》道具件组件库（皮肤线）
+   来源：步骤05 标杆件「工作证」G1 目验通过版（2026-08-25）
+   规则（D3）：只许引用 tokens.css 的 token 组装，禁止散写色值
+   ============================================================ */
+
+/* ============================================================
+   工作证（封面 + 竖排内页）
+   对照实物：design/ref/工作证介绍信.jpg · ref/60be74b5….jpg
+   ============================================================ */
+
+.cert-scene { display: flex; justify-content: center; padding: 26px 0 10px; }
+.workcert {
+    width: 480px; max-width: 92vw;
+    aspect-ratio: 480 / 336;
+    border-radius: 10px;
+    padding: 14px;
+    transform: rotate(var(--tilt-a));
+}
+.workcert:hover { box-shadow: var(--shadow-paper-lift); }
+.cert-inner {
+    position: relative;
+    height: 100%;
+    border: 1.6px solid var(--cert-frame);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 3px var(--bg-sheet), inset 0 0 0 4.4px var(--cert-frame);
+    padding: 20px 26px 16px;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+/* 左上斜折痕 + 右上针孔（实物细节） */
+.cert-inner::before {
+    content: ""; position: absolute; left: -8%; top: -30%; width: 46%; height: 60%;
+    background: linear-gradient(133deg, rgba(58,42,24,.13) 49.6%, rgba(255,250,235,.55) 50.4%, rgba(58,42,24,.05) 56%, transparent 70%);
+    pointer-events: none;
+}
+.cert-inner::after {
+    content: ""; position: absolute; right: 9%; top: 3.5%;
+    width: 7px; height: 9px; border-radius: 50%;
+    background: rgba(30, 22, 12, .55);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.6), 0 1px 0 rgba(255,250,235,.5);
+    pointer-events: none;
+}
+.cert-title {
+    font-family: var(--font-song);   /* 实物为粗宋/美术字，非楷体 */
+    font-weight: 700;
+    font-size: clamp(44px, 13vw, 64px);
+    color: var(--accent);            /* 档案/捷报=印泥红，蓝晒=图纸白线 */
+    letter-spacing: .18em;
+    text-align: center;
+    line-height: 1.15;
+    margin-top: 2px;
+    filter: var(--filter-ink-bleed);
+}
+.cert-no {
+    text-align: center;
+    font-family: var(--font-fangsong);
+    font-size: 17px;
+    color: var(--accent);
+    letter-spacing: .35em;
+    margin-top: 2px;
+}
+.cert-no .num {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 26px;
+    letter-spacing: .18em;
+    color: var(--fg-body);
+    margin-left: .35em;
+}
+/* 日期栏=手写层：照实物手写阿拉伯日期（汉字日期属印刷层语法） */
+.cert-date {
+    text-align: center;
+    font-size: 19px;
+    margin-top: 4px;
+    transform: rotate(-1.6deg);
+}
+.cert-main {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 2px;
+}
+.cert-fields--stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: var(--font-fangsong);
+    font-size: 17px;
+    letter-spacing: .22em;
+}
+/* 贴照片处：玩家上传照片（点击/Ctrl+V/拖拽，localStorage 持久化） */
+.cert-photo {
+    position: relative;
+    width: 96px;
+    height: 122px;
+    border: 1.5px dashed var(--ink-faint);
+    background: var(--paper-bright);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.cert-photo .ph-hint {
+    font-family: var(--font-fangsong);
+    font-size: 12px;
+    letter-spacing: .2em;
+    color: var(--fg-faint);
+    writing-mode: vertical-rl;
+}
+.cert-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.4) sepia(0.25) contrast(0.92) brightness(1.02); /* 老照片做旧 */
+}
+.cert-photo input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.cert-fields .label { color: var(--accent); }
+.cert-fields .fill {
+    font-family: var(--font-wenkai);
+    letter-spacing: .1em;
+    color: var(--fg-muted);
+    border-bottom: 1px solid rgba(41,36,32,.25);
+    padding: 0 4px;
+}
+.cert-stamp {
+    position: absolute;
+    right: 13%; top: 6%;
+    width: 118px; height: 118px;
+    font-size: 13px;
+    letter-spacing: .08em;
+    padding: 10px;
+}
+/* 圆章内环文字排布：外圈单位名 + 中间★ */
+.cert-stamp .ring {
+    position: absolute; inset: 4px;
+    border: 1.6px solid currentColor; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+.cert-stamp .star { font-size: 30px; }
+.cert-stamp .top-arc {
+    position: absolute; top: 12px; left: 0; right: 0;
+    text-align: center; font-size: 12.5px; letter-spacing: .14em;
+}
+
+/* ---- 竖排内页（对照 ref/60be74b5… 红塑工作证内页） ---- */
+.cert-page2-scene { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+.cert-page2 {
+    width: 300px; max-width: 44vw;
+    aspect-ratio: 300 / 420;
+    padding: 16px 14px;
+    border-radius: 6px;
+    transform: rotate(var(--tilt-b));
+    font-family: var(--font-fangsong);
+}
+.cert-page2 .p2-frame {
+    height: 100%;
+    border: 1.4px solid var(--frame);
+    border-radius: 4px;
+    padding: 14px 12px;
+    display: flex;           /* 竖排：列从右往左 */
+    flex-direction: row-reverse;
+    justify-content: space-between;  /* 列均匀撑满，消灭留白 */
+    gap: 6px;
+}
+/* 注意事项页：纯文字，竖排自动换列紧排如实物 */
+.p2-frame--flow { justify-content: flex-start; gap: 14px; }
+.p2-notes { flex: 1; height: 100%; overflow: hidden; line-height: 2.3; letter-spacing: .12em; }
+.p2-title {
+    color: var(--fg-body);                 /* 实物为墨色，非红 */
+    text-decoration: underline;            /* 实物标题带下划线 */
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1.5px;
+    flex-shrink: 0;
+}
+.cert-page2 .p2-col {
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: .1em;
+}
+.cert-page2 .p2-col b { font-weight: 400; color: var(--fg-muted); }
+.cert-page2 .p2-dots {
+    border-inline-start: 1px dotted var(--ink-faint); /* 点线填空 */
+    margin: 0 2px;
+}
+
+@media (max-width: 560px) {
+    .cert-main { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .cert-stamp { width: 92px; height: 92px; right: 6%; }
+}

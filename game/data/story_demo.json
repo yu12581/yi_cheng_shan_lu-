@@ -1,0 +1,889 @@
+{
+  "_meta": {
+    "name": "一程山路·北京一号短篇探索",
+    "note": "一册未归档的试制笔记将主角带回1958年。四幕危机由调查、交涉、决断和后果构成。",
+    "flow": "发现笔记 -> 进入试制组 -> 四幕危机 -> 首飞结算 -> 三档结局",
+    "targetMinutes": 15
+  },
+  "nodes": {
+    "demo_00_start": {
+      "id": "demo_00_start",
+      "act": 0,
+      "phase": "FREE",
+      "type": "card_portal",
+      "date": "2026年8月27日",
+      "time": "闭馆前十分钟",
+      "location": "北航校史馆修复室",
+      "visual": "notebook",
+      "text": "你在修复一册没有编号的旧笔记本。封皮已经起毛，只能辨出五个铅笔字，北京一号试制。\n\n夹在封皮里的登记条没有姓名。最后一页也被人齐根撕走，前一页留着半句话。\n\n「看见问题的人，劳驾再往前看一步。」\n\n你用棉签蘸起清水，纸上的墨迹忽然洇开。",
+      "goto": "demo_01_arrival"
+    },
+    "demo_01_arrival": {
+      "id": "demo_01_arrival",
+      "act": 0,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月12日",
+      "time": "清晨",
+      "location": "北京一号试制车间外",
+      "visual": "workshop",
+      "text": "棉签落地时变成了一截粉笔。你蹲在车间门口，身后有人推着铝板车喊你让路。\n\n一个戴旧线手套的年轻人停下来。他胸前的工作证写着小牛。\n\n「新来的？方书记等统计表呢。你会算尺寸，还是会搬东西？」\n\n他大概把你当成临时来帮忙记资料的低年级学生。这个误会让你进得了现场，却替不了任何人签字。\n\n笔记本就在你的衣服里。第一页多出一行小字，今天午后，第一批机身铝板会因尺寸错误全部报废。",
+      "choices": [
+        {
+          "id": "arrival_help",
+          "slot": "steady",
+          "text": "先帮小牛把铝板推进去",
+          "costHint": "取得小牛信任",
+          "flags": ["trust_niu"],
+          "feedback": "你接过车把。小牛没再问来历，只把自己的半副线手套扔给你。",
+          "goto": "c1_open"
+        },
+        {
+          "id": "arrival_claim",
+          "slot": "aggressive",
+          "text": "说自己来核对放样尺寸",
+          "costHint": "直接进入现场 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["claimed_inspector"],
+          "feedback": "小牛把统计表抱紧了一点。他让开路，也记住了这个没有工作证的检验员。",
+          "goto": "c1_open"
+        }
+      ]
+    },
+
+    "c1_open": {
+      "id": "c1_open",
+      "act": 1,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月12日",
+      "time": "上午八点",
+      "location": "机身放样间",
+      "visual": "workshop",
+      "text": "放样间的水泥地上画着一架等大的机身。小牛趴在地上抄尺寸，方岩站在下料表前催人签字。\n\n图纸右下角沾过水。一条尺寸线只剩前半截，负责放样的老师傅请假去了医院。方岩看了一眼挂钟。\n\n「十点以前不签，下料组今天就得空等。」\n\n小牛把铅笔递给你。他想按相邻框位推一个数，又怕整批铝板跟着这个数一起错。",
+      "goto": "c1_search"
+    },
+    "c1_search": {
+      "id": "c1_search",
+      "act": 1,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月12日",
+      "time": "上午八点二十分",
+      "location": "机身放样间",
+      "visual": "workshop",
+      "text": "方岩给了你们二十分钟。桌上有一叠旧晒图，地面保留着前一天擦掉的粉线。笔记本里也写着一个完整数字。\n\n你只能先查一处。",
+      "choices": [
+        {
+          "id": "c1_find_overlay",
+          "slot": "steady",
+          "text": "翻旧晒图找同一截框位",
+          "costHint": "寻找可复核的图纸证据",
+          "flags": ["c1_overlay"],
+          "feedback": "你在一张作废晒图背面找到半透明描图。两个框位叠在一起，缺失尺寸有了推算依据。",
+          "goto": "c1_decide"
+        },
+        {
+          "id": "c1_trace_chalk",
+          "slot": "steady",
+          "text": "和小牛重拉地面基准线",
+          "costHint": "需要小牛配合 · 重测费时 · 工期余量-1",
+          "condition": { "flag": "trust_niu" },
+          "effects": { "stamina": -1 },
+          "flags": ["c1_chalk"],
+          "feedback": "小牛挡住来往的人，你沿着粉线找回两个基准点。量出的数和他猜的差了三毫米。",
+          "goto": "c1_decide"
+        },
+        {
+          "id": "c1_read_notebook",
+          "slot": "aggressive",
+          "text": "抄下笔记本里的完整数字",
+          "costHint": "立即得到答案 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["c1_exact"],
+          "feedback": "你把数字写在掌心。墨迹像刚落下去一样黑，可你没有任何推算过程。",
+          "goto": "c1_decide"
+        }
+      ]
+    },
+    "c1_decide": {
+      "id": "c1_decide",
+      "act": 1,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月12日",
+      "time": "上午九点五十分",
+      "location": "放样间签字桌",
+      "visual": "workshop",
+      "text": "方岩把下料表推到桌边。小牛握着铅笔，没有签。门外的剪板机已经空转起来。\n\n方岩问你们还能不能给出一个负责的数。小牛看着你，等你先开口。",
+      "choices": [
+        {
+          "id": "c1_use_overlay",
+          "slot": "steady",
+          "text": "叠图复核后请方岩签字",
+          "costHint": "证据完整 · 危机完成+1",
+          "condition": { "flag": "c1_overlay" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_1_done", "trust_fang"],
+          "feedback": "方岩顺着两张图核了一遍。他签下名字，又把那张描图夹进正式记录。",
+          "goto": "c1_success"
+        },
+        {
+          "id": "c1_use_chalk",
+          "slot": "steady",
+          "text": "让小牛报告实测尺寸",
+          "costHint": "共同担责 · 危机完成+1",
+          "condition": { "flag": "c1_chalk" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_1_done", "trust_niu"],
+          "feedback": "小牛把尺递给方岩，自己报出测量过程。方岩让他签字，也让你在旁边补了一个见证名。",
+          "goto": "c1_success"
+        },
+        {
+          "id": "c1_use_exact",
+          "slot": "aggressive",
+          "text": "写下数字并催下料组开工",
+          "costHint": "工期保住 · 季文开始怀疑",
+          "condition": { "flag": "c1_exact" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_1_done", "suspicion_jiwen"],
+          "feedback": "数字是对的。检验员季文追问你怎么算出来，你只把下料表往机器方向推了一下。",
+          "goto": "c1_shortcut"
+        },
+        {
+          "id": "c1_delay",
+          "slot": "conservative",
+          "text": "拒绝签字，等老师傅回来",
+          "costHint": "避免误判 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["crisis_1_missed"],
+          "feedback": "剪板机停了。尺寸没有错下去，整个下料组也空等了半天。",
+          "goto": "c1_fail"
+        }
+      ]
+    },
+    "c1_success": {
+      "id": "c1_success",
+      "act": 1,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月12日",
+      "time": "傍晚",
+      "location": "下料工段门口",
+      "visual": "workshop",
+      "text": "第一批铝板按时下完。小牛用剩下的粉笔在笔记本边角画了一道短线。\n\n「下回你要查什么，先来找我。」\n\n夜里，笔记本翻到下一页。纸上有一圈油印，旁边记着试车台的编号。你闻到一股机油味。",
+      "goto": "c2_open"
+    },
+    "c1_shortcut": {
+      "id": "c1_shortcut",
+      "act": 1,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月12日",
+      "time": "傍晚",
+      "location": "下料工段门口",
+      "visual": "workshop",
+      "text": "铝板没有报废，工期也保住了。季文却把你写下的数字抄进了自己的小本。\n\n他问小牛你从哪个组来。小牛说不清。\n\n夜里，试车台编号出现在笔记本上。数字旁边多了一枚油手印，和你的掌纹差不多大。",
+      "goto": "c2_open"
+    },
+    "c1_fail": {
+      "id": "c1_fail",
+      "act": 1,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月13日",
+      "time": "清晨",
+      "location": "机身放样间",
+      "visual": "workshop",
+      "text": "老师傅第二天带回完整图纸。你们昨晚量出的方向没有错，机器却已经少转了半天。\n\n方岩没有责怪谁。他只在进度板上擦掉一个日期。\n\n笔记本随即翻页。纸面沾着机油，一行字从油渍下露出来，试车台会在十分钟内咬死。",
+      "goto": "c2_open"
+    },
+
+    "c2_open": {
+      "id": "c2_open",
+      "act": 2,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月16日",
+      "time": "下午三点",
+      "location": "发动机试车台",
+      "visual": "engine",
+      "text": "试车台震得脚底发麻。赵师傅守着油压表，季文拿着秒表，等最后一轮数据出来。\n\n轴承温度已经越过上一轮记录。赵师傅想停机，季文指着观察窗说火焰颜色正常，再转十分钟就能交报告。\n\n笔记本只写了七个字，查回油，不要查进油。",
+      "goto": "c2_search"
+    },
+    "c2_search": {
+      "id": "c2_search",
+      "act": 2,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月16日",
+      "time": "下午三点零三分",
+      "location": "发动机试车台",
+      "visual": "engine",
+      "text": "机器还在转。你能碰到油压记录、回油管外壁和试车台的急停杆。季文已经注意到你靠得太近。",
+      "choices": [
+        {
+          "id": "c2_compare_log",
+          "slot": "steady",
+          "text": "比较三轮油压记录",
+          "costHint": "要等完整三轮试车 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["c2_pressure"],
+          "feedback": "进油压力没有变，回油量却一轮比一轮少。堵塞已经写在三行数字里。",
+          "goto": "c2_decide"
+        },
+        {
+          "id": "c2_ask_niu",
+          "slot": "steady",
+          "text": "让小牛取白布接回油",
+          "costHint": "需要小牛信任",
+          "condition": { "flag": "trust_niu" },
+          "flags": ["c2_debris"],
+          "feedback": "小牛钻到台架下接了半杯回油。白布上留着细碎铁屑，赵师傅一眼就看见了。",
+          "goto": "c2_decide"
+        },
+        {
+          "id": "c2_touch_pipe",
+          "slot": "aggressive",
+          "text": "按笔记位置去摸回油管",
+          "costHint": "快速定位 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["c2_exact"],
+          "feedback": "你隔着帆布手套摸到一处异常发烫的弯头。季文问你为什么偏偏摸那里。",
+          "goto": "c2_decide"
+        }
+      ]
+    },
+    "c2_decide": {
+      "id": "c2_decide",
+      "act": 2,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月16日",
+      "time": "下午三点零七分",
+      "location": "发动机试车台",
+      "visual": "engine",
+      "text": "温度表又升了一格。赵师傅的手已经搭在停机杆上，季文仍等一个能写进报告的理由。\n\n你还有三分钟。",
+      "choices": [
+        {
+          "id": "c2_use_pressure",
+          "slot": "steady",
+          "text": "把回油下降写进停机记录",
+          "costHint": "按数据停机 · 危机完成+1",
+          "condition": { "flag": "c2_pressure" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_2_done", "support_zhao", "trust_fang"],
+          "feedback": "季文重新算了一遍，自己喊了停机。方岩在停机记录末尾签了字：『这样的数字，以后多给我看。』赵师傅拆开弯头，从里面夹出一块卷曲铁屑。",
+          "goto": "c2_success"
+        },
+        {
+          "id": "c2_use_debris",
+          "slot": "steady",
+          "text": "把带铁屑的白布递给季文",
+          "costHint": "实物证据 · 危机完成+1",
+          "condition": { "flag": "c2_debris" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_2_done", "support_zhao", "trust_jiwen"],
+          "feedback": "季文没有再争。他按下停机按钮，随后把小牛的名字写进故障发现栏。",
+          "goto": "c2_success"
+        },
+        {
+          "id": "c2_emergency_stop",
+          "slot": "aggressive",
+          "text": "抢在季文前按下急停",
+          "costHint": "保住轴承 · 怀疑加深",
+          "condition": { "flag": "c2_exact" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_2_done", "suspicion_jiwen"],
+          "feedback": "机器停下后，弯头里果然有铁屑。季文没有道谢。他先问你碰过几次这台机器。",
+          "goto": "c2_shortcut"
+        },
+        {
+          "id": "c2_wait",
+          "slot": "conservative",
+          "text": "让季文完成这一轮数据",
+          "costHint": "避免越权 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["crisis_2_missed"],
+          "feedback": "第九分钟，试车台里响起一声干涩的摩擦。轴承抱死，赵师傅闭着眼拉下总闸。",
+          "goto": "c2_fail"
+        }
+      ]
+    },
+    "c2_success": {
+      "id": "c2_success",
+      "act": 2,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月16日",
+      "time": "傍晚",
+      "location": "试车台检修坑",
+      "visual": "engine",
+      "text": "轴承没有损坏。赵师傅把那块铁屑包进白布，塞到你手里。\n\n「下回想停机器，先找得到让别人也敢停的东西。」\n\n季文在报告上签完字，没有再追问。临走时，他说铆接工段有块蒙皮一直对不上孔。",
+      "goto": "c3_gate"
+    },
+    "c2_shortcut": {
+      "id": "c2_shortcut",
+      "act": 2,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月16日",
+      "time": "傍晚",
+      "location": "试车台记录桌",
+      "visual": "engine",
+      "text": "轴承保住了，报告也能按时交。季文却在你的名字下面画了两道线。\n\n「放样尺寸你知道，回油堵塞你也知道。你下次最好带着工作证来。」\n\n他夹起记录本，去了铆接工段。笔记本上的下一页正好画着一排偏斜的铆钉孔。",
+      "goto": "c3_gate"
+    },
+    "c2_fail": {
+      "id": "c2_fail",
+      "act": 2,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月18日",
+      "time": "上午",
+      "location": "试车台检修坑",
+      "visual": "engine",
+      "text": "赵师傅带人拆了两天试车台。你递扳手时，他只问了一句。\n\n「你那天是不是已经看出不对了？」\n\n你没能回答。检修结束后，季文来取报告，顺口提起铆接工段又停了工。那块蒙皮的孔位偏了半毫米。",
+      "goto": "c3_gate"
+    },
+
+    "c3_gate": {
+      "id": "c3_gate",
+      "act": 3,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月20日",
+      "time": "黄昏",
+      "location": "机身铆接车间门口",
+      "visual": "assembly",
+      "text": "季文站在车间门口查工作证。里面的铆枪已经停了，小林抱着那块对不上孔的蒙皮等人发落。\n\n季文看见你，先伸出手。",
+      "choices": [
+        {
+          "id": "c3_enter_clear",
+          "slot": "steady",
+          "text": "跟季文一起进车间",
+          "hideWhenBlocked": true,
+          "condition": { "res": { "deviation": "<2" } },
+          "feedback": "季文查不到你的工作证记录，却也没拦你。他让你站在检验线外。",
+          "goto": "c3_open"
+        },
+        {
+          "id": "c3_face_question",
+          "slot": "aggressive",
+          "text": "留下来接受季文盘问",
+          "hideWhenBlocked": true,
+          "condition": { "res": { "deviation": ">=2" } },
+          "feedback": "季文合上登记簿。铆接工段的人都在等，他仍没有让路。",
+          "goto": "c3_question"
+        }
+      ]
+    },
+    "c3_question": {
+      "id": "c3_question",
+      "act": 3,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月20日",
+      "time": "黄昏",
+      "location": "机身铆接车间门口",
+      "visual": "assembly",
+      "text": "季文问你从哪个系来，谁派你进试制组。笔记本贴在腰侧，纸角已经从衣服里露出来。\n\n车间里有人催检验员。你必须先过他这一关。",
+      "choices": [
+        {
+          "id": "c3_zhao_vouch",
+          "slot": "steady",
+          "text": "请赵师傅替你说明来路",
+          "costHint": "消耗赵师傅的人情",
+          "condition": { "flag": "support_zhao" },
+          "flags": ["jiwen_checked"],
+          "feedback": "赵师傅从检修坑追过来，只说你跟他干过活。季文让开半步，把疑问留在登记簿里。",
+          "goto": "c3_open"
+        },
+        {
+          "id": "c3_niu_vouch",
+          "slot": "steady",
+          "text": "让小牛拿来你的见证签名",
+          "costHint": "需要第一幕共同签字",
+          "condition": { "flag": "trust_niu" },
+          "flags": ["jiwen_checked"],
+          "feedback": "小牛把放样记录递过来。季文认得方岩的签字，这才把工作证登记簿收回去。",
+          "goto": "c3_open"
+        },
+        {
+          "id": "c3_show_notebook",
+          "slot": "aggressive",
+          "text": "撕下一页笔记给季文看",
+          "costHint": "暂时取信 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["jiwen_saw_notebook"],
+          "feedback": "纸上画着还没装完的机身。季文看了很久，收下那页纸，也让你进了门。",
+          "goto": "c3_open"
+        },
+        {
+          "id": "c3_take_blame",
+          "slot": "conservative",
+          "text": "承认混进车间并接受看管",
+          "costHint": "失去行动余地 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["under_watch"],
+          "feedback": "季文让你留在他视线里。你进了车间，往后每个动作都有人看着。",
+          "goto": "c3_open"
+        }
+      ]
+    },
+    "c3_open": {
+      "id": "c3_open",
+      "act": 3,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月20日",
+      "time": "傍晚六点",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "蒙皮上的孔向下偏了半毫米。小林说自己按定位规划的线，季文坚持先报废这块板。\n\n报废会让装配线停一天。硬把铆钉打进去，机身受振后可能从孔边起裂。\n\n笔记本写着一句话，别只看板，看看递工具的人。小林把那把定位规攥在手里。",
+      "goto": "c3_search"
+    },
+    "c3_search": {
+      "id": "c3_search",
+      "act": 3,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月20日",
+      "time": "傍晚六点十分",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "小林不肯松手。他怕定位规出了问题，也怕大家认定是他磨坏了工具。季文已经叫人去领新蒙皮。",
+      "choices": [
+        {
+          "id": "c3_check_gauge",
+          "slot": "steady",
+          "text": "拿标准块校验定位规",
+          "costHint": "查工具，不先追责",
+          "flags": ["c3_worn_gauge"],
+          "feedback": "定位规比标准短了半毫米。磨损很均匀，已经用了很久。小林今天没有动过它。",
+          "goto": "c3_decide"
+        },
+        {
+          "id": "c3_ask_xiaolin",
+          "slot": "steady",
+          "text": "让小牛陪小林重走工序",
+          "costHint": "需要小牛信任 · 整道工序重走 · 工期余量-1",
+          "condition": { "flag": "trust_niu" },
+          "effects": { "stamina": -1 },
+          "flags": ["c3_process"],
+          "feedback": "两个人从取尺开始重做一遍。定位规放上标准块时，小林自己看见了那道缝。",
+          "goto": "c3_decide"
+        },
+        {
+          "id": "c3_read_solution",
+          "slot": "aggressive",
+          "text": "照笔记裁一块补强垫片",
+          "costHint": "绕过检验 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["c3_shim"],
+          "feedback": "垫片尺寸严丝合缝，像是专门为这次错误准备的。季文盯着你的剪裁线，没有说合格。",
+          "goto": "c3_decide"
+        }
+      ]
+    },
+    "c3_decide": {
+      "id": "c3_decide",
+      "act": 3,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月20日",
+      "time": "晚上七点",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "新蒙皮还要一个小时才能领来。小林站在废料架旁，等季文决定这块板和那把定位规的去处。",
+      "choices": [
+        {
+          "id": "c3_replace_gauge",
+          "slot": "steady",
+          "text": "封存旧尺并重钻一块蒙皮",
+          "costHint": "修正根因 · 危机完成+1",
+          "condition": { "flag": "c3_worn_gauge" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_3_done", "trust_xiaolin"],
+          "feedback": "季文封存了定位规，没有把责任记在小林名下。新蒙皮赶在夜班结束前装上。",
+          "goto": "c3_success"
+        },
+        {
+          "id": "c3_fix_process",
+          "slot": "steady",
+          "text": "让小林换尺后亲手返工",
+          "costHint": "保住小林 · 危机完成+1",
+          "condition": { "flag": "c3_process" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_3_done", "trust_xiaolin"],
+          "feedback": "小林重新划线、钻孔、铆接。最后一颗铆钉落下时，他把旧定位规主动交给季文。",
+          "goto": "c3_success"
+        },
+        {
+          "id": "c3_use_shim",
+          "slot": "aggressive",
+          "text": "装上补强垫片继续铆接",
+          "costHint": "眼前过关 · 留下结构隐患",
+          "condition": { "flag": "c3_shim" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_3_done", "hidden_flaw", "suspicion_jiwen"],
+          "feedback": "孔位被垫片补齐，装配线重新开动。季文在检验单上写下复查两个字。",
+          "goto": "c3_shortcut"
+        },
+        {
+          "id": "c3_scrap",
+          "slot": "conservative",
+          "text": "报废蒙皮并暂停整批铆接",
+          "costHint": "彻底避险 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["crisis_3_missed"],
+          "feedback": "问题没有带上飞机，装配线也停到第二天。小林仍不知道自己错在哪里。",
+          "goto": "c3_fail"
+        }
+      ]
+    },
+    "c3_success": {
+      "id": "c3_success",
+      "act": 3,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月20日",
+      "time": "深夜",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "铆枪重新响起来。小林把报废定位规放进你的工具袋。\n\n「这东西别扔。往后谁说手熟不会错，就让他拿去量量。」\n\n四天后，他抱着一卷测控线来找你。线比清单上短了一截，首飞准备室已经在找负责人。",
+      "goto": "c4_open"
+    },
+    "c3_shortcut": {
+      "id": "c3_shortcut",
+      "act": 3,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月20日",
+      "time": "深夜",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "装配线没有停。那块补强垫片也藏进机身，外面看不出痕迹。\n\n季文把你的剪裁余料装进信封。他说首飞前会再查一次。\n\n四天后，试飞准备室发现测控线短了一截。季文也带着那个信封来了。",
+      "goto": "c4_open"
+    },
+    "c3_fail": {
+      "id": "c3_fail",
+      "act": 3,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月21日",
+      "time": "下午",
+      "location": "机身铆接车间",
+      "visual": "assembly",
+      "text": "新蒙皮装好时，进度板又少了一格。小林把旧定位规扔进废料箱，没人拦他。\n\n你后来捡回那把尺，发现它短了半毫米。这个答案来得太晚。\n\n首飞前夜，小林又来找你。他手里的测控线也短了一截。",
+      "goto": "c4_open"
+    },
+
+    "c4_open": {
+      "id": "c4_open",
+      "act": 4,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月24日",
+      "time": "夜里十一点",
+      "location": "试飞准备室",
+      "visual": "launch",
+      "text": "地面测控线比清单短了十二米。明早没有这段线，飞机无法把关键数据传回地面。\n\n库房已经上锁，值班管理员去参加首飞协调会。季文要求按程序报告，方岩在另一间屋里核最后一批清单。\n\n笔记本的最后一行写得很淡。备用线在旧器材库东架第三层。纸页到这里便空了。",
+      "goto": "c4_search"
+    },
+    "c4_search": {
+      "id": "c4_search",
+      "act": 4,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月24日",
+      "time": "夜里十一点十分",
+      "location": "试飞准备室",
+      "visual": "launch",
+      "text": "你们还有一夜。找到线只是第一步，接头、屏蔽层和测试都要有人做。此前愿意相信你的人，今晚可能愿意留下。",
+      "choices": [
+        {
+          "id": "c4_call_team",
+          "slot": "steady",
+          "text": "请小牛和小林分头找人",
+          "costHint": "需要两人的信任",
+          "condition": { "all": [ { "flag": "trust_niu" }, { "flag": "trust_xiaolin" } ] },
+          "flags": ["c4_team"],
+          "feedback": "小牛去找电工，小林去借压线钳。两个人都没有问你为什么知道今晚会缺线。",
+          "goto": "c4_decide"
+        },
+        {
+          "id": "c4_ask_fang",
+          "slot": "steady",
+          "text": "带清单去请方岩开库房",
+          "costHint": "需要方岩信任 · 等领料签批 · 工期余量-1",
+          "condition": { "flag": "trust_fang" },
+          "effects": { "stamina": -1 },
+          "flags": ["c4_authorized"],
+          "feedback": "方岩核了清单，又看了一眼进度板。他签出临时领料单，带你去找管理员。",
+          "goto": "c4_decide"
+        },
+        {
+          "id": "c4_follow_notebook",
+          "slot": "aggressive",
+          "text": "按笔记位置翻窗进旧库房",
+          "costHint": "直接找到备用线 · 偏离+1",
+          "effects": { "deviation": 1 },
+          "flags": ["c4_spare"],
+          "feedback": "东架第三层果然压着一卷旧线。你抱着它翻出窗时，季文正站在下面。",
+          "goto": "c4_decide"
+        },
+        {
+          "id": "c4_use_old_cable",
+          "slot": "conservative",
+          "text": "检查准备室里的旧测试线",
+          "costHint": "不用开库 · 线材已经老化",
+          "flags": ["c4_old_line"],
+          "feedback": "旧线长度够，外皮却有几处发硬。它能不能撑过首飞，只能接上以后才知道。",
+          "goto": "c4_decide"
+        }
+      ]
+    },
+    "c4_decide": {
+      "id": "c4_decide",
+      "act": 4,
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年8月25日",
+      "time": "凌晨零点",
+      "location": "试飞准备室",
+      "visual": "launch",
+      "text": "跑道灯已经试亮一次。准备室里只剩一张空白测试表。你要在天亮前把一条能用的线和一群肯担责的人留在这里。",
+      "choices": [
+        {
+          "id": "c4_rebuild_team",
+          "slot": "steady",
+          "text": "带大家连夜重做接头",
+          "costHint": "人手齐全 · 危机完成+1",
+          "condition": { "flag": "c4_team" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_4_done"],
+          "feedback": "有人剥线，有人焊接。小林逐段检查屏蔽层，小牛把每次测试结果写进表里。",
+          "goto": "c4_success"
+        },
+        {
+          "id": "c4_rebuild_authorized",
+          "slot": "steady",
+          "text": "按领料单重做整段线路",
+          "costHint": "手续完整 · 危机完成+1",
+          "condition": { "flag": "c4_authorized" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_4_done"],
+          "feedback": "库房送来新线和接头。方岩留下来签测试表，最后一次导通在天亮前通过。",
+          "goto": "c4_success"
+        },
+        {
+          "id": "c4_install_spare",
+          "slot": "aggressive",
+          "text": "装上笔记指出的备用线",
+          "costHint": "赶上首飞 · 怀疑达到顶点",
+          "condition": { "flag": "c4_spare" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_4_done", "suspicion_jiwen"],
+          "feedback": "线路一次导通。季文把测试表按在桌上，要求你在首飞以后解释笔记本和那卷线。",
+          "goto": "c4_shortcut"
+        },
+        {
+          "id": "c4_install_old",
+          "slot": "conservative",
+          "text": "接上旧测试线碰一次运气",
+          "costHint": "暂时导通 · 首飞前仍需复查",
+          "condition": { "flag": "c4_old_line" },
+          "effects": { "integration": 1 },
+          "flags": ["crisis_4_done", "old_cable"],
+          "feedback": "仪表亮了，测试表也有数据。赵师傅弯了弯发硬的外皮，只说这根线不能放心带到明早。",
+          "goto": "c4_shortcut"
+        },
+        {
+          "id": "c4_report_morning",
+          "slot": "conservative",
+          "text": "封存设备并等天亮报告",
+          "costHint": "遵守程序 · 工期余量-1",
+          "effects": { "stamina": -1 },
+          "flags": ["crisis_4_missed"],
+          "feedback": "准备室上了封条。清晨协调会开始时，首飞日期已经无法保住。",
+          "goto": "c4_fail"
+        }
+      ]
+    },
+    "c4_success": {
+      "id": "c4_success",
+      "act": 4,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月25日",
+      "time": "清晨五点四十",
+      "location": "北京一号停机坪",
+      "visual": "launch",
+      "text": "测控数据稳定下来。大家把工具收到墙边，谁也没有力气庆祝。\n\n季文拿起那册没有姓名的笔记本。他翻到最后，空白页正在慢慢显出墨迹。\n\n跑道那边传来第一次发动机启动声。",
+      "goto": "demo_06_settle"
+    },
+    "c4_shortcut": {
+      "id": "c4_shortcut",
+      "act": 4,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月25日",
+      "time": "清晨五点四十",
+      "location": "北京一号停机坪",
+      "visual": "launch",
+      "text": "测控仪表亮着，线路暂时没有出错。季文却没有在测试表上签最后一个名字。\n\n他把笔记本放到你面前。撕掉的最后一页正在显出字迹，先出现的是今天的日期。\n\n跑道那边，发动机已经启动。",
+      "goto": "demo_06_settle"
+    },
+    "c4_fail": {
+      "id": "c4_fail",
+      "act": 4,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月25日",
+      "time": "清晨六点",
+      "location": "试飞准备室",
+      "visual": "launch",
+      "text": "协调会决定推迟首飞。跑道上的飞机被重新拖回停机位。\n\n方岩擦掉进度板上的日期。季文把笔记本放在空白测试表旁，最后一页随即显出一行模糊墨迹。\n\n你只看清了自己的姓。",
+      "goto": "demo_06_settle"
+    },
+
+    "demo_06_settle": {
+      "id": "demo_06_settle",
+      "act": 5,
+      "phase": "FREE",
+      "type": "settle",
+      "date": "1958年8月25日",
+      "time": "首飞日清晨",
+      "location": "北京一号停机坪",
+      "visual": "launch",
+      "text": "笔记本最后一页写满了。放样、试车、铆接和测控，每一项后面都有经手人的名字。\n\n有些名字旁边画着勾，有些后面记着返工日期。你的名字夹在其中，字迹越来越淡。\n\n季文问你还要不要跟着飞机往前走。",
+      "choices": [
+        {
+          "id": "ending_erased",
+          "text": "把笔记本交给季文",
+          "hideWhenBlocked": true,
+          "condition": { "res": { "deviation": ">=3" } },
+          "goto": "demo_07_erased"
+        },
+        {
+          "id": "ending_best",
+          "text": "合上笔记本，去跑道送行",
+          "hideWhenBlocked": true,
+          "condition": {
+            "all": [
+              { "res": { "deviation": "<3", "integration": ">=4" } },
+              { "res": { "stamina": ">=1" } },
+              { "not": [ { "flag": "hidden_flaw" } ] },
+              { "not": [ { "flag": "old_cable" } ] }
+            ]
+          },
+          "goto": "demo_07_best"
+        },
+        {
+          "id": "ending_delay_grace",
+          "text": "留下来，把失去的工期追回来",
+          "hideWhenBlocked": true,
+          "condition": {
+            "all": [
+              { "res": { "deviation": "<3", "integration": ">=4" } },
+              { "res": { "stamina": "<=0" } },
+              { "not": [ { "flag": "hidden_flaw" } ] },
+              { "not": [ { "flag": "old_cable" } ] }
+            ]
+          },
+          "goto": "demo_07_delay_grace"
+        },
+        {
+          "id": "ending_delay",
+          "text": "留下来补完返工记录",
+          "hideWhenBlocked": true,
+          "condition": {
+            "all": [
+              { "res": { "deviation": "<3" } },
+              {
+                "any": [
+                  { "res": { "integration": "<4" } },
+                  { "flag": "hidden_flaw" },
+                  { "flag": "old_cable" }
+                ]
+              }
+            ]
+          },
+          "goto": "demo_07_delay"
+        }
+      ]
+    },
+    "demo_07_best": {
+      "id": "demo_07_best",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月25日",
+      "time": "上午九点",
+      "location": "北京一号起飞跑道",
+      "visual": "launch",
+      "text": "北京一号比修订后的准备日期提前一天升空。\n\n小牛把沾着粉笔的手套塞进你口袋。赵师傅站在后面，没有挤进合影。季文拿着记录本，终于没有再问你的工作证。\n\n飞机越过头顶时，四周忽然安静。你回到校史馆，手里仍攥着那半副线手套。\n\n笔记本最后一页没有缺失。几种不同的字迹挤在一起。\n\n「那个没赶上合影的同学，我们记得。多谢你多看了一步。」",
+      "goto": "demo_08_end"
+    },
+    "demo_07_delay_grace": {
+      "id": "demo_07_delay_grace",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年9月",
+      "time": "首飞改期后",
+      "location": "北京一号试制车间",
+      "visual": "workshop",
+      "text": "北京一号还停在停机坪上。四个危机都收了尾，可进度板上的日期已经向后改了四次。\n\n方岩把新的准备日期写上去时，笔停了很久。首飞改到九月，装配车间夜里亮着灯，所有人都在把失去的时间一点点追回来。\n\n你留下来帮小牛核完最后一遍定位尺寸。笔记本合上前，最后一页浮出一行小字。\n\n「做得都对，只是太慢了。」",
+      "goto": "demo_08_end"
+    },
+    "demo_07_delay": {
+      "id": "demo_07_delay",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年9月",
+      "time": "首飞改期后",
+      "location": "北京一号试制车间",
+      "visual": "workshop",
+      "text": "北京一号的首飞日期向后挪了。蒙皮重新检查，测控线也换成了新料。没人愿意让一架带着疑问的飞机上天。\n\n你留下来补返工记录。小林在旧定位规旁写了磨损量，赵师傅把那块回油铁屑订在报告上。\n\n笔记本合上前多出一句批注。\n\n「晚几天也成，问题得留在地上。」",
+      "goto": "demo_08_end"
+    },
+    "demo_07_erased": {
+      "id": "demo_07_erased",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年8月25日",
+      "time": "首飞后",
+      "location": "北京一号停机坪",
+      "visual": "launch",
+      "text": "季文接过笔记本，翻了很久。每一页都有别人留下的指印，只有你写过的数字正在褪色。\n\n北京一号升空以后，没人再问你从哪里来。小牛记得有人帮他推过铝板，却想不起那个人的脸。赵师傅手里还留着一块铁屑，也忘了交给了谁。\n\n校史馆没有把你带回去。你留在1958年，后来换了工作证，名字写得很普通。",
+      "goto": "demo_08_end"
+    },
+    "demo_08_end": {
+      "id": "demo_08_end",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "2026年8月27日",
+      "time": "闭馆后",
+      "location": "北航校史馆修复室",
+      "visual": "notebook",
+      "text": "这册笔记到这里合上。重置以后，前一幕留下的信任、怀疑和工具会打开不同的处理办法。",
+      "goto": "demo_09_end"
+    },
+    "demo_09_end": {
+      "id": "demo_09_end",
+      "act": 5,
+      "phase": "FREE",
+      "type": "story",
+      "date": "2026年8月27日",
+      "time": "闭馆后",
+      "location": "北航校史馆修复室",
+      "visual": "notebook",
+      "text": "笔记本仍摊在修复台上。第一页的墨迹还没有干。"
+    }
+  }
+}

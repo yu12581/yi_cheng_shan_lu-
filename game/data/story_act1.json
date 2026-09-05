@@ -1,0 +1,3780 @@
+{
+  "weeks": {
+    "1": {
+      "label": "残周",
+      "days": [
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "apPerDay": 1,
+      "nightFromDay": "fri",
+      "mainCard": false,
+      "overdueCrisis": false
+    },
+    "2": {
+      "label": "第二周",
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "apPerDay": 2,
+      "nightFromDay": "mon",
+      "mainCard": true,
+      "overdueCrisis": true
+    },
+    "3": {
+      "label": "第三周·危机周",
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "apPerDay": 2,
+      "nightFromDay": "mon",
+      "mainCard": true,
+      "overdueCrisis": false
+    }
+  },
+  "nodes": {
+    "n_000_open": {
+      "id": "n_000_open",
+      "act": 1,
+      "week": 0,
+      "day": "thu",
+      "phase": "FREE",
+      "type": "story",
+      "date": "2026年7月9日",
+      "time": "22:55",
+      "location": "图书馆五楼",
+      "cast": [],
+      "env": {
+        "sound": "闭馆广播响过第二遍，空调风声低低地垫底",
+        "light": "五楼只剩半排台灯亮着",
+        "smell": "旧书的黄脆纸味",
+        "touch": "书页发烫，烫得像贴着炉口",
+        "source": "现代场景（2026侧无语料要求，细节自洽即可）"
+      },
+      "text": "22:55，图书馆五楼又暗了半排灯。闭馆广播响过第二遍，你才合上《操作系统原理》，进程调度那道大题还空着，明早九点就考。\n\n收拾书包时，一本夹错架子的旧书滑了出来，《飞机构造基础》。书页黄脆，扉页上一行褪色的钢笔字。\n\n「1958年7月，于北航平房教研室」\n\n你随手翻开，一张手绘的机翼受力图。铅笔线深一道浅一道，像有人翻来覆去验算过许多遍。\n\n喇叭里的《一程山路》忽然变了调，像磁带被人拽长。「走过一程山路……转过一道弯……」\n\n窗外的路灯整排熄灭，齐刷刷地黑，不像跳闸。\n\n指腹底下的书页发起热来，烫得像贴着炉口。你想抽手，五根手指像焊在了纸上。\n\n一股氨水味最先涌进来，混着松木和墨水的气味。\n\n跟着是天旋地转，耳朵里炸开一声长长的轰鸣。\n\n「新来的！愣着干什么？搭把手！」",
+      "goto": "n_1thu_010_landing",
+      "wordBudget": 350
+    },
+    "n_1thu_010_landing": {
+      "id": "n_1thu_010_landing",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "凌晨三点二十分",
+      "location": "平房教研室",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "翻纸声沙沙，算尺滑得咔咔响，远处厂房透过来嗡嗡呜呜的低音",
+        "light": "几盏煤油灯的橙黄色光晕，吊着的白炽灯泡昏黄",
+        "smell": "氨水味压着松木味，还有墨水味",
+        "touch": "草稿纸粗糙，硌得掌心发痒",
+        "source": "refs P61/P83＋旧剧本1.01年代清单"
+      },
+      "text": "睁眼先看见光。煤油灯一团一团橙黄的晕，昏黄得像蒙了油。头顶吊着几个白炽灯泡，昏黄得像蒙了油。\n\n一张巨大的木制绘图板堵在你面前，蓝底白线的图铺开半张桌面。有人趴着画线，有人举着算尺念念有词，鸭嘴笔蘸墨的吱吱声混在翻纸声里。墙上一条黑体标语压下来。\n\n「苦战一百天，『北京一号』上天！」\n\n北京一号。中国第一架自己设计自己制造的旅客机，1958年9月上天。\n\n这句话在你的教科书里只有一行。此刻它是一间屋子的灯、二十几张熬红的脸、和你鼻子里挥不去的氨水味。\n\n空调呢？手机呢？充电宝呢？！\n\n「喂，新来的，站这儿半天了。」一个抱着图筒的学生上下打量你，「哪个系调来支援的？脸色这么白，比熬了三个通宵的还不如。」\n\n你张了张嘴，嗓子干得发不出声。\n\n「行了行了，别审他了。」角落里有人站起来。个子不高，袖子挽到肘弯，怀里揣着一沓单子，「小王，机身工段的。你顺路，把这同学捎去水房洗把脸，回头车间那边还等他搭把手呢。」\n\n小王。你记住这个名字的同时，已经被他拽着胳膊往门口走。门槛很高，你的脚尖磕了一下。\n\n门外的夜凉得像另一个世界。没有空调外机的嗡鸣，没有一条马路有车。银河从苏式大楼的屋顶上淌过去，亮得不讲道理。\n\n真的是1958年。\n\n你真的回不去了，至少今晚回不去。",
+      "goto": "n_1thu_020_identity",
+      "wordBudget": 600
+    },
+    "n_1thu_020_identity": {
+      "id": "n_1thu_020_identity",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年7月10日",
+      "time": "凌晨三点半",
+      "location": "公共水房",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "水龙头哗哗，水管深处咕咚咕咚",
+        "light": "一只昏黄灯泡，镜子里晃着两团影子",
+        "smell": "潮气混着肥皂的油脂味",
+        "touch": "凉水激得指骨发麻，毛巾糙得刮脸",
+        "source": "旧剧本1.02A年代清单（白瓷水池裂纹/搪瓷盆/铜龙头）"
+      },
+      "text": "公共水房里，白瓷水池裂着纹，墙根摆着两只掉了瓷的搪盆。小王拧开铜龙头，把一条灰毛巾扔给你。\n\n「洗。」\n\n凉水浇下去，你整个人激灵了一下。镜子里那张脸还是你的，白衬衫不是你的，领口磨得起毛，针脚密得吓人。\n\n镜子边上贴着张泛黄的报纸，「北京航空学院师生决心试制轻型旅客机」。1958年6月。\n\n「我叫王小栓，都叫我小王。」他把怀里那沓单子拍了拍，「机身工段的生产准备工，大二。半夜过来，还不是替工段取工艺单，明天的活等着它开工。」他扒着水池沿看你，「你是哪个系的？叫什么？回头支书要登名册的。」\n\n水珠顺着下巴往下滴。你的目光撞上镜边那张报纸，挪不开。\n\n「看啥呢。」小王把毛巾甩到你肩上，「报纸都贴仨月了。全校都在干这一件事。」\n\n镜子里的自己在发抖，一身冷汗。你掐了大腿一把，疼。真的。\n\n名册。支援。哪个系。\n\n你脑子里飞快过了一遍所有能说的话。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "谎称机械系毕业班来支援",
+          "costHint": "偏离+2·留下破绽",
+          "effects": {
+            "integration": 3,
+            "deviation": 2
+          },
+          "flags": [
+            "f_cover_flaw"
+          ],
+          "aftermath": "小王点点头，又随口问：「机械系？那会看展开图吧？」你喉咙一紧。",
+          "goto": "n_1thu_030_towshop"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "说是外地调训来的学生",
+          "costHint": "最稳·融入中等",
+          "effects": {
+            "integration": 5
+          },
+          "aftermath": "「调训的啊，难怪面生。」小王不再多问，把毛巾往你肩上一搭。",
+          "goto": "n_1thu_030_towshop"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "坦白失忆，之前的事全想不起来",
+          "costHint": "融入最低·方支书接住",
+          "effects": {
+            "integration": 2
+          },
+          "npc": {
+            "fang": 1
+          },
+          "flags": [
+            "f_fang_shield"
+          ],
+          "aftermath": "小王盯着你看了三秒，毛巾都忘了接：「失、失忆？这事得让支书知道。先回车间，他就在那儿。」",
+          "goto": "n_1thu_030_towshop"
+        }
+      ],
+      "wordBudget": 400
+    },
+    "n_1thu_030_towshop": {
+      "id": "n_1thu_030_towshop",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "凌晨四点",
+      "location": "金工车间门口→车间",
+      "cast": [
+        "wang",
+        "fang"
+      ],
+      "env": {
+        "sound": "先是嗡嗡呜呜，再是哎哎哎的插齿机，锯床嘶拉嘶拉垫在底下",
+        "light": "厂房电灯大白亮，门外夜色浓黑",
+        "smell": "机油味混着金属切削味，扑了满脸",
+        "touch": "木门把手冰凉，门缝里挤出来的热风却是烫的",
+        "source": "refs P65拟声词系统/P77金工车间"
+      },
+      "text": "不管你怎么答的，小王都只是点头，然后领你往厂房走。\n\n「跟你说正经的。」他一路走一路掰手指，「咱们机身工段立了比武条件的，两天，全部交出尾段框。原本两个小组的活，如今一组担。」\n\n「困难多不多？」他自己问。\n\n「不少！」他自己答，答得斩钉截铁。\n\n「那咋办？」\n\n「克服！」\n\n金工车间的木门推开，声音的墙迎面砸过来。车床嗡嗡呜呜地转，插齿机哎哎哎地啃着圆弧，锯床在窗口那儿嘶拉嘶拉地下料。灯大白亮，铁屑混着汗水味，机油味呛人。\n\n没人抬头看你一眼。人人手上都有活。\n\n「支书！」小王踮脚喊。人群里走出个三十来岁的干部模样的人，袖口也挽着，眼睛里全是红丝，笑起来却干净：「新调来的同学？欢迎。叫什么名字？」\n\n你报了名字。他从兜里摸出个小本子，用铅笔头写得一笔一划。\n\n「来了就好。人在，阵地就在。」他把本子揣回去，朝钳工桌那一溜扬扬下巴，「先跟赵师傅学。手别闲着。在这儿，手闲着的人睡不着觉。」",
+      "goto": "n_1thu_040_firstframe",
+      "wordBudget": 420
+    },
+    "n_1thu_040_firstframe": {
+      "id": "n_1thu_040_firstframe",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月10日",
+      "time": "凌晨四点半",
+      "location": "金工车间·钣金工位",
+      "cast": [
+        "zhao",
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "叮当、叮当，木槌敲在铝皮上，闷里带脆",
+        "light": "大灯罩下来的白光圈，铝皮反光晃眼",
+        "smell": "铝屑的腥气混着机油味",
+        "touch": "木槌柄磨手，铝皮凉，敲一会儿就烫起来",
+        "source": "refs P77赵师傅/P61敲打场面"
+      },
+      "text": "赵师傅五十上下，围裙油亮，手背上的茧一层摞一层。他把一把木槌塞进你手里，掂了掂，又换了一把轻些的。\n\n「敲框，钣金的入门功。」他拿起一块切好的铝皮，蒙上胎模，「手劲匀着走，锤锤咬住线。听着声不对就停手，铝皮会说话。」\n\n说罢抄起自己那把槌，随手三下。叮、叮、叮，铝皮服服帖帖地伏了下去，一条框缘直得像用尺子量过。\n\n你盯着那面铝皮看了两秒。\n\n旁边桌上，扎两条辫子的姑娘正往磨床里加冷却油，冲你大大方方点点头：「新同学？我叫小辫子，他们都这么叫。」扛料的汉子路过，肩膀上的铝棒颤巍巍的：「小牛！」他自顾自报了名，脚步没停。\n\n槌子到你手里了。\n\n不就是钣金版的流水线作业么，你心想。固定节拍，单一工序，重复劳动率百分之百，这种活儿，写个循环脚本都能替他们干了。\n\n可你没有脚本。你只有一双敲惯了键盘的手。掌心先出了汗。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "加快锤速，露一手给他看看",
+          "costHint": "体力-2·可能敲废料",
+          "effects": {
+            "stamina": -2
+          },
+          "flags": [
+            "f_scrap_frame"
+          ],
+          "aftermath": "槌头一偏，铝皮上绽开一道死棱。",
+          "goto": "n_1thu_041_scrap",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "按师傅教的节奏，一下一下来",
+          "costHint": "体力-1·慢但稳",
+          "effects": {
+            "stamina": -1,
+            "integration": 1
+          },
+          "aftermath": "第一锤偏了，第二锤找回了那口气。",
+          "goto": "n_1thu_042_steady",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "托词去看图纸，先躲开这一关",
+          "costHint": "融入-1·错过上手",
+          "effects": {
+            "integration": -1
+          },
+          "flags": [
+            "f_dodged_frame"
+          ],
+          "aftermath": "你退到图纸堆前，背后的锤声一声一声，敲得你后颈发烫。",
+          "goto": "n_1thu_043_dodge"
+        }
+      ],
+      "wordBudget": 420
+    },
+    "n_1thu_041_scrap": {
+      "id": "n_1thu_041_scrap",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "清晨六点",
+      "location": "金工车间·钣金工位",
+      "cast": [
+        "zhao"
+      ],
+      "env": {
+        "sound": "废料扔进铁筐，哐当一声",
+        "light": "白光圈外，厂房尽头泛起一点灰白",
+        "smell": "铝屑腥气更冲了",
+        "touch": "掌心火辣辣地烧",
+        "source": "refs P80浪费材料拖长周期是大事"
+      },
+      "text": "「停。」赵师傅的手按住铝皮。他捏着那道死棱看了看，语气没起伏：「材料不认你的性子。它有多硬、多脆、吃多少锤，得你顺着它来，不是它顺着你来。」\n\n废料扔进铁筐。一个人的劳累是小事，浪费了材料、拖长了周期才是大事。他的原话更短：「这块料，够小王跑半天腿。」\n\n你再上场。这回锤锤咬线，可不到半小时，掌心烧起来了。摊开手，三个血泡，豆大，亮晶晶。\n\n赵师傅瞥了一眼，没吭声，扔过来一卷纱布。\n\n教科书上说他们苦战一百天。教科书没说，第一天就得拿血泡交学费。",
+      "effects": {
+        "integration": -1
+      },
+      "goto": "n_1thu_050_evening",
+      "wordBudget": 270
+    },
+    "n_1thu_042_steady": {
+      "id": "n_1thu_042_steady",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "清晨六点",
+      "location": "金工车间·钣金工位",
+      "cast": [
+        "zhao",
+        "bianzi",
+        "niu"
+      ],
+      "env": {
+        "sound": "木槌声零零落落，渐渐有了点儿",
+        "light": "曙光从高窗探进来一线",
+        "smell": "机油味里掺进了早饭的气味",
+        "touch": "虎口酸得抬不起来，掌心发热",
+        "source": "refs P72曙光透进来/P61"
+      },
+      "text": "慢是真慢。一个钟头敲下来，你那块框缘才走了三分之一。\n\n「行。」赵师傅绕到你身后看了一圈，「肯下笨功夫，就行。手艺这东西跟庄稼一样，骗不了节气。」\n\n收槌的时候你摊开手。掌心横着两道红痕，起了三个亮晶晶的血泡，不疼，就是火辣辣的。\n\n小辫子凑过来看了一眼，把自己那卷纱布撕了一半给你：「头一回都这样。小牛头一回，把锉刀都使反了。」\n\n远处传来小牛的吼声：「报告！材料到了！」\n\n掌心的血泡一跳一跳。你头一回觉得，『累』这个字原来是有形状的。",
+      "goto": "n_1thu_050_evening",
+      "wordBudget": 260
+    },
+    "n_1thu_043_dodge": {
+      "id": "n_1thu_043_dodge",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "清晨六点",
+      "location": "金工车间·图纸台",
+      "cast": [],
+      "env": {
+        "sound": "身后的锤声从零落变得均匀",
+        "light": "图纸台的白炽灯罩着一圈黄晕",
+        "smell": "纸张和墨水的味道盖过了机油味",
+        "touch": "指尖捻着图纸边缘，干净的、没有茧的手",
+        "source": "旧剧本1.03年代清单（丁字尺/鸭嘴笔/算尺）"
+      },
+      "text": "图纸台前站了一个钟头。\n\n丁字尺、鸭嘴笔、算尺，你都认识了，就是没再碰那把木槌。替你顶位的是隔壁桌的高个子，起初锤声零零落落，后来竟敲出了均匀的点儿。\n\n收工时他朝你扬扬手心的血泡，笑得挺开心：「头一回都这样！明天接着来！」\n\n你也笑，攥着自己干干净净的手。\n\n赵师傅路过，看了你一眼，什么也没说。就那一眼，比说了还沉。\n\n那晚你在床上摊开手掌看了很久。白的，软的，没有一个泡。\n\n不知道为什么，有点丢人。",
+      "goto": "n_1thu_050_evening",
+      "wordBudget": 230
+    },
+    "n_1thu_050_evening": {
+      "id": "n_1thu_050_evening",
+      "act": 1,
+      "week": 1,
+      "day": "thu",
+      "phase": "FREE",
+      "type": "story",
+      "date": "1958年7月10日",
+      "time": "早晨七点",
+      "location": "金工车间门槛",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "机器声歇了，只剩水管咕咚和人声渐远",
+        "light": "电灯逐渐失去光芒，曙光从高窗斜进来，墙壁抹上一层红",
+        "smell": "机油味淡了，晨风里有露水和庄稼地的气息",
+        "touch": "搪瓷缸壁温热，虎口酸胀",
+        "source": "refs P72电灯失去光芒曙光透进来/P83黎明寒冷"
+      },
+      "text": "收工的哨声不知道从哪儿响起来。你走出厂房才发现，电灯不知什么时候已经失去了光芒，初升的太阳在厂房墙壁上抹上了红色。\n\n又是白天了。\n\n小王塞给你一只搪瓷缸，热水，豁了口的缸子上印着『劳动光荣』。你们蹲在门槛上喝。\n\n「你手怎么了？」他瞥见纱布。\n\n「敲框敲的。」\n\n「嘿，第一天就上手了？」他咧嘴笑，「我头一天光顾着跑腿，连槌柄都没摸着。」\n\n热水下肚，浑身的乏劲都成了实的，比图书馆里熬的那几个夜实在多了。\n\n回宿舍的路上，小王指给你看，飞机楼的脚手架上有灯，人影在动。「设计组还在赶图。他们交图，咱们交零件，谁也别拖谁的后腿。」\n\n你在教科书里读过他们的一百个昼夜。现在你知道了，一百个昼夜是这么过的，一夜一夜地敲，一夜一夜地把血泡磨成茧。\n\n困意压下来之前，你最后一个念头是，明天的操作系统考试，永远缺席了。",
+      "goto": "n_1fri_010_daystart",
+      "wordBudget": 380
+    },
+    "n_1fri_010_daystart": {
+      "id": "n_1fri_010_daystart",
+      "act": 1,
+      "week": 1,
+      "day": "fri",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月11日",
+      "time": "早晨六点半",
+      "location": "机身工段黑板前",
+      "cast": [
+        "fang",
+        "wang"
+      ],
+      "env": {
+        "sound": "晨会的人声压着机床的低音，比昨天齐整",
+        "light": "早晨的太阳斜进高窗",
+        "smell": "豆浆味混着机油味",
+        "touch": "虎口的酸胀退了大半",
+        "source": "refs P84比武大会"
+      },
+      "text": "两天的锤声砸下来，虎口酸得诚实。可你知道，手正在变结实，酸劲退过去的地方，皮一天比一天硬。\n\n晨会很短。方岩念完各组的数，末了从兜里摸出一张纸牌，钉在黑板角上你的名字旁边：「新同学的牌子，熟悉车间。一周之内，手艺、人、路数，都给我认熟。」\n\n散会后小王凑过来压低声音：「牌子分两种。一种全组的，一种你自己的。你自己的完不成，丢的是你的人。」\n\n「也算你的阵地。」他又补了一句，跑走了。",
+      "goto": "n_1fri_020_action",
+      "wordBudget": 165
+    },
+    "n_1fri_020_action": {
+      "id": "n_1fri_020_action",
+      "act": 1,
+      "week": 1,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月11日",
+      "time": "上午七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "叮当声连成片，插齿机哎哎哎地啃圆弧",
+        "light": "光柱里粉尘浮动",
+        "smell": "铝屑腥气",
+        "touch": "槌柄温热",
+        "source": "refs P65拟声词/P67"
+      },
+      "text": "上午的活照旧。自己那张牌，你想怎么打？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "上工位，接着练锤",
+          "costHint": "体力-1·教学牌进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "赵师傅这回没看你，说明不用看了。",
+          "goto": "n_1fri_030_incident",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "揣着本子，把车间的机床认一遍",
+          "costHint": "教学牌进度+1·攒人缘",
+          "effects": {
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "explore_shop"
+          ],
+          "flags": [
+            "f_know_machines"
+          ],
+          "aftermath": "插齿机是王师傅的，锯床是小牛的，本子上记满了名字。",
+          "goto": "n_1fri_030_incident"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "站边上看新同学们上工",
+          "costHint": "不显山露水·错过上手",
+          "effects": {},
+          "aftermath": "一水儿的学生脸，一水儿的白衬衫，像极了上周的你。",
+          "goto": "n_1fri_030_incident"
+        }
+      ],
+      "wordBudget": 20
+    },
+    "n_1fri_030_incident": {
+      "id": "n_1fri_030_incident",
+      "act": 1,
+      "week": 1,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月11日",
+      "time": "午后三点",
+      "location": "金工车间·钳工段",
+      "cast": [
+        "zhao",
+        "xiaolin",
+        "xiaozheng"
+      ],
+      "env": {
+        "sound": "一声脆响，然后整个车间的锤声都停了",
+        "light": "西晒的光停在平台上那只歪扭的隔框上",
+        "smell": "铝屑味里渗出一点汗馊味",
+        "touch": "你手里的槌也停了，柄上全是汗",
+        "source": "refs P79李华失手摔隔框（改名换姓为小林）"
+      },
+      "text": "午后出了一桩事。\n\n新来的小林失手把一只隔框摔在了平台上。当啷一声，声音不大，可整个车间的锤声都跟着停了。\n\n隔框歪扭着。这回是真报废了。\n\n「半天的劳动，累得满身大汗，就这么完了……」旁边的小郑声音发紧。\n\n小林站在原地，头低着，肩膀绷得死紧，眼泪在眼眶里转，愣是没让它掉下来。\n\n赵师傅从人群外走过来，先弯腰看了看那只框，才开口：「一个人的劳累是小事。浪费了材料，拖长了周期，才是大事。」\n\n说完他拍了拍小林的肩，像是深怕这孩子当场哭出来：「去吧，把胎模上的铝屑清了。手稳了，框就稳了。」\n\n人群散开，锤声重新响起来。\n\n要是你，你会当场道歉、复盘流程、写改进清单。这里没有清单。只有一只报废的框，和一句让你记到今晚的话。\n\n书上没这一段。书上只说他们苦战一百天，没说一百天里有这样安静的下午。",
+      "goto": "n_1fri_040_night",
+      "wordBudget": 400
+    },
+    "n_1fri_040_night": {
+      "id": "n_1fri_040_night",
+      "act": 1,
+      "week": 1,
+      "day": "fri",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月11日",
+      "time": "夜里十点",
+      "location": "学生宿舍",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "熄灯号吹过，远处厂房还有机器嗡嗡",
+        "light": "月光从窗户纸上漫进来",
+        "smell": "皂角味",
+        "touch": "床板硬，掌心的茧贴着褥子",
+        "source": "refs P83黎明寒冷/P61"
+      },
+      "text": "熄灯前，小王趴在门框上教规矩：「夜里三个去处，睡觉攒力气，回车间赶工，找人说话。挑一样。明早还得战斗。」\n\n这是你在1958年的第一个夜晚选择。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "两天的乏一起涌上来，你睡得像一块被砸实的铝锭。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "灯下只剩你和一台嘶拉嘶拉的锯床。进度+1，明天见。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "去调度室找人说说话",
+          "effects": {},
+          "npc": {
+            "bianzi": 1
+          },
+          "result": "小辫子在磨铝片，看见你，往旁边挪了挪：「正好，缺个搭手的。」沙沙声一直响到月亮偏西。"
+        }
+      ],
+      "goto": "n_1sat_010_daystart",
+      "wordBudget": 70
+    },
+    "n_1sat_010_daystart": {
+      "id": "n_1sat_010_daystart",
+      "act": 1,
+      "week": 1,
+      "day": "sat",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月12日",
+      "time": "晌午十一点",
+      "location": "水房→小卖部→宿舍",
+      "cast": [],
+      "env": {
+        "sound": "周六的校园静，远处车间锤声稀稀拉拉",
+        "light": "正午的太阳白花花地晒着晾衣绳",
+        "smell": "肥皂沫味，硬面包的麦香味",
+        "touch": "衬衫领口搓得指腹发涩，再也白不回来了",
+        "source": "素材库§4生活细节（硬面包/0.23元的书）＋旧剧本年代清单"
+      },
+      "text": "周六轮休半天。\n\n你在水房把衬衫搓出了泡沫。领口那圈黄渍搓不掉。你忽然明白，这里的白衬衫都是这么一点点旧下去的。\n\n小卖部里买了两个硬面包，咬起来费腮帮子；又买了一本信纸，定价两毛三。\n\n回到宿舍铺开信纸。「爸妈，我在北航，一切都好。这边在造一架飞机……」\n\n写到第三行，笔停了。没法解释自己在哪一年。\n\n你把信纸揉了，又展开抹平，夹进《飞机构造基础》的扉页，跟那行钢笔字贴在一起。\n\n信纸滑进去的时候，扉页那行字好像亮了一下。可能是错觉。",
+      "goto": "n_1sat_020_action",
+      "wordBudget": 210
+    },
+    "n_1sat_020_action": {
+      "id": "n_1sat_020_action",
+      "act": 1,
+      "week": 1,
+      "day": "sat",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月12日",
+      "time": "下午两点",
+      "location": "金工车间／宿舍",
+      "cast": [],
+      "env": {
+        "sound": "周六的车间安静些，每一声锤都听得清成色",
+        "light": "午后的光斜过钳工桌",
+        "smell": "机油味淡了一半",
+        "touch": "枕巾晒得发烫",
+        "source": "refs P65/P61"
+      },
+      "text": "下午自由支配。半个休息日，也是牌面上的日子。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "车间还有活，去搭把手",
+          "costHint": "体力-1·教学牌进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "周六的锤声听得清每一声的成色，你自己的也不例外。",
+          "goto": "n_1sat_030_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "去统计组帮忙登一天图号",
+          "costHint": "经营关系·教学牌进度+1",
+          "effects": {
+            "npc": {
+              "niu": 1,
+              "bianzi": 1
+            },
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "explore_shop"
+          ],
+          "aftermath": "登记册上一页页图号翻过去，像一行行提交记录。",
+          "goto": "n_1sat_030_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "把觉补足",
+          "costHint": "体力+2·错过热闹",
+          "effects": {
+            "stamina": 2
+          },
+          "aftermath": "一觉睡到夕阳。宿舍空得能听见自己的心跳。",
+          "goto": "n_1sat_030_night"
+        }
+      ],
+      "wordBudget": 22
+    },
+    "n_1sat_030_night": {
+      "id": "n_1sat_030_night",
+      "act": 1,
+      "week": 1,
+      "day": "sat",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月12日",
+      "time": "夜里九点半",
+      "location": "宿舍／房顶",
+      "cast": [
+        "niu"
+      ],
+      "env": {
+        "sound": "夏夜的虫鸣一层一层",
+        "light": "银河亮得不讲道理",
+        "smell": "晒了一天的瓦檐味",
+        "touch": "棉被垫着靠床头，硌得慌但暖",
+        "source": "素材库§4棉被垫着靠床头看星星"
+      },
+      "text": "夜里有人招呼上房顶，抱着被子，棉被垫着靠床头看星星。去不去？",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "不去，睡觉",
+          "effects": {},
+          "result": "星星在窗外亮了一夜。你没看见，你在梦里敲框。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间再干两个钟头",
+          "effects": {
+            "taskId": "task_w1_teach_frame",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "周六夜的车间只有你和一台打瞌睡的检验员。进度+1。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "上房顶，跟小牛他们看星星",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "result": "小牛抱着膝盖忽然问：「你说，毛主席知道咱们在造飞机吗？」「知道。」「那就中。」他往被子上一躺，星星落了他一脸。"
+        }
+      ],
+      "goto": "n_1sun_010_settle",
+      "wordBudget": 35
+    },
+    "n_1sun_010_settle": {
+      "id": "n_1sun_010_settle",
+      "act": 1,
+      "week": 1,
+      "day": "sun",
+      "phase": "WEEK_SETTLE",
+      "type": "settle",
+      "date": "1958年7月13日",
+      "time": "傍晚六点",
+      "location": "机身工段黑板前",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "广播器的电流声滋啦一响",
+        "light": "晚霞把黑板的漆面照出一片红",
+        "smell": "白菜汤味从食堂漫过来",
+        "touch": "名册合上时带起一阵风",
+        "source": "refs P92广播捷报/P84比武条件"
+      },
+      "text": "周日傍晚，广播器滋啦一响：「报捷，本周全院提前两天完成计划！」\n\n黑板上红线画到了头。你名字旁边那张纸牌也换了颜色，熟悉车间，完成{{my:task_w1_teach_frame}}项。\n\n方岩把名册合上，锁进抽屉，钥匙揣好：「账清了。都回去歇着。明天，还得战斗。」\n\n看着抽屉锁咔哒一声，你忽然明白，这一周真的收档了。\n\n来这儿的第一周，你学会了三件事，握槌，认路，还有在锤声里睡着。",
+      "goto": "w2_start",
+      "wordBudget": 185
+    },
+    "w2_start": {
+      "id": "w2_start",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "WEEK_START",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "早晨六点半",
+      "location": "机身工段黑板前",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "晨会的人声压着机床的低音",
+        "light": "早晨的太阳斜进高窗，照亮黑板一角",
+        "smell": "豆浆味从食堂方向飘来，混着机油味",
+        "touch": "名册本子的纸边卷了毛",
+        "source": "refs P84比武大会/P92广播捷报组织行为"
+      },
+      "text": "周一早晨六点半，机身工段的黑板前站满了人。\n\n黑板上是方岩的字，红笔描了三遍。比武条件，提前两天，全部交出尾段框。\n\n「上周干得不错。」方岩的声音不大，压得住场，「但是材料组传来话，总装那边催得紧。所以本周，苦战五昼夜，决不拖总装的后腿！」\n\n「困难多不多？」\n\n「不少！」几十条嗓子。\n\n「怎么办？」\n\n「克服！」\n\n他翻开名册派活，念到你名字的时候顿了顿：「新同学跟上礼拜一样，先跟赵师傅。谁有空谁带。」有人回头冲你挤挤眼，是上礼拜替你顶位的高个子。\n\n散会前，他在黑板边上钉了两张纸牌。一张写着主线的数，尾段框六个，周日验收；另一张是小王的委托，淬火件一趟清，把全组的送件路线并成一趟。\n\n「牌子就这些。」方岩拍拍手上的粉笔灰，「干去吧。人在，阵地在。」\n\n人群散开，各奔各的工位，脚步声跟开会前一样急。\n\n你盯着那两张纸牌看了两秒。一周的命，就这么押上去了。",
+      "goto": "n_2mon_005_daystart",
+      "wordBudget": 400
+    },
+    "n_2mon_005_daystart": {
+      "id": "n_2mon_005_daystart",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "锤声重新连成片",
+        "light": "晨光落上钳工桌",
+        "smell": "铝屑味",
+        "touch": "槌柄温热",
+        "source": "refs P67"
+      },
+      "text": "散会，各就各位。今天的两个行动点，上午一个，下午一个。",
+      "goto": "d_2mon_020_action1",
+      "wordBudget": 30
+    },
+    "d_2mon_020_action1": {
+      "id": "d_2mon_020_action1",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月14日",
+      "time": "上午七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "锤声连成一片，下料组的锯床嘶拉嘶拉",
+        "light": "日头上来了，粉尘在光柱里浮着",
+        "smell": "铝屑腥气，汗咸味",
+        "touch": "槌柄被前一个人握得温热",
+        "source": "refs P67铣钳工段/P71打磨铝片"
+      },
+      "text": "锤声连成一片，广播器里放着进行曲。上午的厂房是个大战场，你的第一个行动点，往哪儿投？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "上钳工桌，接着敲框",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "进度表上，你名下添了一个小小的『1』。",
+          "goto": "d_2mon_021_work",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "中午帮小牛小辫子抬料去下料组",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "半个馒头的工夫，交了两个朋友。",
+          "goto": "d_2mon_022_social"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去资料室，帮着整理检验单",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_inspect_station"
+            ]
+          },
+          "flags": [
+            "f_saw_inspection_log"
+          ],
+          "aftermath": "你把一叠磁力探伤送检单理齐。检验站的流程，记得清清楚楚了。",
+          "goto": "d_2mon_023_explore"
+        }
+      ],
+      "wordBudget": 50
+    },
+    "d_2mon_021_work": {
+      "id": "d_2mon_021_work",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "上午",
+      "location": "金工车间·钳工桌",
+      "cast": [
+        "zhao",
+        "niu"
+      ],
+      "env": {
+        "sound": "你的木槌追着赵师傅那台的点儿",
+        "light": "光柱挪到了桌角",
+        "smell": "新铝皮的亮腥气",
+        "touch": "血泡瘪了，中间那层皮发硬发痒",
+        "source": "refs P77赵师傅教学"
+      },
+      "text": "一上午，你敲完一个框缘。速度只有别人的三分之一，但锤锤咬住了线。\n\n「新同学上手快！」路过的调度员冲赵师傅喊。赵师傅哼了一声：「慢是慢，没废料。」这话从他嘴里说出来，算顶格的表扬。\n\n小牛扛着杆料经过，冲你扬扬下巴：「行啊你！上礼拜还敲出死棱呢！」\n\n你低头看掌心。上礼拜的血泡瘪下去了，新的茧还没长出来，中间那点皮发硬，痒。\n\n进度表上，你名下添了一个小小的『1』。",
+      "goto": "d_2mon_035_action2",
+      "wordBudget": 210
+    },
+    "d_2mon_022_social": {
+      "id": "d_2mon_022_social",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "中午",
+      "location": "厂区路上",
+      "cast": [
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "蝉在庄稼地里叫成一片",
+        "light": "正午的太阳白花花地晒",
+        "smell": "晒热的土路味，汗味",
+        "touch": "铝棒压得肩膀生疼",
+        "source": "refs P71小辫子的诗"
+      },
+      "text": "料不算重，路不算近。小辫子在前头引路，小牛扛大头，你扶中间，一路上他俩把嗓子聊哑了。\n\n「你说，明年『十一』天上会有什么？」小辫子忽然问，不等答案自己接上，「原子飞机！要不就月球火箭！我们要在古老宫殿旁边，发射第一个飞向月球的火箭！」她眼睛亮得吓人。\n\n小牛嘿嘿笑：「先把这根杆料送到地方再说。」\n\n送到下料组，你肩膀压出两道红印。小辫子把一块烤馒头掰给你一半，算是工钱。\n\n半个馒头的工夫，你听了一首诗、扛了一趟料、交了两个朋友。这买卖，不亏。",
+      "goto": "d_2mon_035_action2",
+      "wordBudget": 215
+    },
+    "d_2mon_023_explore": {
+      "id": "d_2mon_023_explore",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "上午",
+      "location": "资料室",
+      "cast": [],
+      "env": {
+        "sound": "安静得耳朵嗡嗡响",
+        "light": "窗户纸滤过的光，匀而暗",
+        "smell": "旧纸张的干燥气味",
+        "touch": "送检单薄脆，边角卷了毛",
+        "source": "旧剧本1.03资料室细节＋素材库§2.6磁力探伤"
+      },
+      "text": "资料室安静得耳朵嗡嗡响。管资料的同志不在，桌上一摞检验单等你归拢。\n\n磁力探伤送检单。薄壁衬套一类的小件，摔不得碰不得，全要过检验站的磁力探伤，合格证签发前谁也不能装用。\n\n你把一星期的送检记录理了一遍，哪天送的、谁经手、几天出证，清清楚楚。\n\n脑子里那本『教科书』翻页似的闪了一下。这一页，好像写着什么。\n\n可你现在想不起来。只把『检验站』三个字，在心里描了一遍。",
+      "goto": "d_2mon_035_action2",
+      "wordBudget": 210
+    },
+    "d_2mon_035_action2": {
+      "id": "d_2mon_035_action2",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月14日",
+      "time": "下午一点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "下午的锤声更密，广播器咳了两声开始播通知",
+        "light": "西晒的光从高窗切进来，半座厂房金黄",
+        "smell": "淬火槽的酸气隔着半个车间飘来",
+        "touch": "汗把衬衫粘在背上",
+        "source": "refs P84热处理工段/P92广播"
+      },
+      "text": "西晒的光斜进来，淬火槽那边腾着白汽。下午的第二个行动点，往哪儿投？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "继续敲框，赶今天的数",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "下班前你数了数，今天两个。",
+          "goto": "d_2mon_036_work",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮小王送淬火件，一趟串全组",
+          "costHint": "体力-1·支线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_side_quench",
+            "taskProgress": 1
+          },
+          "npc": {
+            "wang": 1
+          },
+          "progressTags": [
+            "errand_quench"
+          ],
+          "aftermath": "小王把路线图叠好塞回烟壳纸，郑重其事揣进兜里。",
+          "goto": "d_2mon_037_social"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "留在资料室抄进度表听动静",
+          "costHint": "不显山露水·攒情报",
+          "effects": {},
+          "flags": [
+            "f_material_shortage"
+          ],
+          "aftermath": "老王和支书的半句话飘过来：「三十号料……就剩三天量了。」你握笔的手顿了一下。",
+          "goto": "d_2mon_038_explore"
+        }
+      ],
+      "wordBudget": 40
+    },
+    "d_2mon_036_work": {
+      "id": "d_2mon_036_work",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "下午",
+      "location": "金工车间·钣金工位",
+      "cast": [
+        "zhao",
+        "wang"
+      ],
+      "env": {
+        "sound": "两台木槌一唱一和，咚咚、咚咚",
+        "light": "西晒的金黄爬上胎模",
+        "smell": "铝屑味里混着汗咸",
+        "touch": "手腕酸，腰上却知道怎么使劲了",
+        "source": "refs P77师徒传承质感"
+      },
+      "text": "新领的框缘上桌的时候，你的锤声已经能跟上赵师傅那台的节拍了。\n\n「咚咚、咚咚」，两台木槌一唱一和。赵师傅忽然开口：「手腕松下来。劲从腰上走，不从膀子上走。」\n\n你照做。果然省力，锤点也稳了。\n\n下班前小王替你把账登了：「账要天天清。」进度表上，你名下的数又往上跳了一格。",
+      "goto": "n_2mon_night",
+      "wordBudget": 130
+    },
+    "d_2mon_037_social": {
+      "id": "d_2mon_037_social",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "下午",
+      "location": "厂区各工段之间",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "你和小王的脚步声追着广播器的通知跑",
+        "light": "影子被西晒拉得老长",
+        "smell": "淬火件的酸气隔着湿布丝丝往外钻",
+        "touch": "零件烫手，垫着湿布捧着，一路不敢停",
+        "source": "refs P83生产准备工跑腿段落"
+      },
+      "text": "淬火件烫手，垫着湿布捧着，一路不能停。小王在前，你在后，把模具组、样板库、检验台、热处理串成了一条线。\n\n「以前是东一头西一头地跑。」他抹把汗，「我把路线并了并，一趟清。你看，省出来的工夫，够多敲半个框！」\n\n他算这笔账的时候眼睛发光，像个刚优化完算法的工程师。\n\n你忽然觉得亲切。原来这年头也有同行。\n\n「小王，」你脱口而出，「你这个流程改法，提效至少三成。」\n\n「提效？」他愣了一下，咂摸了一下这两个字，「对，就是要提高效率！只要能让劳动效率提高，我什么都干！」",
+      "goto": "n_2mon_night",
+      "wordBudget": 215
+    },
+    "d_2mon_038_explore": {
+      "id": "d_2mon_038_explore",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月14日",
+      "time": "下午",
+      "location": "资料室",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "笔尖沙沙，图纸柜后传来压低的说话声",
+        "light": "西晒只剩一线，贴着柜顶走",
+        "smell": "旧纸张的干燥气味",
+        "touch": "誊表抄得指尖染蓝",
+        "source": "素材库§2.5缺料危机伏笔"
+      },
+      "text": "进度表抄到一半，材料组的老王来找支书，两个人在图纸柜后头嘀咕。\n\n声音很低，可『三十号料』四个字钻进了你耳朵。你抄表的手没停，耳朵全张开了。\n\n缺料。缺多少、缺多久，没听全。\n\n这是你脑中那本教科书完全没写的段落。\n\n你把进度表誊完，在自己本子角落记下一行小字，材料，三十号，告急。",
+      "goto": "n_2mon_night",
+      "wordBudget": 160
+    },
+    "n_2mon_night": {
+      "id": "n_2mon_night",
+      "act": 1,
+      "week": 2,
+      "day": "mon",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月14日",
+      "time": "夜里十点",
+      "location": "学生宿舍",
+      "cast": [
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "木板床吱呀，远处厂房还剩一台机器嗡嗡",
+        "light": "熄灯后只剩月光从窗户纸上漫进来",
+        "smell": "皂角味，被子上有太阳晒过的气息",
+        "touch": "床板硬，掌心的茧不敢沾褥子",
+        "source": "refs P83黎明的寒冷/P61木板床休息站"
+      },
+      "text": "宿舍熄了灯。上铺鼾声此起彼伏，谁在梦里喊了半句『快提手柄』。\n\n窗户纸上月光很淡，远处厂房还有一台机器在嗡嗡地转，不知道是谁，也在熬夜。\n\n你躺着，掌心的茧抵着褥子，一跳一跳。今天挣下的那个『数』，明天会长成什么呢？",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "你翻了个身。这一觉黑得纯粹，连梦都没有。"
+        },
+        {
+          "key": "overtime",
+          "text": "摸黑回车间，再赶几个零件",
+          "effects": {},
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "你摸黑回了车间，借着一盏灯又敲了半宿。进度+1，胳膊已经不是自己的了。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "睡不着，回车间陪小牛磨铝片",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "result": "调度室里，小牛和小辫子就着一盏灯磨铝片，沙沙的，像春蚕吃叶。你坐下搭把手，没人说话，铝片渐渐亮得能照见人影。回去的路上，月亮很好。"
+        }
+      ],
+      "goto": "n_2tue_005_daystart",
+      "wordBudget": 125
+    },
+    "n_2tue_005_daystart": {
+      "id": "n_2tue_005_daystart",
+      "act": 1,
+      "week": 2,
+      "day": "tue",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月15日",
+      "time": "早晨六点半",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "锤声稀稀拉拉",
+        "light": "晨光照出黑板角上的粉笔字",
+        "smell": "铁锈味比昨天重",
+        "touch": "名册纸边刮着指尖",
+        "source": "素材库§2.5"
+      },
+      "text": "周二。料荒的第二天，厂房里的锤声稀稀拉拉。",
+      "goto": "d_2tue_010",
+      "wordBudget": 22
+    },
+    "d_2tue_010": {
+      "id": "d_2tue_010",
+      "act": 1,
+      "week": 2,
+      "day": "tue",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月15日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "锤声比昨天稀，调度员的嗓门比昨天大",
+        "light": "黑板角上新添的一行粉笔字格外扎眼",
+        "smell": "机油味里多了铁锈味",
+        "touch": "名册的纸边刮着指尖",
+        "source": "素材库§2.5缺料危机伏笔"
+      },
+      "text": "黑板角上新添了一行字，三十号料，告急。\n\n老王跑了三天，今天一早又走了，听说这回要坐飞机去沈阳。料跟不上，机器等米下锅，连锤声都稀了。\n\n今天的第一个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "替小王跑一趟料单",
+          "costHint": "体力-1·支线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_side_quench",
+            "taskProgress": 1
+          },
+          "npc": {
+            "wang": 1
+          },
+          "progressTags": [
+            "errand_quench"
+          ],
+          "aftermath": "料单跑完，你对『等米下锅』四个字有了体重。",
+          "goto": "d_2tue_015_action2"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "上工位，把存货的活做透",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "没料的工位上，你把胎模擦得能照出人脸。",
+          "goto": "d_2tue_015_action2",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去调度室听风声",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_dispatch"
+            ]
+          },
+          "flags": [
+            "f_material_detail"
+          ],
+          "aftermath": "『全局在调，兄弟厂在让。』八个字，你抄进了本子。",
+          "goto": "d_2tue_015_action2"
+        }
+      ],
+      "wordBudget": 75
+    },
+    "d_2tue_090_night": {
+      "id": "d_2tue_090_night",
+      "act": 1,
+      "week": 2,
+      "day": "tue",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月15日",
+      "time": "夜里十点",
+      "location": "宿舍门槛",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "蛐蛐叫，纸页哗啦",
+        "light": "门槛里漏出一线灯光",
+        "smell": "蚊香的味道",
+        "touch": "夜风带凉，白天晒过的砖还温",
+        "source": "素材库§4蚊子夜战"
+      },
+      "text": "小王蹲在门槛上算料账，蚊香在他脚边绕圈。今晚怎么过？",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "蚊香烧完一圈，你就什么都不知道了。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "存货的铝皮还够敲两个钟头。进度+1，胳膊酸得诚实。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "蹲下来，帮小王对账",
+          "effects": {},
+          "npc": {
+            "wang": 1
+          },
+          "result": "你们对着烟壳纸上的路线图核到后半夜。他忽然说：「有你搭手，我敢想更大的并法了。」"
+        }
+      ],
+      "goto": "n_2wed_005_daystart",
+      "wordBudget": 30
+    },
+    "n_2wed_005_daystart": {
+      "id": "n_2wed_005_daystart",
+      "act": 1,
+      "week": 2,
+      "day": "wed",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月16日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "两个节拍的锤声隔着过道一问一答",
+        "light": "晨光平铺在钳工桌上",
+        "smell": "铝屑味",
+        "touch": "草图在兜里硌着胯骨",
+        "source": "refs P77"
+      },
+      "text": "周三早晨。你揣着昨晚描好的草图进了车间。",
+      "goto": "d_2wed_010",
+      "wordBudget": 20
+    },
+    "d_2wed_010": {
+      "id": "d_2wed_010",
+      "act": 1,
+      "week": 2,
+      "day": "wed",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月16日",
+      "time": "上午九点",
+      "location": "金工车间",
+      "cast": [
+        "zhao"
+      ],
+      "env": {
+        "sound": "两个节拍的锤声隔着过道一问一答",
+        "light": "上午的光平铺在钳工桌上",
+        "smell": "铝屑味",
+        "touch": "指尖无意识地在桌沿画流程图",
+        "source": "refs P77师徒传承"
+      },
+      "text": "上午你盯着两个工位发呆，下料组切好的料，堆在钳工桌前等人；钳工敲完的框，又在检验台前排着队。各干各的，中间全是等。\n\n职业病又犯了，这不就是流水线阻塞吗？\n\n你瞄了一眼赵师傅的背影。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "当面提两道工序并着走",
+          "costHint": "可能碰壁·也可能立功",
+          "effects": {
+            "integration": 1
+          },
+          "npc": {
+            "zhao": 1
+          },
+          "flags": [
+            "f_suggest_flow"
+          ],
+          "aftermath": "赵师傅停了槌，回头看了你足足三秒。",
+          "goto": "d_2wed_090_response"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "先画在纸上，托小王递话",
+          "costHint": "稳·借人递话",
+          "effects": {},
+          "npc": {
+            "wang": 1
+          },
+          "flags": [
+            "f_suggest_flow_paper"
+          ],
+          "aftermath": "小王把你的草图端详半天：「有点意思。我给你递。」",
+          "goto": "d_2wed_090_response"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "把话咽回去，先干完自己的",
+          "costHint": "建议流产",
+          "effects": {},
+          "flags": [
+            "f_suggest_swallowed"
+          ],
+          "aftermath": "晚上你把那条建议写进本子，旁边画了个问号。",
+          "goto": "d_2wed_015_action2"
+        }
+      ],
+      "wordBudget": 90
+    },
+    "d_2wed_090_response": {
+      "id": "d_2wed_090_response",
+      "act": 1,
+      "week": 2,
+      "day": "wed",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月16日",
+      "time": "中午十二点",
+      "location": "金工车间·下料组窗口",
+      "cast": [
+        "zhao",
+        "wang"
+      ],
+      "env": {
+        "sound": "锯床换了首曲子，嘶拉声顺了不少",
+        "light": "正午的光从高窗直直落下来",
+        "smell": "切削液微甜的气味",
+        "touch": "草图边角被汗浸软了",
+        "source": "refs P83生产准备工"
+      },
+      "text": "不管这条建议是怎么走到赵师傅面前的，它走到了。\n\n「想法是活的。」他把草图按在下料组窗台上，「可手上功夫没到，并行就是乱套。不过，」他朝里头喊，「往后给钣金送料，按敲打的顺序送！谁的主意？」\n\n小王指了你。\n\n「半条计。」赵师傅说，「也算计。」\n\n半条计也是计。心里那点职业病的痒，头一回挠对了地方。在我的世界，这叫最小可行改动。",
+      "goto": "d_2wed_015_action2",
+      "wordBudget": 160
+    },
+    "d_2wed_095_night": {
+      "id": "d_2wed_095_night",
+      "act": 1,
+      "week": 2,
+      "day": "wed",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月16日",
+      "time": "夜里十点",
+      "location": "宿舍",
+      "cast": [],
+      "env": {
+        "sound": "上铺翻身的吱呀声",
+        "light": "月光切在被子上",
+        "smell": "白天的日头味",
+        "touch": "草稿纸垫在枕头下，硌出一个角",
+        "source": "refs P83"
+      },
+      "text": "睡前你把那张流程草图又描了一遍。今晚怎么过？",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "梦里那条流水线终于不堵了。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "按新送法，料来得顺手，你多敲出了一个框的量。进度+1。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "找小辫子，问问登记册的门道",
+          "effects": {},
+          "npc": {
+            "bianzi": 1,
+            "niu": 1
+          },
+          "result": "她把登记册摊给你看：「图号就是我们的战线地图。」小牛补充：「丢一个图号，等于丢一场仗。」"
+        }
+      ],
+      "goto": "n_2thu_005_daystart",
+      "wordBudget": 25
+    },
+    "n_2thu_005_daystart": {
+      "id": "n_2thu_005_daystart",
+      "act": 1,
+      "week": 2,
+      "day": "thu",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月17日",
+      "time": "早晨六点半",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "广播器试音的电流声",
+        "light": "晨光斜过高窗",
+        "smell": "豆浆味混着机油味",
+        "touch": "手心的汗把槌柄浸得发滑",
+        "source": "refs P92"
+      },
+      "text": "周四。广播器一开闸，比武的日子近了。",
+      "goto": "d_2thu_010",
+      "wordBudget": 18
+    },
+    "d_2thu_010": {
+      "id": "d_2thu_010",
+      "act": 1,
+      "week": 2,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月17日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "广播器在念各工段的比武完成率",
+        "light": "晨光里，黑板上的数字重新写过",
+        "smell": "豆浆味今天没人顾得上喝",
+        "touch": "广播的铁皮壳子震得嗡嗡的",
+        "source": "refs P92广播/P84比武大会"
+      },
+      "text": "广播器念各工段完成率，机身工段暂时第二。第一是铆装段，他们把标语改成了「苦战72小时」。\n\n方岩在黑板上加了一行，落后就是落后，没有理由。\n\n今天的第一个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "加点干，追回一个框的差距",
+          "costHint": "体力-2·主线进度+2",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 2
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "收工时你的双臂抖得端不住搪瓷缸，但数追上了。",
+          "goto": "d_2thu_015_action2",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "串门学艺，去看铆装段的枪声",
+          "costHint": "开眼·涨见识",
+          "effects": {
+            "integration": 1,
+            "exploreTags": [
+              "explore_riveting"
+            ]
+          },
+          "flags": [
+            "f_seen_riveting"
+          ],
+          "aftermath": "嗒嗒嗒的铁枪声里，你头一回觉得机器像武器，车间像阵地。",
+          "goto": "d_2thu_015_action2"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "帮统计组清点库存",
+          "costHint": "不显山露水·攒情报",
+          "effects": {},
+          "npc": {
+            "bianzi": 1
+          },
+          "flags": [
+            "f_stock_mismatch"
+          ],
+          "aftermath": "清到最后，三十号料的库存数跟账面对不上。少了还是记错了，没人说得清。",
+          "goto": "d_2thu_015_action2"
+        }
+      ],
+      "wordBudget": 80
+    },
+    "d_2thu_090_night": {
+      "id": "d_2thu_090_night",
+      "act": 1,
+      "week": 2,
+      "day": "thu",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月17日",
+      "time": "夜里十一点",
+      "location": "宿舍",
+      "cast": [],
+      "env": {
+        "sound": "有人梦话里喊口号",
+        "light": "窗外偶尔扫过手电的光柱",
+        "smell": "风油精的清凉味",
+        "touch": "太阳穴一跳一跳",
+        "source": "素材库§4组织行为氛围"
+      },
+      "text": "比武到了节骨眼，宿舍里的呼吸都比前几天沉。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "口号是别人喊的，觉是你自己的。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "凌晨的厂房只剩你一盏灯。进度+1。英国佬睡了，美国佬也睡了，你没有睡。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "去找方岩，问问落后的对策",
+          "effects": {},
+          "npc": {
+            "fang": 1
+          },
+          "result": "他正在黑板前站着。「急不急？」「急。」「急就睡好。明天的仗要清醒的脑子打。」"
+        }
+      ],
+      "goto": "n_2fri_005_daystart",
+      "wordBudget": 25
+    },
+    "n_2fri_005_daystart": {
+      "id": "n_2fri_005_daystart",
+      "act": 1,
+      "week": 2,
+      "day": "fri",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月18日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "标语纸往墙上刷的声响",
+        "light": "大白亮的灯压过晨光",
+        "smell": "切削液的热气",
+        "touch": "衬衫一上身就贴了背",
+        "source": "refs P68"
+      },
+      "text": "周五，验收前最后一天。",
+      "goto": "d_2fri_010",
+      "wordBudget": 10
+    },
+    "d_2fri_010": {
+      "id": "d_2fri_010",
+      "act": 1,
+      "week": 2,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月18日",
+      "time": "早晨八点",
+      "location": "金工车间",
+      "cast": [
+        "fang",
+        "wang",
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "标语纸刷刷上墙，调度员嗓子已经喊劈了",
+        "light": "大白亮的灯压过晨光",
+        "smell": "切削液和汗水混成一团热气",
+        "touch": "空气黏稠，衬衫十分钟就贴上了背",
+        "source": "refs P67支援铣工段/P68苦战24小时"
+      },
+      "text": "标语换了新的，「苦战24小时，迎接验收！」\n\n铣钳工段成了关口，调度员嗓子劈了还在喊：「支援铣钳工段！用手挖也得完成任务！」\n\n锉声、锯声、槌声几乎盖过了机床，全员压上去。\n\n验收前最后一天，你怎么打？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "支援钳工段，用手挖也干",
+          "costHint": "体力-2·主线进度+2",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 2
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "flags": [
+            "f_supported_mill"
+          ],
+          "aftermath": "铁屑混着汗水洒了一地，你也洒在里面。",
+          "goto": "d_2fri_015_action2",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "坚守本岗，把最后的框收尾",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "你的工位安安静静，交出去的框一个没废。",
+          "goto": "d_2fri_015_action2",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "扶晕倒的小林去医务室",
+          "costHint": "离开战场·错过冲刺",
+          "effects": {},
+          "npc": {
+            "xiaolin": 1
+          },
+          "flags": [
+            "f_helped_xiaolin"
+          ],
+          "aftermath": "收工的欢呼传到医务室时，你正扶着小林往回走。热闹是你的，你不在场。",
+          "goto": "d_2fri_015_action2"
+        }
+      ],
+      "wordBudget": 95
+    },
+    "d_2fri_090_night": {
+      "id": "d_2fri_090_night",
+      "act": 1,
+      "week": 2,
+      "day": "fri",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月18日",
+      "time": "深夜十二点",
+      "location": "金工车间门口",
+      "cast": [],
+      "env": {
+        "sound": "厂房里的动静终于低了下去",
+        "light": "只剩几盏灯还亮着，像哨位",
+        "smell": "夜露压住了机油味",
+        "touch": "门槛石被一天的脚踩得温润",
+        "source": "refs P72"
+      },
+      "text": "验收前夜。厂房像一头终于喘匀了气的兽。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "回去睡觉，养足精神",
+          "effects": {},
+          "result": "你睡得很沉。明天有大事。"
+        },
+        {
+          "key": "overtime",
+          "text": "再守最后一班岗",
+          "effects": {
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "你把最后半块料敲完了。进度+1。回头路上，东边已经泛白。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "陪值夜的赵师傅坐一会儿",
+          "effects": {},
+          "npc": {
+            "zhao": 1
+          },
+          "result": "他擦着一排木槌，像擦一群孩子。「手艺这东西，」他忽然说，「是拿日子喂出来的。」"
+        }
+      ],
+      "goto": "n_2sat_010",
+      "wordBudget": 20
+    },
+    "n_2sat_010": {
+      "id": "n_2sat_010",
+      "act": 1,
+      "week": 2,
+      "day": "sat",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "choice",
+      "date": "1958年7月19日",
+      "time": "傍晚七点",
+      "location": "宿舍房顶",
+      "cast": [
+        "niu",
+        "bianzi",
+        "wang"
+      ],
+      "env": {
+        "sound": "难得的静，虫鸣都懒洋洋的",
+        "light": "天刚黑透，银河出来了",
+        "smell": "瓦檐的日晒味",
+        "touch": "棉被垫着靠床头，砖还存着白天的热",
+        "source": "素材库§4棉被看星星"
+      },
+      "text": "验收前的周六傍晚，难得没人催活。房顶上有人占好了位置，棉被垫着靠床头，星星一颗一颗地出来。\n\n你上去吗？跟谁？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "挤进小牛小辫子中间坐下",
+          "costHint": "经营挚友线",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "他们教你认北斗。你差点说出那三个字母，咽回去了。",
+          "goto": "w2_settle"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "跟小王捋下周的路线",
+          "costHint": "经营后勤线",
+          "effects": {},
+          "npc": {
+            "wang": 1
+          },
+          "aftermath": "一张烟壳纸画到月亮偏西，捋出两条新路。",
+          "goto": "w2_settle"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "一个人上去待会儿",
+          "costHint": "独处·想家",
+          "effects": {},
+          "aftermath": "银河还是那条银河。你想家想得很具体，想到的是外卖和地铁。",
+          "goto": "w2_settle"
+        }
+      ],
+      "wordBudget": 55
+    },
+    "w2_settle": {
+      "id": "w2_settle",
+      "act": 1,
+      "week": 2,
+      "day": "sun",
+      "phase": "WEEK_SETTLE",
+      "type": "settle",
+      "date": "1958年7月20日",
+      "time": "傍晚六点",
+      "location": "金工车间",
+      "cast": [
+        "fang",
+        "zhao"
+      ],
+      "env": {
+        "sound": "广播器的电流声滋啦一响，整个厂房静了下来",
+        "light": "傍晚的光斜在黑板上，粉笔字发亮",
+        "smell": "晚饭的白菜汤味漫进厂房",
+        "touch": "黑板前的粉笔灰簌簌落在手背",
+        "source": "refs P92广播实时播报捷报/P84比武条件"
+      },
+      "text": "周日晚饭前，广播器的电流声『滋啦』一响，整个厂房静了下来。\n\n「报捷，机身工段本周交出尾段框{{task:task_w2_main_weiduankuang}}个，比武条件{{target:task_w2_main_weiduankuang}}个！」\n\n半秒钟的静，然后满厂房都是跺脚声和口哨声。黑板上那条红线画到了头，方岩把那个数字写得顶到了框，粉笔都断了。\n\n「同志们！」他对满屋子的人挥手，「苦战五昼夜，咱们说到做到！」\n\n你站在人群后排鼓掌。掌心的茧蹭着另一只手的茧。\n\n一周前你还不知道木槌该怎么握。现在你名下有自己的{{my:task_w2_main_weiduankuang}}个框，掌心的茧厚了一圈，认得的人也从一个人变成了半个车间。\n\n广播又响了一声：「钣金工段报捷，本周框缘合格率百分之百！」人群里，赵师傅哼了一声，嘴角却压不住。\n\n教科书上就一行字的事，是他们的一百个昼夜。\n\n而你现在也在里面了。",
+      "goto": "n_act1_end_path",
+      "wordBudget": 350
+    },
+    "n_act1_end_path": {
+      "id": "n_act1_end_path",
+      "act": 1,
+      "week": 2,
+      "day": "sun",
+      "phase": "WEEK_SETTLE",
+      "type": "choice",
+      "date": "1958年7月20日",
+      "time": "晚饭后",
+      "location": "支部办公室门口",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "办公室的算盘珠子噼啪响了几下，停了",
+        "light": "一盏台灯，灯罩把光拢成一小圈",
+        "smell": "墨水与旧木头味",
+        "touch": "名册封皮起了毛边",
+        "source": "refs P77支书谈话场景"
+      },
+      "text": "结完账，方岩把你留了下来。\n\n「名册要定组了。」他用铅笔在本子上点了三个格，「钣金，跟着赵师傅；统计，帮小牛他们；资料室，管图纸档案。」\n\n「你自己挑。挑了的，就是你的阵地。」\n\n铅笔尖悬在三行字上面。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "去钣金，跟着赵师傅",
+          "costHint": "干活产出↑·赵师傅好感起步",
+          "effects": {
+            "integration": 1
+          },
+          "npc": {
+            "zhao": 1
+          },
+          "flags": [
+            "f_path_banjin"
+          ],
+          "aftermath": "方岩笑了：「好。铁砧子上再淬一遍。」",
+          "goto": "end_act1_diary"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "去统计组，帮小牛他们",
+          "costHint": "社交效果↑·挚友组起步",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "flags": [
+            "f_path_tongji"
+          ],
+          "aftermath": "「统计组的算盘珠子，就差你这颗。」方岩说。",
+          "goto": "end_act1_diary"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去资料室，守图纸档案",
+          "costHint": "探索产出↑·偏离风险更大",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_path_ziliao"
+          ],
+          "aftermath": "方岩多看了你一眼：「资料室清净，也不清净。图纸守好了，什么都守住了。」",
+          "goto": "end_act1_diary"
+        }
+      ],
+      "wordBudget": 95
+    },
+    "end_act1_diary": {
+      "id": "end_act1_diary",
+      "act": 1,
+      "week": 2,
+      "day": "sun",
+      "phase": "WEEK_SETTLE",
+      "type": "diary",
+      "date": "1958年7月20日",
+      "time": "熄灯前",
+      "location": "宿舍",
+      "cast": [],
+      "text": "「七月二十日，晴。\n\n来到这里的第十一个昼夜。\n\n手掌上有茧了。信写了又揉，夹在那本书里。今天定组，我选了自己的阵地。\n\n我还不知道怎么回去。我开始知道，为什么要敲好每一个框。\n\n那本越读越薄的教科书，今晚薄得像一张纸。\n\n纸上全是名字。」",
+      "wordBudget": 110,
+      "goto": "w3_open"
+    },
+    "card_chentao_xujing_portal": {
+      "id": "card_chentao_xujing_portal",
+      "act": 1,
+      "week": 3,
+      "day": "mon",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "card_portal",
+      "date": "预知展开",
+      "time": "凌晨",
+      "location": "磨床旁",
+      "cast": [
+        "fang",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "磨床嗡嗡，冷却油滴答",
+        "light": "一盏灯照着旋转的砂轮，火星细碎",
+        "smell": "金属磨削的焦香味",
+        "touch": "卡片在掌心发烫",
+        "source": "refs P63方青磨衬套小辫子加冷却油（改名换姓）"
+      },
+      "text": "卡片在你掌心发烫，眼前的画面猛地拉近。\n\n磨床旁。支书亲自撑着磨衬套，小辫子在边上加冷却油，一天一夜没睡，眼睛却亮得惊人。磨好了一个，她伸手来接，嘴里说着「多光啊」，指腹摩挲那光滑的表面。\n\n你知道下一秒会发生什么。衬套会从她手里滑落，当啷一声砸在地上。磁力探伤最终会证明它是好的，可她会躲进草地里哭，在检验站守一整夜，浮肿着眼睛等清晨那张合格证。\n\n现在，你有大约三十秒。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "抢前一步，托住她的手提醒拿稳",
+          "costHint": "偏离+1·事件被没收",
+          "effects": {
+            "deviation": 1
+          },
+          "aftermath": "衬套没掉。小辫子莫名其妙看了你一眼，继续干活。本来要发生的，被你没收了。",
+          "goto": "end_card_chentao_xujing"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "什么也不做，转身走开",
+          "costHint": "见证标记·偏离0",
+          "effects": {},
+          "flags": [
+            "f_witness_chentao"
+          ],
+          "aftermath": "你去了图纸台。身后当啷一声，你没有回头。",
+          "goto": "end_card_chentao_xujing"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "让它发生，陪她守检验站到天亮",
+          "costHint": "体力-3·信任大涨",
+          "effects": {
+            "stamina": -3
+          },
+          "npc": {
+            "bianzi": 2,
+            "niu": 1
+          },
+          "flags": [
+            "f_guarded_night"
+          ],
+          "aftermath": "那一夜很长。合格证是清晨到的，她举着它飞奔回来，像举着一面旗。",
+          "goto": "end_card_chentao_xujing"
+        }
+      ],
+      "wordBudget": 185
+    },
+    "end_card_chentao_xujing": {
+      "id": "end_card_chentao_xujing",
+      "act": 1,
+      "week": 3,
+      "day": "mon",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "story",
+      "date": "1958年7月21日",
+      "time": "凌晨",
+      "location": "磨床旁",
+      "cast": [],
+      "env": {
+        "sound": "磨床的嗡嗡声回到耳边",
+        "light": "灯还是那盏灯",
+        "smell": "金属磨削的焦香味未散",
+        "touch": "掌心的卡片凉了下来",
+        "source": "refs P63（预知收束场景，与门户同源）"
+      },
+      "text": "画面像退潮一样散去。磨床的嗡嗡声回到耳边，掌心的卡片凉了下来。\n\n只是有些事，从此只有你知道它会怎么发生。",
+      "wordBudget": 55
+    },
+    "w3_open": {
+      "id": "w3_open",
+      "act": 2,
+      "week": 3,
+      "day": "sun",
+      "phase": "FREE",
+      "type": "choice",
+      "date": "1958年7月20日",
+      "time": "深夜",
+      "location": "宿舍窗前",
+      "cast": [],
+      "env": {
+        "sound": "车间那头的锤声彻夜未停",
+        "light": "远处厂房亮得比任何一夜都狠",
+        "smell": "夜风里的雨腥气",
+        "touch": "窗框冰凉",
+        "source": "素材库§2.5危机周氛围"
+      },
+      "text": "周日深夜，你睡不着。上周验收的锣鼓声还在耳朵里，可车间那头的灯，亮得比往常任何一夜都狠。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "condition": {
+            "flag": "crisis_w2_main"
+          },
+          "text": "去车间，直面追责会",
+          "costHint": "戴罪之身",
+          "effects": {},
+          "aftermath": "你披上衣服出了门。有些账，得当面认。",
+          "goto": "crisis_w2_intro"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "condition": {
+            "not": {
+              "flag": "crisis_w2_main"
+            }
+          },
+          "text": "照常迎接新的一周",
+          "costHint": "",
+          "effects": {},
+          "aftermath": "你吹熄了灯。明天是定组后的第一个早晨。",
+          "goto": "w3_start"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "crisis_w2_intro": {
+      "id": "crisis_w2_intro",
+      "act": 2,
+      "week": 3,
+      "day": "sun",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "story",
+      "date": "1958年7月20日",
+      "time": "深夜十一点",
+      "location": "金工车间",
+      "cast": [
+        "fang",
+        "wang"
+      ],
+      "env": {
+        "sound": "追责会开得很静，静得像下大雪前的天",
+        "light": "一盏灯吊在黑板前",
+        "smell": "烟味呛人",
+        "touch": "手心的汗把裤缝攥皱了",
+        "source": "01 D3 修正危机链（剧情化落地）"
+      },
+      "text": "追责会。方岩第一次当众没压住火，黑板上那个数，差着三个框。\n\n有人说人手分薄了。你没躲，也没辩。\n\n桌上摊着老王从沈阳发回来的电报，空手而归。\n\n方岩最后说：「骂，解决不了框。明天起全组给材料组打下手，戴罪立功四个字，送给我们所有人。」\n\n散会时他单独留了你一句：「你的牌子，这周翻倍。」",
+      "goto": "crisis_w2_oath",
+      "wordBudget": 200
+    },
+    "crisis_w2_oath": {
+      "id": "crisis_w2_oath",
+      "act": 2,
+      "week": 3,
+      "day": "sun",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "choice",
+      "date": "1958年7月20日",
+      "time": "午夜",
+      "location": "金工车间·军令状前",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "粉笔在纸上划出的沙沙声",
+        "light": "灯把军令状照得雪亮",
+        "smell": "墨水味",
+        "touch": "印泥凉，指印却按得很重",
+        "source": "素材库§4向党保证/军令状组织行为"
+      },
+      "text": "军令状铺在桌上。怎么立？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "连轴转，把缺口一口吞下",
+          "costHint": "体力-3·伤身",
+          "effects": {
+            "stamina": -3
+          },
+          "aftermath": "你在军令状上按了手印。指印很重，像要把名字嵌进纸里。",
+          "goto": "crisis_w2_resolve"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "分批补交，稳住阵线",
+          "costHint": "稳·慢",
+          "effects": {},
+          "npc": {
+            "fang": 1
+          },
+          "aftermath": "你把补交计划抄成两份，一份交方岩，一份贴床头。",
+          "goto": "crisis_w2_resolve"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "如实上报，等院部支援",
+          "costHint": "等待·受制于人",
+          "effects": {},
+          "aftermath": "院部的回话第二天才到，支援有，排队等。队伍里，你们排最后。",
+          "goto": "crisis_w2_resolve"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "crisis_w2_resolve": {
+      "id": "crisis_w2_resolve",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "story",
+      "date": "1958年7月21日",
+      "time": "清晨六点",
+      "location": "机身工段黑板前",
+      "cast": [
+        "fang",
+        "feng"
+      ],
+      "env": {
+        "sound": "晨会前少有的安静",
+        "light": "晨光照着黑板上陌生的字迹",
+        "smell": "豆浆味没人顾得上闻",
+        "touch": "军令状的折痕硌着口袋",
+        "source": "素材库§2.5接头问题"
+      },
+      "text": "无论你怎么立的状，周一早晨的黑板给了所有人同一个答案。\n\n冯工的粉笔字第一次出现在机身工段的黑板上。\n\n「接头不过关，一切等于零。」\n\n字后面没有画红线。他不敢画。\n\n危机换了战场。",
+      "goto": "w3_start",
+      "wordBudget": 120
+    },
+    "w3_start": {
+      "id": "w3_start",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "WEEK_START",
+      "type": "choice",
+      "date": "1958年7月21日",
+      "time": "早晨六点半",
+      "location": "机身工段黑板前",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "晨会的人声压着机床的低音",
+        "light": "晨光照着黑板上的两行字，一行比武条件，一行冯工的字",
+        "smell": "豆浆混着机油味",
+        "touch": "名册合上了，这次是真的定了组",
+        "source": "refs P84/P77"
+      },
+      "text": "周一晨会。方岩念完各组任务，念到你名字的时候，合上了名册。\n\n「新同学，定组了。」他看着你，「说吧。你要哪个阵地？」\n\n铅笔尖又悬起来了。这一次，悬在你自己手里。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "condition": {
+            "flag": "f_path_banjin"
+          },
+          "text": "钣金组，跟赵师傅当学徒",
+          "costHint": "干活产出↑",
+          "effects": {
+            "integration": 1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "npc": {
+            "zhao": 1
+          },
+          "aftermath": "方岩点头：「赵师傅，给你添徒了。」赵师傅哼了一声，往旁边让出一个工位，那是他留给好苗子的位置。",
+          "goto": "n_3mon_005_daystart"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "condition": {
+            "flag": "f_path_tongji"
+          },
+          "text": "统计组，管半块黑板",
+          "costHint": "社交产出↑",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "「算盘珠子到齐了。」小辫子把半截红铅笔拍进你手心。小牛扛来一只新登计簿：「战况升级，武器也升级。」",
+          "goto": "n_3mon_005_daystart"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "condition": {
+            "flag": "f_path_ziliao"
+          },
+          "text": "资料室，守图纸档案",
+          "costHint": "探索产出↑·预知提前",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "aftermath": "方岩多看了你一眼：「资料室的钥匙，全院只有三把。」他把其中一把放进你掌心，凉的。",
+          "goto": "n_3mon_005_daystart"
+        }
+      ],
+      "wordBudget": 130
+    },
+    "n_3mon_005_daystart": {
+      "id": "n_3mon_005_daystart",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月21日",
+      "time": "早晨七点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "锤声、锯声、广播声",
+        "light": "晨光落进各自的新阵地",
+        "smell": "铝屑与铁锈混杂",
+        "touch": "新的登记簿／新的钥匙／新的工位",
+        "source": "refs P67"
+      },
+      "text": "定组后的第一个行动点。",
+      "goto": "d_3mon_010_action",
+      "wordBudget": 12
+    },
+    "d_3mon_010_action": {
+      "id": "d_3mon_010_action",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月21日",
+      "time": "上午八点",
+      "location": "金工车间／货站",
+      "cast": [],
+      "env": {
+        "sound": "调度哨声此起彼伏",
+        "light": "地图上的图钉红成一片",
+        "smell": "铁锈味浓了",
+        "touch": "电报纸毛糙剌手",
+        "source": "素材库§2.5缺一千多件零件材料"
+      },
+      "text": "老王带回来的消息传遍车间，缺的不止三十号料。一千多件零件的材料，全国都在找。调度室的地图上插满了图钉。\n\n今天的第一条行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "报名跟车去货站蹲料",
+          "costHint": "体力-2·主线+1",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "explore_dispatch"
+          ],
+          "aftermath": "货站的木箱堆得像城墙。你啃着硬面包数了半夜箱子。",
+          "goto": "d_3mon_015_action2"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "回阵地，把手头的活干透",
+          "costHint": "体力-1·主线+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "料越缺，手上越不能出废品。这话今天没人说，人人都这么做。",
+          "goto": "d_3mon_015_action2",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "帮调度室誊写寻料电报",
+          "costHint": "攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_dispatch"
+            ]
+          },
+          "flags": [
+            "f_knew_hunt_map"
+          ],
+          "aftermath": "十一封电报，十一个地名。你把它们背下来了。",
+          "goto": "d_3mon_015_action2"
+        }
+      ],
+      "wordBudget": 110
+    },
+    "n_3mon_090_night": {
+      "id": "n_3mon_090_night",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月21日",
+      "time": "夜里十一点",
+      "location": "学生宿舍",
+      "cast": [
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "厂房的灯比星星还密",
+        "light": "窗外一片通明的轮廓",
+        "smell": "夜风里有雨意",
+        "touch": "枕头底下压着你的本子",
+        "source": "素材库§2.5危机周氛围"
+      },
+      "text": "危机周第一夜。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "梦里的图钉红成一片，你一个一个往下拔。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "接头件的毛坯还剩一堆。进度+1。凌晨的车间，灯比月亮实在。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "陪小牛他们清点库存件",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "result": "你们把库存件一件一件摸过、记过。小辫子忽然说：「账清了，心里就不慌了。」"
+        }
+      ],
+      "goto": "n_3tue_005_daystart",
+      "wordBudget": 100
+    },
+    "n_3tue_005_daystart": {
+      "id": "n_3tue_005_daystart",
+      "act": 2,
+      "week": 3,
+      "day": "tue",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月22日",
+      "time": "早晨七点",
+      "location": "金工车间·检验台旁",
+      "cast": [],
+      "env": {
+        "sound": "检验台的台灯嗡嗡",
+        "light": "灯光聚在一枚样件上",
+        "smell": "切削液微甜",
+        "touch": "样件冰凉，公差卡尺硌手",
+        "source": "素材库§2.5接头问题"
+      },
+      "text": "周二。接头攻关第一天，冯工亲自下了车间。",
+      "goto": "d_3tue_010_action",
+      "wordBudget": 18
+    },
+    "d_3tue_010_action": {
+      "id": "d_3tue_010_action",
+      "act": 2,
+      "week": 3,
+      "day": "tue",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月22日",
+      "time": "上午九点",
+      "location": "金工车间·检验台",
+      "cast": [
+        "feng",
+        "cheng"
+      ],
+      "env": {
+        "sound": "卡尺的轻响，人群屏住的呼吸",
+        "light": "台灯把冯工的影子钉在墙上",
+        "smell": "金属和油",
+        "touch": "样件传到你手里，沉得出乎意料",
+        "source": "素材库§2.5最重要部件出问题＋§3程秉原型"
+      },
+      "text": "冯工蹲在检验台前，手里捏着接头的样件，看了足足十分钟，一言不发。\n\n工艺员小声说，公差已经压到极限了，还是装不进去。\n\n全场安静。这个部件有多要紧，不用任何人解释，它是把整架飞机连成一体的那一环。\n\n今天的行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "报名进接头突击小组",
+          "costHint": "体力-1·主线+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "flags": [
+            "f_joined_squad"
+          ],
+          "aftermath": "小组七个人，你是唯一的新面孔。没有人反对，这比欢迎更让人心跳。",
+          "goto": "d_3tue_015_action2",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "给突击小组跑腿送样件",
+          "costHint": "体力-1·结识程秉",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "flags": [
+            "f_met_cheng"
+          ],
+          "aftermath": "收样的检验工叫程秉，话极少，验一件签一件，笔头像刻碑。他冲你点了下头。后来你知道，这就是他的最高礼遇。",
+          "goto": "d_3tue_015_action2"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "记下冯工说的每句要点",
+          "costHint": "攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_feng_notes"
+          ],
+          "aftermath": "四页纸记得满满当当。最后一页只记了半句，他那句话没说完。",
+          "goto": "d_3tue_015_action2"
+        }
+      ],
+      "wordBudget": 140
+    },
+    "n_3tue_090_night": {
+      "id": "n_3tue_090_night",
+      "act": 2,
+      "week": 3,
+      "day": "tue",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月22日",
+      "time": "夜里十一点半",
+      "location": "学生宿舍",
+      "cast": [],
+      "env": {
+        "sound": "远处锤声比昨晚急",
+        "light": "月光稀薄",
+        "smell": "风油精味",
+        "touch": "被角掖了又掖",
+        "source": "refs P83"
+      },
+      "text": "接头的事压在每个人心口。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "你睡着了，梦里全是装不进去的接头。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "进度+1。今晚的厂房很静，静得听得见自己的心跳追着锤点跑。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "去检验站，找程秉问检验标准",
+          "effects": {},
+          "result": "他话还是极少，但翻开了他的检验记录本给你看，每一页都工整如印刷。「标准这东西，纸上的是条文，手上的才算分寸。」"
+        }
+      ],
+      "goto": "n_3wed_005_daystart",
+      "wordBudget": 95
+    },
+    "n_3wed_005_daystart": {
+      "id": "n_3wed_005_daystart",
+      "act": 2,
+      "week": 3,
+      "day": "wed",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月23日",
+      "time": "上午十点",
+      "location": "金工车间·锯床旁",
+      "cast": [],
+      "env": {
+        "sound": "一切如常的上午",
+        "light": "白光圈落在各工位",
+        "smell": "铝屑味",
+        "touch": "槌柄温热",
+        "source": "refs P66"
+      },
+      "text": "周三上午，一切如常，直到锯床的方向传来一声尖叫。",
+      "goto": "n_3wed_saw",
+      "wordBudget": 24
+    },
+    "n_3wed_saw": {
+      "id": "n_3wed_saw",
+      "act": 2,
+      "week": 3,
+      "day": "wed",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月23日",
+      "time": "上午十点一刻",
+      "location": "金工车间·下料组锯床",
+      "cast": [
+        "niu",
+        "fang",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "锯床有节奏的声音突然变成尖叫的怪音",
+        "light": "白光圈外人群围拢",
+        "smell": "焦臭的浓烟味",
+        "touch": "你手心全是汗，槌掉在地上都没听见",
+        "source": "refs P66小牛挡锯弓（改名换姓）"
+      },
+      "text": "锯床下料的节奏声突然变成尖叫的怪音，锯弓直往杆料上压，锯条和工件剧烈摩擦，冒起一股焦臭的浓烟。\n\n「快提手柄！」不知谁喊了一句。操作的是小牛。他早把柄转到上升位置，手柄失灵了！全院唯一的一根锯条眼看就要压断。\n\n一刹那间，小牛痛苦地歪曲着脸，好像那上百斤的锯弓压在他身上。\n\n他猛地关了电门，一个箭步跳到锯床前，深深弯下腰，用肩膀和双手拉住了下沉的锯弓！电流断了。可锯弓靠着惯性，毫不留情地朝他的手冲过去。\n\n「放手！」方岩吼着冲过去。\n\n小牛没有放手。\n\n血顺着锯条流下来，倒流进即将加工的杆料。\n\n锯条保住了。小牛的手指裂开一条寸多长、见肉的口子。\n\n校医室回来已是夜里两点的事。此刻他被硬按着送走了；可当晚两点，你在钳工桌边看见了他，手上缠着绷带，立正站着，嘴角微笑着歪在一边：\n\n「报告！一个指头负伤，还有几个可以工作！」\n\n打破伤风！工伤认定流程呢？破伤风针呢？！这些词涌到嘴边，被你死死咬住。\n\n书上没有这一段。\n\n教科书只写了『北京一号』四个字。没写血是热的。\n\n方岩一把夺过他手里的工具，连推带拉把他塞回休息站。这一回，谁也没有拦。",
+      "goto": "d_3wed_020_action",
+      "wordBudget": 430
+    },
+    "d_3wed_020_action": {
+      "id": "d_3wed_020_action",
+      "act": 2,
+      "week": 3,
+      "day": "wed",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月23日",
+      "time": "下午两点",
+      "location": "金工车间",
+      "cast": [],
+      "env": {
+        "sound": "车间安静得反常",
+        "light": "光柱里的粉尘浮得很慢",
+        "smell": "消毒水味隐约",
+        "touch": "手里的活轻拿轻放",
+        "source": "refs P67"
+      },
+      "text": "下午的车间安静得反常。人人手上都有活，人人都不太说话。今天的行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "顶上小牛留下的下料位",
+          "costHint": "体力-2·主线+1",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "他的锯床在你手里嘶拉嘶拉地响，像他还站在那儿。",
+          "goto": "d_3wed_025_action2",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "去休息站看小牛，替他带饭",
+          "costHint": "经营挚友线",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "他冲你扬扬缠满绷带的手：「别用这种眼神看我，怪痒的。」小辫子在旁边抹眼泪，被他瞪了一眼。",
+          "goto": "d_3wed_025_action2"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "把今天的事写进本子",
+          "costHint": "独处消化",
+          "effects": {},
+          "flags": [
+            "f_recorded_saw"
+          ],
+          "aftermath": "写到最后，纸上洇开一滴水。不知道是汗，还是别的。",
+          "goto": "d_3wed_025_action2"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "n_3wed_090_night": {
+      "id": "n_3wed_090_night",
+      "act": 2,
+      "week": 3,
+      "day": "wed",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月23日",
+      "time": "夜里十二点",
+      "location": "学生宿舍",
+      "cast": [],
+      "env": {
+        "sound": "整层楼都比平时静",
+        "light": "月光惨白",
+        "smell": "皂角味",
+        "touch": "绷带的影子总在眼前晃",
+        "source": "refs P83"
+      },
+      "text": "熄灯很久了，谁都没睡着。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "强迫自己睡",
+          "effects": {},
+          "result": "明天还有明天的仗。你逼着自己闭眼。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "进度+1。你想明白了一件事，让血不白流的方式，是把活干出来。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "和小辫子一起给小牛熬粥",
+          "effects": {},
+          "npc": {
+            "bianzi": 1,
+            "niu": 1
+          },
+          "result": "锅炉房的煤火映着两张脸。粥熬糊了一点锅底，小牛喝得一滴不剩，说了句：「香。明天就能上工。」"
+        }
+      ],
+      "goto": "n_3thu_005_daystart",
+      "wordBudget": 85
+    },
+    "n_3thu_005_daystart": {
+      "id": "n_3thu_005_daystart",
+      "act": 2,
+      "week": 3,
+      "day": "thu",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月24日",
+      "time": "早晨七点",
+      "location": "金工车间·检验台",
+      "cast": [],
+      "env": {
+        "sound": "台灯嗡嗡，锤声稀落",
+        "light": "灯光下冯工的背影佝偻",
+        "smell": "冷透的茶水味",
+        "touch": "样件在手里掂了又掂",
+        "source": "素材库§2.5副总工艺师信心动摇"
+      },
+      "text": "周四。冯工已经两天没离开过检验台了。",
+      "goto": "d_3thu_010_action",
+      "wordBudget": 18
+    },
+    "d_3thu_010_action": {
+      "id": "d_3thu_010_action",
+      "act": 2,
+      "week": 3,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月24日",
+      "time": "上午十点",
+      "location": "金工车间·检验台后",
+      "cast": [
+        "feng"
+      ],
+      "env": {
+        "sound": "争执压得极低",
+        "light": "灯影里眼镜片闪了一下",
+        "smell": "冷茶味",
+        "touch": "你的本子边角被汗浸软",
+        "source": "素材库§2.5『反正外人不知道』的后路心态（情感克制律执行）"
+      },
+      "text": "你去检验台送样件，听见冯工和工艺员低声争执。\n\n「……实在不行，就按现在的装。反正外人不知道。」冯工的声音很低，像怕被自己听见。\n\n工艺员还想说什么，他摆摆手走了。背影从没这么佝偻过。这个三天三夜没合眼的人，这个画图比你写字还快的人。\n\n原来撑住一个工程这么难。原来它随时会垮。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "把技术要点整理给冯工",
+          "costHint": "以下克上",
+          "effects": {
+            "integration": 1,
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "npc": {
+            "feng": 1
+          },
+          "aftermath": "他翻了翻你整理的要点，忽然按住某一页：「这句……谁教你的？」你说是自己瞎琢磨的。他盯着你看了很久，什么也没说，把本子还给你时多了一句：「明晚来，帮我排计划。」",
+          "goto": "d_3thu_015_action2"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "组织人手把样件再筛一遍",
+          "costHint": "体力-1·主线+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "flags": [
+            "f_rescreened"
+          ],
+          "aftermath": "筛出十七个超差件。程秉在合格证上一笔一笔签字，像刻碑。冯工看着那摞合格证，眼镜擦了又擦。",
+          "goto": "d_3thu_015_action2",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "什么也不说，咽下去",
+          "costHint": "独自消化",
+          "effects": {},
+          "flags": [
+            "f_saw_doubt"
+          ],
+          "aftermath": "那半句话在你心里生了根。夜里你梦见黑板上的数字变成陌生的标题。（偏离征兆潜伏中）",
+          "goto": "d_3thu_015_action2"
+        }
+      ],
+      "wordBudget": 170
+    },
+    "n_3thu_090_night": {
+      "id": "n_3thu_090_night",
+      "act": 2,
+      "week": 3,
+      "day": "thu",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月24日",
+      "time": "夜里十一点",
+      "location": "学生宿舍",
+      "cast": [],
+      "env": {
+        "sound": "谁在楼下练琴，断断续续",
+        "light": "走廊灯昏黄",
+        "smell": "夏夜的潮气",
+        "touch": "草稿纸的毛边刮着手腕",
+        "source": "refs P83"
+      },
+      "text": "危机周第四夜。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "躺下就睡",
+          "effects": {},
+          "result": "睡前你想，原来大人物也会怕。这发现让你睡得很沉。"
+        },
+        {
+          "key": "overtime",
+          "text": "回车间赶工",
+          "effects": {
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "进度+1。冯工的灯也没灭。两盏灯隔着半个车间，谁也没理谁。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "找赵师傅聊聊手艺之外的事",
+          "effects": {},
+          "npc": {
+            "zhao": 1
+          },
+          "result": "他难得话多：「我干这行三十年，见过垮掉的厂子。厂子垮，先是人心散了，手艺跟着就走形。所以别学冯工一个人扛。」"
+        }
+      ],
+      "goto": "n_3fri_005_daystart",
+      "wordBudget": 80
+    },
+    "n_3fri_005_daystart": {
+      "id": "n_3fri_005_daystart",
+      "act": 2,
+      "week": 3,
+      "day": "fri",
+      "phase": "DAY_START",
+      "type": "story",
+      "date": "1958年7月25日",
+      "time": "清晨七点",
+      "location": "厂区门口",
+      "cast": [],
+      "env": {
+        "sound": "引擎声由远及近",
+        "light": "吉普车碾起的晨尘",
+        "smell": "尘土和汽油味",
+        "touch": "袖口被人扯了一下，站直点",
+        "source": "素材库§2.5视察（康生红线：全程匿名化）"
+      },
+      "text": "周五清晨，厂区门口多了几辆吉普车。",
+      "goto": "n_3fri_visit",
+      "wordBudget": 15
+    },
+    "n_3fri_visit": {
+      "id": "n_3fri_visit",
+      "act": 2,
+      "week": 3,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "story",
+      "date": "1958年7月25日",
+      "time": "上午九点",
+      "location": "金工车间",
+      "cast": [
+        "feng",
+        "fang",
+        "zhao"
+      ],
+      "env": {
+        "sound": "锉声锯声槌声压得很齐，像憋着一口气",
+        "light": "大白亮的灯外，晨光正好",
+        "smell": "机油混着尘土",
+        "touch": "手心的汗擦了又擦",
+        "source": "素材库§2.5领导视察后路断了（匿名化处理）"
+      },
+      "text": "中央领导同志来视察了。\n\n没有标语，没有掌声。领导同志在接头检验台前站了很久，问了冯工三个问题。冯工答到第三个的时候，声音低了下去。\n\n领导同志走后，冯工在黑板前站了很久很久。然后他转过身，声音不大，整个车间都听见了：\n\n「后路，没有了。」\n\n「要么干出来，要么承认干不出来。我冯某人，选前头那条。」\n\n他把粉笔递给方岩。方岩在黑板上写下一行大字。\n\n「苦战七昼夜，攻克接头！」\n\n「困难多不多？」\n\n「不少！」\n\n「怎么办？」\n\n「克服！」\n\n这一回的『克服』，是你来北航以后听过的最响的一次。\n\n冯工的眼镜擦了又擦。",
+      "goto": "d_3fri_020_action",
+      "wordBudget": 260
+    },
+    "d_3fri_020_action": {
+      "id": "d_3fri_020_action",
+      "act": 2,
+      "week": 3,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月25日",
+      "time": "中午十二点",
+      "location": "金工车间",
+      "cast": [
+        "fang",
+        "feng"
+      ],
+      "env": {
+        "sound": "报名声此起彼伏",
+        "light": "正午的光直直落下",
+        "smell": "汗水味",
+        "touch": "名单纸传来传去，边角都卷了",
+        "source": "refs P67支援铣工段氛围"
+      },
+      "text": "突击队开始报名。今天的行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "报进突击队，第一批上",
+          "costHint": "体力-2·主线+2",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 2
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "flags": [
+            "f_first_squad"
+          ],
+          "aftermath": "名单贴出来，你的名字排在第七个。这一次，没有人惊讶。",
+          "goto": "d_3fri_025_action2",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "守好本职，让突击无后顾",
+          "costHint": "体力-1·主线+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "你把工位让给突击组，自己去搬了一下午料。肩膀肿了。值。",
+          "goto": "d_3fri_025_action2",
+          "work": true
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "陪冯工重新排攻关计划",
+          "costHint": "幕后功臣",
+          "effects": {
+            "integration": 1
+          },
+          "npc": {
+            "feng": 1
+          },
+          "aftermath": "灯下两张草稿纸改到深夜。末了他说你这年轻人，「想的不是自己立功」。你想起自己确实想过，上个月。现在不想了。",
+          "goto": "d_3fri_025_action2"
+        }
+      ],
+      "wordBudget": 70
+    },
+    "n_3fri_090_night": {
+      "id": "n_3fri_090_night",
+      "act": 2,
+      "week": 3,
+      "day": "fri",
+      "phase": "NIGHT_CHOICE",
+      "type": "night",
+      "date": "1958年7月25日",
+      "time": "深夜十二点半",
+      "location": "金工车间→宿舍",
+      "cast": [
+        "zhao"
+      ],
+      "env": {
+        "sound": "突击组的锤声连夜不停",
+        "light": "几盏灯像不眠的哨位",
+        "smell": "夜露压住机油味",
+        "touch": "门槛石温润",
+        "source": "refs P77赵师傅三昼夜不合眼被骗睡觉（改名换姓保留情节）"
+      },
+      "text": "突击第一夜。今晚。",
+      "nightOptions": [
+        {
+          "key": "rest",
+          "text": "回去睡觉养精神",
+          "effects": {},
+          "result": "突击是长跑，不是冲刺。你睡得心安理得。"
+        },
+        {
+          "key": "overtime",
+          "text": "跟突击组一起熬",
+          "effects": {
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "overtime_default"
+          ],
+          "result": "进度+1。凌晨三点有人唱起了歌，五音不全，全屋都跟着哼。",
+          "work": true
+        },
+        {
+          "key": "talk",
+          "text": "送三天没合眼的赵师傅回宿舍",
+          "effects": {},
+          "npc": {
+            "zhao": 1
+          },
+          "result": "他的工具箱早空了，徒弟们缴了他的械。你搀他往宿舍走，他一路嘟囔「淬火件还没整完」，进了门倒头就睡。你替他掖了蚊帐，把他的鞋摆正。"
+        }
+      ],
+      "goto": "n_3sat_010",
+      "wordBudget": 75
+    },
+    "n_3sat_010": {
+      "id": "n_3sat_010",
+      "act": 2,
+      "week": 3,
+      "day": "sat",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "choice",
+      "date": "1958年7月26日",
+      "time": "清晨六点",
+      "location": "厂区／货站",
+      "cast": [
+        "laowang",
+        "niu"
+      ],
+      "env": {
+        "sound": "调度哨声急促，大雨砸着棚顶",
+        "light": "雨天灰白的黎明",
+        "smell": "雨水打起的土腥气",
+        "touch": "蓑衣漏水，顺着脖子往下淌",
+        "source": "refs P75-76大雨帮断料运钢连干两昼夜"
+      },
+      "text": "周六，天降大雨。别的车间断料断在了半路，钢料堵在货站，没人手运。\n\n调度一声哨响，机身工段能动的，全部支援断料运钢！\n\n你上不上？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "冒雨去货站扛钢料",
+          "costHint": "体力-2·主线+1",
+          "effects": {
+            "stamina": -2,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "errand_quench"
+          ],
+          "flags": [
+            "f_rain_steel"
+          ],
+          "aftermath": "三轮车绑着木棍，车把上挂着石头，一趟又一趟。雨水和汗水在脸上汇成河，没人腾出手擦。",
+          "goto": "w3_settle"
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "留守车间管七十人的饭",
+          "costHint": "后勤也是战线",
+          "effects": {},
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "七十个人的饭一锅一锅焖。锅巴分给大家，都说香。",
+          "goto": "w3_settle"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "补觉，攒下周的力气",
+          "costHint": "错过热闹",
+          "effects": {
+            "stamina": 2
+          },
+          "aftermath": "醒来时雨停了。你错过了满身泥水的大合唱，但周日，你会是全车间精神最好的人。",
+          "goto": "w3_settle"
+        }
+      ],
+      "wordBudget": 110
+    },
+    "w3_settle": {
+      "id": "w3_settle",
+      "act": 2,
+      "week": 3,
+      "day": "sun",
+      "phase": "WEEK_SETTLE",
+      "type": "settle",
+      "date": "1958年7月27日",
+      "time": "傍晚六点",
+      "location": "金工车间",
+      "cast": [
+        "fang",
+        "feng",
+        "zhao"
+      ],
+      "env": {
+        "sound": "广播器滋啦一响，厂房安静下来",
+        "light": "晚霞照着黑板上的两行字",
+        "smell": "白菜汤味漫进来",
+        "touch": "粉笔灰落在手背",
+        "source": "refs P92广播捷报"
+      },
+      "text": "周日晚，广播器滋啦一响：\n\n「报捷，机身工段接头攻关取得突破，首批合格件交付总装！钢料运输任务提前完成！」\n\n黑板上，冯工亲手把『接头』两个字后面的问号划掉了。他做这件事的时候，车间里静得能听见粉笔划过黑板的声音。\n\n方岩翻开名册锁好抽屉：「账清了。」\n\n你名下，主线{{my:task_w3_main_jietou}}／{{target:task_w3_main_jietou}}。\n\n一周前那个问题，撑住一个工程到底有多难，你现在有了第一个答案。难在每个人都把自己的那一部分，当成天大的事。\n\n掌心的茧越来越厚。厚得快要摸不出来，这只手曾经属于2026年。",
+      "goto": "end_w3_bridge",
+      "wordBudget": 300
+    },
+    "end_w3_bridge": {
+      "id": "end_w3_bridge",
+      "act": 2,
+      "week": 3,
+      "day": "sun",
+      "phase": "FREE",
+      "freeNode": true,
+      "type": "story",
+      "date": "1958年7月27日",
+      "time": "熄灯前",
+      "location": "宿舍",
+      "cast": [],
+      "env": {
+        "sound": "雨后的蛙鸣",
+        "light": "月光洗过窗户纸",
+        "smell": "湿泥土味",
+        "touch": "被褥带着太阳最后的温度",
+        "source": "过渡占位节点（W4 批量时接线替换）"
+      },
+      "text": "危机周过去了。可谁都清楚，这不是结束。热处理那边，硝盐槽的图纸已经摊开在案板上了。\n\n（第二幕 W4-W7 批量内容待 G2' 语感拍板后解锁。）",
+      "wordBudget": 70
+    },
+    "d_2tue_015_action2": {
+      "id": "d_2tue_015_action2",
+      "act": 1,
+      "week": 2,
+      "day": "tue",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月15日",
+      "time": "下午两点",
+      "location": "金工车间",
+      "cast": [
+        "wang"
+      ],
+      "env": {
+        "sound": "断料的锤声稀稀拉拉",
+        "light": "下午的日头斜进厂房",
+        "smell": "铝屑和汗味",
+        "touch": "槌柄被汗浸得发滑",
+        "source": "素材库§2.5缺料危机"
+      },
+      "text": "下午的日头斜进厂房，三十号料的阴影罩在每个人头顶。\n\n今天的第二个行动点，往哪儿使？",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "上工位，把上午起的框敲透",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "锤声不响，落点很准。进度表上又添了一道杠。",
+          "goto": "d_2tue_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "替小王再跑一趟淬火件",
+          "costHint": "体力-1·支线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_side_quench",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "errand_quench"
+          ],
+          "npc": {
+            "wang": 1
+          },
+          "aftermath": "四个工位跑下来，你和检验台的老师傅都混了个脸熟。",
+          "goto": "d_2tue_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去资料室翻三十号料的旧底单",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_archive_30"
+          ],
+          "aftermath": "1956年的调拨单上，同一批料曾经卡过整整两周。你把这个数记下了。",
+          "goto": "d_2tue_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_2wed_015_action2": {
+      "id": "d_2wed_015_action2",
+      "act": 1,
+      "week": 2,
+      "day": "wed",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月16日",
+      "time": "下午三点",
+      "location": "金工车间",
+      "cast": [
+        "niu",
+        "bianzi"
+      ],
+      "env": {
+        "sound": "机床低音压着人声",
+        "light": "西晒的光切在钳工桌上",
+        "smell": "汗咸味混着机油",
+        "touch": "后背的汗贴住衬衫",
+        "source": "refs P67铣钳工段"
+      },
+      "text": "午后的厂房闷得像蒸笼，连锤声都懒了半拍。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "接着敲框，追上午落下的进度",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "手心的茧磨得发烫，框件的尺寸又近了一线。",
+          "goto": "d_2wed_095_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮小牛小辫子抬料去下料组",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "三个人抬一根料，号子喊得像模像样。小辫子说你上道。",
+          "goto": "d_2wed_095_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去调度室抄运力表",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_dispatch"
+            ]
+          },
+          "aftermath": "『全局在调，兄弟厂在让。』你把八个字又核对了一遍。",
+          "goto": "d_2wed_095_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_2thu_015_action2": {
+      "id": "d_2thu_015_action2",
+      "act": 1,
+      "week": 2,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月17日",
+      "time": "下午两点",
+      "location": "金工车间／检验站",
+      "cast": [],
+      "env": {
+        "sound": "探伤仪的嗡嗡声隔着布帘",
+        "light": "光里粉尘翻滚",
+        "smell": "臭氧混着煤油味",
+        "touch": "图纸的边角卷了毛",
+        "source": "refs P71打磨铝片"
+      },
+      "text": "周四下午。检验台的布帘后面，磁力探伤仪嗡嗡地响。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "上工位敲框，冲刺周验收",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "赵师傅路过，看了一眼你的框，没说话，但点了下头。",
+          "goto": "d_2thu_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "把小王压着的淬火件清完",
+          "costHint": "体力-1·支线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_side_quench",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "errand_quench"
+          ],
+          "npc": {
+            "wang": 1
+          },
+          "aftermath": "最后一筐淬火件入库，小王在烟壳纸上把这条线划掉了。",
+          "goto": "d_2thu_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "在检验站门口看磁力探伤",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_inspect_station"
+            ]
+          },
+          "flags": [
+            "f_watch_inspection"
+          ],
+          "aftermath": "绿灯一个接一个亮。你多看了两眼那台探伤仪，把流程记进本子。",
+          "goto": "d_2thu_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_2fri_015_action2": {
+      "id": "d_2fri_015_action2",
+      "act": 1,
+      "week": 2,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月18日",
+      "time": "下午四点",
+      "location": "金工车间",
+      "cast": [
+        "fang"
+      ],
+      "env": {
+        "sound": "广播器在念各工段进度",
+        "light": "夕阳把厂房染成铜色",
+        "smell": "铁屑腥气",
+        "touch": "粉笔灰落在手背",
+        "source": "refs P92广播捷报"
+      },
+      "text": "明天就是验收前的最后一个白天。黑板上红笔描的数字，今天下午还能再加一道杠。\n\n第二个行动点，也是本周最后一个。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "冲刺——把框件的最后一批敲完",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w2_main_weiduankuang",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "收工哨响的时候，你的名字后面又多了一道杠。",
+          "goto": "d_2fri_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮下料组把明天的料备出来",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "niu": 1
+          },
+          "aftermath": "明天的料码得整整齐齐。小牛捶了捶你的肩：「够意思。」",
+          "goto": "d_2fri_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "把一周的情报整理成笔记",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_notes_week2"
+          ],
+          "aftermath": "运力、料单、探伤流程——一周的见闻抄成了三页纸。",
+          "goto": "d_2fri_090_night"
+        }
+      ],
+      "wordBudget": 70
+    },
+    "d_3mon_015_action2": {
+      "id": "d_3mon_015_action2",
+      "act": 2,
+      "week": 3,
+      "day": "mon",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月21日",
+      "time": "下午两点",
+      "location": "机身工段",
+      "cast": [
+        "zhao"
+      ],
+      "env": {
+        "sound": "新工位的槌声生疏",
+        "light": "下午的光平铺在图纸上",
+        "smell": "新领的棉纱味",
+        "touch": "接头的图纸边角割手",
+        "source": "refs P84"
+      },
+      "text": "定组后的第一个下午。接头的图纸摊在钳工桌上，冯工的字还在黑板上没擦。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "跟赵师傅攻接头",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "npc": {
+            "zhao": 1
+          },
+          "aftermath": "赵师傅只说了一句『槌要稳』，然后看着你敲了三十下。",
+          "goto": "n_3mon_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮统计组抄当天的战报",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "niu": 1,
+            "bianzi": 1
+          },
+          "aftermath": "半块黑板归你管了，粉笔灰落了满肩。小辫子教你怎么画箭头。",
+          "goto": "n_3mon_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去资料室核接头的规范",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_jietou_spec"
+          ],
+          "aftermath": "苏联资料里的公差表，和你课本上的差着一线。你把这一线记进本子。",
+          "goto": "n_3mon_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_3tue_015_action2": {
+      "id": "d_3tue_015_action2",
+      "act": 2,
+      "week": 3,
+      "day": "tue",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月22日",
+      "time": "下午三点",
+      "location": "机身工段",
+      "cast": [
+        "feng"
+      ],
+      "env": {
+        "sound": "冯工的算盘在检验台响",
+        "light": "光从天窗斜下来一柱",
+        "smell": "金属锉屑味",
+        "touch": "锉刀柄硌手心",
+        "source": "refs P84"
+      },
+      "text": "接头的第一批试件上了检验台。冯工站在旁边，谁也不知道他心里过不过。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "继续攻接头的配合面",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "配合面锉出了一线亮光，塞尺进去，松紧刚刚好。",
+          "goto": "n_3tue_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "替赵师傅去工具室领料",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "zhao": 1
+          },
+          "aftermath": "领料单上赵师傅的名字签得龙飞凤舞。他接料的时候哼了一声，像是满意。",
+          "goto": "n_3tue_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去调度室看兄弟工段的进度",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_dispatch"
+            ]
+          },
+          "aftermath": "全局图上，你们工段的红箭头落后了半格。你把这半格记住了。",
+          "goto": "n_3tue_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_3wed_025_action2": {
+      "id": "d_3wed_025_action2",
+      "act": 2,
+      "week": 3,
+      "day": "wed",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月23日",
+      "time": "下午两点",
+      "location": "机身工段／检验站",
+      "cast": [],
+      "env": {
+        "sound": "探伤仪隔着布帘嗡嗡",
+        "light": "阴天的光发灰",
+        "smell": "煤油和臭氧味",
+        "touch": "布帘蹭过手背",
+        "source": "素材库§2.5"
+      },
+      "text": "周三下午。检验站排队送检的框件排到了门口。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "攻接头，赶首批送检",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "首批接头试件送检，冯工亲自押着去的。",
+          "goto": "n_3wed_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮检验台搬运送检的框件",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "zhao": 1
+          },
+          "aftermath": "一筐一筐抬下来，检验员记住了你这个不喊累的学徒。",
+          "goto": "n_3wed_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "在检验站看磁力探伤的全流程",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_inspect_station"
+            ]
+          },
+          "flags": [
+            "f_watch_inspection_w3"
+          ],
+          "aftermath": "裂纹在荧光下像头发丝。你明白了为什么接头不过关，一切等于零。",
+          "goto": "n_3wed_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_3thu_015_action2": {
+      "id": "d_3thu_015_action2",
+      "act": 2,
+      "week": 3,
+      "day": "thu",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月24日",
+      "time": "下午三点",
+      "location": "机身工段",
+      "cast": [
+        "bianzi"
+      ],
+      "env": {
+        "sound": "黑板的粉笔字擦了又写",
+        "light": "西晒把车间切成明暗两半",
+        "smell": "汗味和铝屑味",
+        "touch": "粉笔灰沾在袖口",
+        "source": "refs P77"
+      },
+      "text": "周四下午。黑板上的战报擦了又写，接头的数字爬得比希望慢。\n\n第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "加班点，把接头的活往前赶",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "下班哨吹过了，你的槌声又响了一刻钟。",
+          "goto": "n_3thu_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "和小辫子一起整理黑板战报",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "bianzi": 1
+          },
+          "aftermath": "小辫子把红铅笔拍在你手里：「明天你来画箭头。」",
+          "goto": "n_3thu_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "去资料室查苏联工艺卡",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_soviet_card"
+          ],
+          "aftermath": "工艺卡上的热处理曲线，画得比教科书冷静。你抄了一份。",
+          "goto": "n_3thu_090_night"
+        }
+      ],
+      "wordBudget": 60
+    },
+    "d_3fri_025_action2": {
+      "id": "d_3fri_025_action2",
+      "act": 2,
+      "week": 3,
+      "day": "fri",
+      "phase": "DAY_ACTION",
+      "type": "choice",
+      "date": "1958年7月25日",
+      "time": "下午四点",
+      "location": "机身工段",
+      "cast": [
+        "feng",
+        "fang"
+      ],
+      "env": {
+        "sound": "天闷得锤声都发沉",
+        "light": "乌云从西边压过来",
+        "smell": "潮气混着机油味",
+        "touch": "交付单的纸角发潮",
+        "source": "refs P75-76"
+      },
+      "text": "周五下午，天阴得厉害。接头的最后一批料在检验台前排着队。\n\n明天可能有雨。第二个行动点。",
+      "choices": [
+        {
+          "id": "a",
+          "slot": "aggressive",
+          "text": "交付前最后一轮修配",
+          "costHint": "体力-1·主线进度+1",
+          "effects": {
+            "stamina": -1,
+            "taskId": "task_w3_main_jietou",
+            "taskProgress": 1
+          },
+          "progressTags": [
+            "work_frame"
+          ],
+          "aftermath": "最后一批接头装筐，冯工在交付单上签了字，笔压得很重。",
+          "goto": "n_3fri_090_night",
+          "work": true
+        },
+        {
+          "id": "b",
+          "slot": "steady",
+          "text": "帮冯工核对交付单",
+          "costHint": "体力-1·经营关系",
+          "effects": {
+            "stamina": -1
+          },
+          "npc": {
+            "feng": 1
+          },
+          "aftermath": "冯工核完最后一行，抬头看了你一眼：「数字不错。」这是他第一次跟你说话。",
+          "goto": "n_3fri_090_night"
+        },
+        {
+          "id": "c",
+          "slot": "conservative",
+          "text": "把一周的进度情报理成本子",
+          "costHint": "不显山露水·攒情报",
+          "effects": {
+            "exploreTags": [
+              "explore_archive"
+            ]
+          },
+          "flags": [
+            "f_notes_week3"
+          ],
+          "aftermath": "接头进度、兄弟工段、探伤流程——三页纸，就是你在这个年代的第一个数据库。",
+          "goto": "n_3fri_090_night"
+        }
+      ],
+      "wordBudget": 70
+    }
+  }
+}

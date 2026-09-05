@@ -1,0 +1,333 @@
+/* ============================================================
+   tokens.css —— 《一程山路》皮肤地基 · 设计令牌
+   步骤05 交付物（05_skin-foundation.md / planning 05 D1 D2 D3 D6 D7）
+   ------------------------------------------------------------
+   四色主轴（D1）：--paper 米黄 / --ink 墨黑 / --stamp-red 印泥红 / --blueprint 蓝晒青
+   质感基准：game/design/ref/ 14 张 1958 实物照片（禁止凭想象调色）
+   规则：其余道具件只许用本文件 token 组装（D3 第三步），禁止散写色值
+   ============================================================ */
+
+:root {
+    /* ---------- 四色主轴（D1 定稿） ---------- */
+    /* 米黄旧纸：基准 #f4ecd8 系（取样：粮票纸面 / 介绍信纸） */
+    --paper:            #f4ecd8;   /* 纸底基准 */
+    --paper-bright:     #f9f3e4;   /* 受光面 / 新纸 */
+    --paper-dim:        #ead9bd;   /* 背光面 / 旧纸 */
+    --paper-aged:       #ddc9a0;   /* 边缘泛黄（径向渐变外环） */
+    --paper-stain:      #b39a6b;   /* 霉斑 / 水渍（foxing） */
+
+    /* 墨黑铅字：暖黑（取样：解放日报铅字，非纯黑） */
+    --ink:              #292420;
+    --ink-soft:         #4c443b;   /* 次级文字 */
+    --ink-faint:        #857968;   /* 弱化文字 / 点线 */
+
+    /* 印泥红（取样：工作证红字 / 公章印泥） */
+    --stamp-red:        #bf3528;
+    --stamp-red-deep:   #9c281f;   /* 印泥浓处 */
+    --stamp-red-bright: #d0443a;   /* 印泥新蘸 */
+
+    /* 蓝晒青：#1e3a5f 系（图纸即未来之图，预知卡模式） */
+    --blueprint:        #1e3a5f;
+    --blueprint-deep:   #142a47;
+    --blueprint-bright: #2d5383;
+    --blueprint-line:   #d7e6f4;   /* 图纸白线 */
+
+    /* ---------- 辅助墨色（实物参照中存在，非第五主色） ---------- */
+    --ink-pen:          #3d4f7d;   /* 蓝黑钢笔/圆珠笔手迹（介绍信填空） */
+    --stamp-blue:       #4a5a8a;   /* 蓝紫印泥（工作证圆章） */
+    --cert-frame:       #35786b;   /* 工作证双线青绿框（1958实物取样） */
+    --ink-pencil:       #6b655c;   /* 铅笔批注（"误"） */
+
+    /* ---------- 功能映射（组件只许引用这一层，不直引色板） ---------- */
+    --bg-page:          var(--paper-dim);        /* 桌面/背景 */
+    --bg-sheet:         var(--paper);            /* 纸面 */
+    --fg-body:          var(--ink);              /* 正文 */
+    --fg-muted:         var(--ink-soft);
+    --fg-faint:         var(--ink-faint);
+    --accent:           var(--stamp-red);        /* 印章/强调 */
+    --frame:            rgba(41, 36, 32, 0.55);  /* 表格细线 */
+    --tex-paper:        var(--tex-fiber-fine);   /* 当前模式纸纹 */
+
+    /* ---------- 阴影公式（D3：纸张物理感三层合成，暖褐不纯黑） ----------
+     * 纸张浮贴：接触影 + 中距软影 + 远距环境影
+     * 用法：.paper 类已内置；浮起态换 --shadow-paper-lift */
+    --shadow-paper:       0 1px 1px rgba(58, 42, 24, 0.22),
+                          0 3px 8px rgba(58, 42, 24, 0.15),
+                          0 14px 32px rgba(58, 42, 24, 0.13);
+    --shadow-paper-lift:  0 2px 2px rgba(58, 42, 24, 0.24),
+                          0 8px 18px rgba(58, 42, 24, 0.20),
+                          0 24px 48px rgba(58, 42, 24, 0.18);
+    --shadow-recess:      inset 0 1px 3px rgba(58, 42, 24, 0.20);   /* 凹陷（格子/槽） */
+    --shadow-stamp:       0 0 0 rgba(0, 0, 0, 0);                   /* 印章 multiply 无影 */
+
+    /* ---------- 字体栈（D6：仅文楷走 CDN，其余系统栈回退） ---------- */
+    --font-song:        "Noto Serif SC", "Songti SC", "STSong", "SimSun", "NSimSun", serif;                                  /* 正文宋体 */
+    --font-fangsong:    "FangSong", "STFangsong", "FangSong_GB2312", "仿宋", "FangSong SC", var(--font-song);                /* 公文仿宋 */
+    --font-kai:         "KaiTi", "STKaiti", "Kaiti SC", "楷体", "BiauKai", var(--font-song);                                 /* 标题楷体 */
+    --font-wenkai:      "LXGW WenKai Screen R", "LXGW WenKai", "KaiTi", "STKaiti", "Kaiti SC", var(--font-song);             /* 日记·霞鹜文楷（CDN切片） */
+    --font-sans:        "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;                               /* 仅工具层（设置/调试，D2例外）；diegetic层禁用 */
+
+    /* ---------- 排版度量 ---------- */
+    --fs-body: 16px;
+    --fs-body-l: 17px;
+    --fs-note: 13px;
+    --lh-body: 2;            /* 宋体正文行距（叙事区现状值） */
+    --lh-doc: 1.9;           /* 公文/道具件行距 */
+    --ls-title: 0.12em;      /* 报头/标题字距 */
+    --tap-min: 44px;         /* D7 移动端点击目标下限 */
+
+    /* ---------- 微旋转（D3：纸张摆放永不绝对水平） ---------- */
+    --tilt-a: -1.4deg;
+    --tilt-b: 0.9deg;
+    --tilt-c: 2.2deg;
+    --tilt-d: -2.6deg;
+
+    /* ---------- 纸纹（data-URI feTurbulence，file:// 可用，零请求） ---------- */
+    --tex-fiber-fine: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.24  0 0 0 0 0.19  0 0 0 0 0.12  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --tex-fiber-coarse: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.02 0.45' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.30  0 0 0 0 0.23  0 0 0 0 0.13  0 0 0 0.09 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --tex-grain-blue: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.85  0 0 0 0 0.90  0 0 0 0 0.95  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+
+    /* ---------- SVG 滤镜引用（defs 由 js/ui/SkinFilters.js 注入） ---------- */
+    --filter-stamp-rough: url("#skin-stamp-rough");   /* 印章残边（位移） */
+    --filter-ink-bleed:   url("#skin-ink-bleed");     /* 铅字洇墨 */
+    --filter-deckle:      url("#skin-deckle");        /* 毛边裁切 */
+}
+
+/* ============================================================
+   双模式 class 体系（D1：每个视觉模式绑定一个机制）
+   body 无类 = mode-archive（日常档案卷宗）
+   body.mode-blueprint = 预知卡·蓝晒图纸（青蓝底白线）
+   body.mode-redbullet = 周结算·捷报红（红黑套印）
+   预留：mode-decay（修正征兆·泛黄加剧+日期错乱）后续步骤接入
+   ============================================================ */
+
+/* ---- 档案模式（默认值显式化，便于演示切换） ---- */
+body.mode-archive {
+    --bg-page: var(--paper-dim);
+    --bg-sheet: var(--paper);
+    --fg-body: var(--ink);
+    --accent: var(--stamp-red);
+    --tex-paper: var(--tex-fiber-fine);
+}
+
+/* ---- 蓝晒模式：整卷翻成图纸（青蓝底白线，机制=预知） ---- */
+body.mode-blueprint {
+    --bg-page: var(--blueprint-deep);
+    --bg-sheet: var(--blueprint);
+    --fg-body: var(--blueprint-line);
+    --fg-muted: #a8c4dd;
+    --fg-faint: #6f8dab;
+    --accent: var(--blueprint-line);
+    --frame: rgba(215, 230, 244, 0.45);
+    --tex-paper: var(--tex-grain-blue);
+    --shadow-paper: 0 1px 1px rgba(0, 10, 22, 0.45),
+                    0 4px 10px rgba(0, 10, 22, 0.35),
+                    0 14px 32px rgba(0, 10, 22, 0.30);
+    --shadow-paper-lift: 0 2px 2px rgba(0, 10, 22, 0.50),
+                         0 8px 18px rgba(0, 10, 22, 0.40),
+                         0 24px 48px rgba(0, 10, 22, 0.35);
+}
+
+/* ---- 捷报模式：红黑套印（机制=周结算，取样：1958县报红版） ---- */
+body.mode-redbullet {
+    --bg-page: #e8d9b8;
+    --bg-sheet: var(--paper-bright);
+    --fg-body: var(--stamp-red-deep);
+    --fg-muted: #a04a3a;
+    --fg-faint: #b98a6a;
+    --accent: var(--stamp-red);
+    --frame: rgba(156, 40, 31, 0.55);
+    --tex-paper: var(--tex-fiber-fine);
+}
+
+/* 模式切换过渡（D7：只动 color/opacity/transform 保 60fps） */
+body,
+.paper,
+.stamp,
+.choice-btn {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* ============================================================
+   纸张材质系统（D3 标杆件配方，全部 token 组装）
+   ============================================================ */
+
+/* ---- 基础纸面：底色 + 纤维噪声 + 边缘泛黄径向渐变 ---- */
+.paper {
+    position: relative;
+    background-color: var(--bg-sheet);
+    background-image:
+        var(--tex-paper),
+        radial-gradient(115% 90% at 50% 42%,
+            rgba(0, 0, 0, 0) 55%,
+            rgba(179, 154, 107, 0.14) 78%,
+            rgba(140, 108, 55, 0.30) 100%);
+    box-shadow: var(--shadow-paper);
+    color: var(--fg-body);
+}
+
+/* ---- 泛黄加剧（修正征兆预留档，D1；后续接 mode-decay） ---- */
+.paper--aged {
+    background-image:
+        var(--tex-fiber-coarse),
+        radial-gradient(120% 95% at 50% 45%,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(179, 154, 107, 0.28) 70%,
+            rgba(122, 90, 42, 0.45) 100%);
+}
+
+/* ---- 霉斑（foxing）：小径向斑，叠若干处 ---- */
+.paper--stained::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(6px 5px at 12% 18%, rgba(122, 90, 42, 0.35), transparent 70%),
+        radial-gradient(9px 7px at 86% 12%, rgba(122, 90, 42, 0.28), transparent 70%),
+        radial-gradient(5px 6px at 78% 82%, rgba(122, 90, 42, 0.30), transparent 70%),
+        radial-gradient(7px 5px at 22% 74%, rgba(140, 108, 55, 0.25), transparent 70%);
+}
+
+/* ---- 折痕：横贯亮暗双线 ---- */
+.crease {
+    position: relative;
+}
+.crease::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+        rgba(58, 42, 24, 0.16) 0%,
+        rgba(58, 42, 24, 0.02) 45%,
+        rgba(255, 250, 235, 0.5) 55%,
+        rgba(58, 42, 24, 0.05) 100%);
+}
+
+/* ---- 印章（D3：multiply 混合 + 残边滤镜 + 印泥不匀遮罩 + 微旋转） ---- */
+.stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--stamp-red);
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    mix-blend-mode: multiply;          /* 印泥吃进纸里 */
+    filter: var(--filter-stamp-rough); /* 残边（feTurbulence 位移） */
+    -webkit-mask-image: radial-gradient(ellipse at 38% 42%, #000 55%, rgba(0, 0, 0, 0.55) 78%, rgba(0, 0, 0, 0.8) 100%);
+    mask-image: radial-gradient(ellipse at 38% 42%, #000 55%, rgba(0, 0, 0, 0.55) 78%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 0.82;
+    transform: rotate(var(--tilt-b));
+    pointer-events: none;
+    font-family: var(--font-kai);
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    user-select: none;
+}
+
+/* 蓝紫印泥变体（工作证圆章取样） */
+.stamp--blue { color: var(--stamp-blue); }
+
+/* 方章（签收单"讫"） */
+.stamp--rect {
+    border-radius: 6px;
+    border-width: 3px;
+    padding: 2px 8px;
+}
+
+/* 印泥浓淡两档 */
+.stamp--fresh { opacity: 0.92; }
+.stamp--worn  { opacity: 0.62; }
+
+/* ---- 微旋转工具类（D3：落下回弹后停在这些角度） ---- */
+.tilt-a { transform: rotate(var(--tilt-a)); }
+.tilt-b { transform: rotate(var(--tilt-b)); }
+.tilt-c { transform: rotate(var(--tilt-c)); }
+.tilt-d { transform: rotate(var(--tilt-d)); }
+
+/* ---- 毛边（票证裁切边，配合 --filter-deckle 或直接用遮罩） ---- */
+.deckle {
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='d'><feTurbulence type='fractalNoise' baseFrequency='0.12' numOctaves='2' seed='7'/><feDisplacementMap in='SourceGraphic' scale='6'/></filter><rect width='100%25' height='100%25' fill='white' filter='url(%23d)'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='d'><feTurbulence type='fractalNoise' baseFrequency='0.12' numOctaves='2' seed='7'/><feDisplacementMap in='SourceGraphic' scale='6'/></filter><rect width='100%25' height='100%25' fill='white' filter='url(%23d)'/></svg>");
+}
+
+/* ============================================================
+   排版年代语法（D3 第五步 / D6）
+   ============================================================ */
+
+/* 正文宋体（叙事区基准） */
+.type-song { font-family: var(--font-song); }
+
+/* 公文仿宋（介绍信/通知/表格填印字） */
+.type-fangsong { font-family: var(--font-fangsong); }
+
+/* 标题楷体（报头/题字） */
+.type-kai { font-family: var(--font-kai); }
+
+/* 日记文楷（CDN 切片，离线回退楷体不破版） */
+.type-wenkai { font-family: var(--font-wenkai); }
+
+/* 竖排报头（vertical-rl，从右往左列） */
+.type-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;   /* 汉字直立，标点随式 */
+    letter-spacing: var(--ls-title);
+    line-height: 1.6;
+}
+
+/* 汉字日期（一九五八年七月十日）——转换器见 SkinFormat.dateCN */
+.date-cn {
+    font-family: var(--font-kai);
+    letter-spacing: 0.08em;
+    font-variant-numeric: normal;
+}
+
+/* diegetic 层（道具件）禁无衬线：强制继承，防组件混入系统字体 */
+.diegetic,
+.diegetic * {
+    font-family: inherit;
+}
+.diegetic { font-family: var(--font-song); }
+
+/* 工具层例外（D2：设置菜单/F1调试保持普通工具样式） */
+.ui-tool { font-family: var(--font-sans); }
+
+/* 手迹（蓝黑钢笔/圆珠笔填空，介绍信参照） */
+.hand-pen {
+    font-family: var(--font-wenkai);
+    color: var(--ink-pen);
+}
+
+/* 铅笔批注（"误"，逾期歪斜） */
+.hand-pencil {
+    font-family: var(--font-wenkai);
+    color: var(--ink-pencil);
+    transform: rotate(var(--tilt-c));
+    display: inline-block;
+}
+
+/* 蓝晒模式下墨色翻白（图纸只有"线"，手迹/批注随线色） */
+body.mode-blueprint .hand-pen,
+body.mode-blueprint .hand-pencil {
+    color: var(--fg-muted);
+}
+
+/* ============================================================
+   D7 移动端基线：<768px 单列；点击目标 ≥44px
+   ============================================================ */
+@media (max-width: 767px) {
+    :root {
+        --fs-body: 15px;
+        --fs-body-l: 16px;
+    }
+}
+
+/* 可访问性：系统减弱动效时关掉模式过渡 */
+@media (prefers-reduced-motion: reduce) {
+    body, .paper, .stamp, .choice-btn { transition: none; }
+}

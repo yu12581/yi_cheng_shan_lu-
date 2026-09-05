@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23bf3528%27/%3E%3Crect x=%278%27 y=%2714%27 width=%2716%27 height=%274%27 rx=%271%27 fill=%27%23f4ecd8%27/%3E%3C/svg%3E">
+    <meta name="theme-color" content="#2b3a4a">
+    <title>一程山路 - 北航1958</title>
+    <!-- 字体已本地化（assets/fonts/lxgw/），断网环境不受影响。 -->
+    <link rel="stylesheet" href="assets/fonts/lxgw/font.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/props.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body class="mode-archive">
+    <!-- 主游戏容器 -->
+    <div id="game-container">
+        
+        <!-- 顶部日期时间显示 -->
+        <header id="game-header">
+            <div class="date-display">
+                <span id="current-date">1958年7月10日</span>
+                <span class="separator">·</span>
+                <span id="current-time">凌晨03:20</span>
+            </div>
+            <div class="location-display" id="current-location">北航平房教研室</div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main id="game-main">
+            
+            <!-- 文本显示区 -->
+            <section id="story-section">
+                <div id="scene-description" class="scene-text"></div>
+                <div id="narrative-text" class="narrative-text"></div>
+            </section>
+
+            <!-- 选项区 -->
+            <section id="choices-section">
+                <!-- 动态生成选项按钮 -->
+            </section>
+
+            <!-- 属性变化反馈卡片 -->
+            <div id="feedback-card" class="feedback-card hidden">
+                <div class="feedback-content"></div>
+            </div>
+
+        </main>
+
+        <!-- 右侧属性面板 -->
+        <aside id="attribute-panel">
+            <h3>状态</h3>
+            
+            <!-- 核心属性 -->
+            <div class="attribute-group">
+                <div class="attribute-item">
+                    <label>体力值</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="stamina-bar"></div>
+                        <span class="progress-text" id="stamina-text">100/100</span>
+                    </div>
+                </div>
+                
+                <div class="attribute-item">
+                    <label>融入度</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="integration-bar"></div>
+                        <span class="progress-text" id="integration-text">50/100</span>
+                    </div>
+                </div>
+                
+                <div class="attribute-item">
+                    <label>偏离度</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="deviation-bar"></div>
+                        <span class="progress-text" id="deviation-text">0/100</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NPC关系 -->
+            <div class="npc-group">
+                <h4>人际关系</h4>
+                <div id="npc-relations">
+                    <!-- 动态生成NPC关系 -->
+                </div>
+            </div>
+
+            <!-- 控制按钮 -->
+            <div class="control-buttons">
+                <button id="save-btn" class="control-btn">存档</button>
+                <button id="load-btn" class="control-btn">读档</button>
+                <button id="menu-btn" class="control-btn">菜单</button>
+                <button id="mute-btn" class="control-btn" title="声音开启">🔊</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 存档/读档模态框 -->
+    <div id="save-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">存档</h2>
+            <div class="save-slots">
+                <div class="save-slot" data-slot="auto">
+                    <div class="slot-header">自动存档（周结算）</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="1">
+                    <div class="slot-header">存档位 1</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="2">
+                    <div class="slot-header">存档位 2</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="3">
+                    <div class="slot-header">存档位 3</div>
+                    <div class="slot-info">空</div>
+                </div>
+            </div>
+            <button id="modal-close" class="control-btn">关闭</button>
+        </div>
+    </div>
+
+    <!-- 开始菜单 -->
+    <div id="start-menu" class="modal">
+        <div class="modal-content start-menu-content">
+            <h1 class="game-title">一程山路</h1>
+            <p class="game-subtitle">北航1958 · 穿越题材文字冒险</p>
+            <div class="start-buttons">
+                <button id="new-game-btn" class="start-btn">开始新游戏</button>
+                <button id="continue-game-btn" class="start-btn">继续游戏</button>
+            </div>
+            <p class="game-info">游戏时长约 2-3 小时 | 支持存档</p>
+        </div>
+    </div>
+
+    <!-- JavaScript 模块加载（?v= 缓存戳：改动后递增，防浏览器缓存旧版） -->
+    <script src="js/core/AudioManager.js?v=4"></script>
+    <script src="js/core/BootNotice.js?v=4"></script>
+    <script src="js/core/AttributeManager.js?v=4"></script>
+    <script src="js/core/ConditionEvaluator.js?v=4"></script>
+    <script src="js/core/SaveManager.js?v=4"></script>
+    <script src="js/core/LoopController.js?v=4"></script>
+    <script src="js/core/CardManager.js?v=4"></script>
+    <script src="js/core/ContentLoader.js?v=4"></script>
+    <script src="js/core/StoryEngine.js?v=4"></script>
+    <script src="js/core/DebugPanel.js?v=4"></script>
+    <script src="js/core/SlideRule.js?v=4"></script>
+    <script src="js/ui/UIManager.js?v=4"></script>
+    <script src="js/ui/SkinFilters.js?v=4"></script>
+    <script src="js/main.js?v=4"></script>
+</body>
+</html>
