@@ -1,0 +1,263 @@
+{
+  "node_101_timetravel": {
+    "date": "1958年7月10日",
+    "time": "凌晨03:20",
+    "location": "北航平房教研室",
+    "speaker": "chen",
+    "description": "现代图书馆五楼 → 1958年北航平房教研室。煤油灯的橙黄色光晕、蓝底白线的氨图纸、木制绘图板、泛黄的纸张，空气里弥漫着氨水、松木和墨水混合的气味。",
+    "narrative": "22:55，图书馆五楼的灯暗了半排。毛不易的《一程山路》从喇叭里飘出来，你揉了揉熬红的眼睛——明天就是操作系统期末考试。\n\n手里这本馆藏的《飞机构造基础》页边都卷了毛，扉页上一行褪色的钢笔字：「1958年7月，于北航平房教研室」。\n\n窗外的路灯突然全灭了。纸面开始发热，很烫，那行钢笔字开始发光。天旋地转，耳边是巨大的轰鸣声。\n\n\"新来的？！发什么呆，快过来搭把手，张总师那边等着这组数据呢！\"\n\n你睁开眼睛。不是图书馆的白炽灯，是昏黄的煤油灯。面前是巨大的木制绘图板，铺着蓝底白线的图纸。墙上贴着标语：「苦战一百天，北京一号上天！」座钟指着凌晨三点二十分。\n\n一个戴眼镜、袖口卷起的年轻人走到你面前：\"你是新调过来支援的吧？哪个系的？怎么站着不动？\"",
+    "choices": [
+      {
+        "text": "「我……我是谁？这是哪儿？」",
+        "effects": { "integration": -2, "stamina": -5 },
+        "npcChanges": { "chen": 5 },
+        "nextNode": "node_102a_identity_cover"
+      },
+      {
+        "text": "（默默接过算尺，假装自己是调来支援的）",
+        "effects": { "integration": 3, "stamina": -3 },
+        "unlockAchievement": "冷静应对",
+        "nextNode": "node_102b_first_calculation"
+      },
+      {
+        "text": "「等等，我需要确认一下……」（冲向门口）",
+        "effects": { "integration": -5, "deviation": 2 },
+        "nextNode": "node_102c_reality_shock"
+      },
+      {
+        "text": "「抱歉，我刚才走神了。这组数据是……？」（试探接话）",
+        "effects": { "integration": 7 },
+        "npcChanges": { "chen": 3 },
+        "nextNode": "node_102d_smooth_entry"
+      }
+    ]
+  },
+  "node_102a_identity_cover": {
+    "date": "1958年7月10日",
+    "time": "凌晨03:25",
+    "location": "公共水房",
+    "speaker": "chen",
+    "description": "平房教研室的走廊很窄，水泥地面，白灰墙皮有些脱落。墙上贴着手写标语。水房里几个白瓷水池有裂纹，搪瓷脸盆底部磨损，铜制老式水龙头。",
+    "narrative": "\"走走走，别在这儿挡道。\"戴眼镜的年轻人扶着你的肩膀，把你往外推，\"今晚这是第三个熬晕的了。\"\n\n\"我叫陈建国，飞机制造专业大四的，大家都叫我小陈。\"他边走边说，\"你是哪个系调过来支援的？\"\n\n他推开水房的门，拧开水龙头，递给你一条粗糙的毛巾。冰凉的水让你瞬间清醒。镜子边缘贴着一张泛黄的报纸：「北京航空学院师生决心试制轻型旅客机」，日期是1958年6月。\n\n这是真的。你真的穿越了。\n\n\"怎么样，好点了吗？\"陈建国关切地问。你需要一个能站得住脚的身份。",
+    "choices": [
+      {
+        "text": "「我其实不是北航的学生，我是从别的地方来的」",
+        "effects": { "integration": -10, "deviation": 8 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「我是低年级的，系里让我来帮忙，但我对飞机不太懂」",
+        "effects": { "integration": 8 },
+        "npcChanges": { "chen": 8 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「我记不太清了，头有点晕……」（继续装晕）",
+        "effects": { "stamina": -10, "integration": -3 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「我是工程系的，之前在实验室帮忙，刚调过来」",
+        "effects": { "integration": 8 },
+        "npcChanges": { "chen": 5 },
+        "nextNode": "node_103_team_introduction"
+      }
+    ]
+  },
+  "node_102b_first_calculation": {
+    "date": "1958年7月10日",
+    "time": "凌晨03:25",
+    "location": "教研室计算区",
+    "speaker": "chen",
+    "description": "教研室的一角，几张长桌拼在一起，堆满纸张、算尺、铅笔。三四个学生围在一起对着数字讨论。墙上的座钟滴答作响。",
+    "narrative": "你接过那把算尺。竹制的，表面磨得很光滑，上面刻着密密麻麻的刻度。\n\n\"这组数据是机翼升力系数的验算。\"戴眼镜的年轻人把一张纸递给你，\"理论值是1.32，但吹风测出来是1.28，误差有点大。你帮我算一下雷诺数。\"\n\n雷诺数？Re = ρvL/μ……你大一选修过《流体力学基础》，好像提到过。但要怎么用算尺算出来？\n\n\"愣着干什么？\"陈建国皱眉，\"不会用算尺？\"\n\n你感觉到周围几个人的目光都看了过来。这是你在1958年的第一次考验。（此处将触发算尺计算小游戏，Demo暂以选项模拟结果）",
+    "choices": [
+      {
+        "text": "凝神静气，一步步拨动算尺算出雷诺数（成功）",
+        "effects": { "integration": 13, "stamina": -5 },
+        "npcChanges": { "chen": 10 },
+        "unlockAchievement": "算盘高手",
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "手忙脚乱对不准刻度，陈建国接过去帮你算（失败）",
+        "effects": { "integration": -5 },
+        "npcChanges": { "chen": 5 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「学长，能教教我这个算尺怎么用吗？我想帮上忙」",
+        "effects": { "integration": 5 },
+        "npcChanges": { "chen": 8 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「这个时代的工具真不方便……」（不小心说出口）",
+        "effects": { "integration": -8, "deviation": 3 },
+        "nextNode": "node_103_team_introduction"
+      }
+    ]
+  },
+  "node_102c_reality_shock": {
+    "date": "1958年7月10日",
+    "time": "凌晨03:25",
+    "location": "教研室外·室外",
+    "speaker": "chen",
+    "description": "走廊很窄，水泥地面坑坑洼洼。墙上贴着毛笔手写标语和宣传画。推开门，是完全没有光污染的满天星空，三栋苏式建筑，远处是黑漆漆的庄稼地。",
+    "narrative": "\"等等！我需要……\"你转身就往门口冲。\n\n\"诶！你干什么？！\"他在后面喊。\n\n你推开走廊尽头的门，夏夜的风扑面而来。不是2024年北京的夏夜——没有汽车尾气，没有空调外机的热风。\n\n满天的星星，密密麻麻，清晰到能看到银河。面前是三栋苏式建筑，中间那栋还搭着竹子脚手架。远处传来广播：\"……毛主席教导我们，自力更生，艰苦奋斗……\"\n\n你的腿一软，靠在门框上。这他妈的是真的。你真的穿越到了1958年。\n\n\"你怎么跑出来了？\"陈建国追了出来，扶住你的肩膀，\"你是不是真的病了？\"",
+    "choices": [
+      {
+        "text": "「我只是突然想透透气……」（稳住情绪）",
+        "effects": { "stamina": -8, "integration": 3 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「这里是……1958年？」（直接问出来）",
+        "effects": { "integration": -10, "deviation": 5 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「学长，现在是几点了？今天是几月几号？」（试探确认）",
+        "effects": { "integration": 2 },
+        "nextNode": "node_103_team_introduction"
+      },
+      {
+        "text": "「对不起，我刚才太累了，有点头晕……」（找借口回去）",
+        "effects": { "stamina": -5, "integration": 5 },
+        "npcChanges": { "chen": 5 },
+        "nextNode": "node_103_team_introduction"
+      }
+    ]
+  },
+  "node_102d_smooth_entry": {
+    "date": "1958年7月10日",
+    "time": "凌晨03:30",
+    "location": "教研室计算区",
+    "speaker": "chen",
+    "description": "你稳住了心神，顺势接过陈建国手里的纸张和算尺，装作是刚走神的支援人员。",
+    "narrative": "\"这组数据啊，\"陈建国松了口气，\"是机翼升力系数的验算，张总师催着要呢。\"\n\n你一边点头一边飞快地观察周围——蓝图、算尺、座钟、标语。你努力让自己看起来像个熟练的支援者，接过纸张认真研究上面的数字。\n\n陈建国见你镇定下来，也放下了戒心：\"行，看你这样子是缓过来了。走，先跟我认认人，回头再干活。\"\n\n你跟着他，走向教研室更开阔的主厅。",
+    "choices": [
+      {
+        "text": "跟着陈建国去认识团队",
+        "effects": { "integration": 3 },
+        "npcChanges": { "chen": 3 },
+        "nextNode": "node_103_team_introduction"
+      }
+    ]
+  },
+  "node_103_team_introduction": {
+    "date": "1958年7月10日",
+    "time": "凌晨04:00",
+    "location": "教研室主厅",
+    "speaker": "chen",
+    "description": "教研室主厅，二十多个人在忙碌。几张大桌子拼成巨大的工作台，铺着各种图纸。墙上挂着手绘的甘特图：北京一号试制进度表。",
+    "narrative": "陈建国带你回到教研室主厅。墙上挂着一张巨大的手写甘特图：\n\n北京一号试制进度表——设计阶段3月到7月12日（旁边写着\"即将完成\"），制造阶段7月15日-9月15日，首飞9月23日。\n\n今天是7月10日。距离首飞，还有75天。\n\n\"大家注意一下！\"陈建国拍手，\"这位是新来支援的同志！\"\n\n他指着不同区域介绍：设计组的张总师、工艺组的周工、资料室的林助教、校办工厂脾气倔但手艺好的赵师傅。\n\n\"好了，你先熟悉熟悉环境。\"陈建国拍拍你的肩膀，转身走向工艺组。你一个人站在教研室中央，看着这些忙碌的人——这就是1958年的北航，这就是\"北京一号\"诞生的地方。",
+    "choices": [
+      {
+        "text": "走向设计组，观察张总师工作",
+        "effects": { "integration": 2 },
+        "npcChanges": { "zhang": 3 },
+        "nextNode": "node_104_final_blueprint"
+      },
+      {
+        "text": "走向资料室，和林助教搭话",
+        "effects": { "integration": 2 },
+        "npcChanges": { "li": 5 },
+        "nextNode": "node_104_final_blueprint"
+      },
+      {
+        "text": "走向工艺组，找周工和陈建国",
+        "effects": { "integration": 3 },
+        "npcChanges": { "chen": 3 },
+        "nextNode": "node_104_final_blueprint"
+      },
+      {
+        "text": "站在原地，观察整体环境，消化信息",
+        "effects": { "stamina": 5 },
+        "nextNode": "node_104_final_blueprint"
+      }
+    ]
+  },
+  "node_104_final_blueprint": {
+    "date": "1958年7月12日",
+    "time": "上午11:30",
+    "location": "教研室设计区",
+    "speaker": "zhang",
+    "description": "7月12日上午。连续两天高强度工作后，教研室气氛既疲惫又兴奋。今天中午就要画完最后一张图纸——尾翼操纵面连接件的装配图。",
+    "narrative": "从7月10日凌晨到现在，你已经在1958年待了整整两天。你跟着陈建国学会了用算尺，帮计算组校对过数据，在食堂吃过窝头。你慢慢接受了这个事实：你真的穿越了，而且正在参与一件了不起的事。\n\n11点55分，张总师放下鸭嘴笔：\"画完了。周工，你来核对一遍尺寸。\"\n\n就在这时，张总师的目光落在你身上：\"那个新来的同志，你过来。陈建国说你算尺用得不错。来，帮周工一起校对这张图纸。多一双眼睛，少一分失误。\"\n\n他把图纸递给你。你的手有些抖。\"别紧张，\"张总师拍拍你的肩膀，\"咱们的原则是：慎之又慎，万无一失。\"（此处将触发图纸校对小游戏，Demo暂以选项模拟结果）",
+    "choices": [
+      {
+        "text": "一口气指出五处差异：φ12写成φ21、编号J-047写成J-074……（完美成功）",
+        "effects": { "integration": 23 },
+        "npcChanges": { "zhang": 20 },
+        "unlockAchievement": "火眼金睛",
+        "nextNode": "node_105_choose_path"
+      },
+      {
+        "text": "指出一处尺寸标注错误，剩下的看不出来（部分成功）",
+        "effects": { "integration": 5 },
+        "npcChanges": { "zhang": 8 },
+        "nextNode": "node_105_choose_path"
+      },
+      {
+        "text": "密密麻麻的线条让你眼花，实在看不出来（失败）",
+        "effects": { "integration": -5, "deviation": 8 },
+        "nextNode": "node_105_choose_path"
+      },
+      {
+        "text": "仔细核对，找出大部分关键差异（稳妥）",
+        "effects": { "integration": 10 },
+        "npcChanges": { "zhang": 12 },
+        "nextNode": "node_105_choose_path"
+      }
+    ]
+  },
+  "node_105_choose_path": {
+    "date": "1958年7月14日",
+    "time": "下午15:00",
+    "location": "教研室主厅",
+    "speaker": "zhang",
+    "description": "7月14日下午，设计阶段正式结束，制造阶段即将开始。张总师召集所有人开会，分配下一阶段的任务。分成三条战线：设计计算线、车间制造线、资料档案线。",
+    "narrative": "中午12点整，周工核对完所有尺寸，郑重地签上名字。张总师也签了字，标注日期：1958年7月12日。\n\n\"同志们，从3月1日到今天，110天，780张图纸，全部完成。\"教研室里响起热烈的掌声，有人眼眶红了。墙上甘特图\"设计阶段\"那栏被郑重地用红笔划掉。\n\n两天后的7月14日下午，张总师站在甘特图前：\"接下来分成三条战线。设计计算线跟周工，车间制造线跟赵师傅，资料档案线跟林助教。\"\n\n他的目光落在你身上：\"____同志，你愿意去哪条线？\"\n\n所有人都看着你。这不只是一个游戏选项——接下来两个月，你将在哪里度过？你将和谁并肩作战？",
+    "choices": [
+      {
+        "text": "「我想加入设计计算线」（跟随张总师和周工）",
+        "effects": { "integration": 10 },
+        "setFlag": "path_design",
+        "unlockAchievement": "见证历史",
+        "nextNode": "node_end_act1"
+      },
+      {
+        "text": "「我想加入车间制造线」（去校办工厂，和陈建国一起）",
+        "effects": { "stamina": 5 },
+        "npcChanges": { "chen": 10 },
+        "setFlag": "path_factory",
+        "unlockAchievement": "见证历史",
+        "nextNode": "node_end_act1"
+      },
+      {
+        "text": "「我想加入资料档案线」（留在资料室，跟林助教）",
+        "effects": { "integration": 5 },
+        "npcChanges": { "li": 15 },
+        "setFlag": "path_archive",
+        "unlockAchievement": "见证历史",
+        "nextNode": "node_end_act1"
+      },
+      {
+        "text": "「我能不能……几条线都参与一下？」（特殊选项）",
+        "effects": { "stamina": -10, "integration": 3 },
+        "unlockAchievement": "见证历史",
+        "nextNode": "node_end_act1"
+      }
+    ]
+  },
+  "node_end_act1": {
+    "date": "1958年7月14日",
+    "time": "傍晚",
+    "location": "教研室门口",
+    "speaker": "chen",
+    "description": "夕阳把天空染成橙红色。远处的庄稼地里，有农民在收工。你站在教研室门口，看着手里的出入证。",
+    "narrative": "林助教发给你一张出入证，钢笔填写着你的名字和分组，发证日期：1958年7月14日。\n\n那本《飞机构造基础》还在你的背包里，扉页上的字迹依然清晰：「1958年7月，于北航平房教研室」。下面又多了一行你自己的铅笔字：「7月14日，我选择了自己的战线。距离首飞，还有70天。」\n\n陈建国在后面喊你：\"走啊，去食堂！今天食堂有肉！\"\n\n你转身，跟上他的脚步。天色渐暗，教研室的灯又亮了起来。新的征程，才刚刚开始。\n\n——【第一幕·闯入1958】完——\n\n（Demo到此结束，第二幕·百日攻坚敬请期待）",
+    "choices": []
+  }
+}

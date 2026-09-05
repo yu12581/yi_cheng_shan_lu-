@@ -1,0 +1,82 @@
+{
+  "niu": {
+    "name": "小牛",
+    "role": "一年级学生·统计员兼下料",
+    "line": "deep",
+    "credit": "取材于真实人物",
+    "affinity": { "value": 0, "stageThresholds": [4, 10, 18], "stages": ["戒备", "认可", "信任", "托付"] },
+    "firstMeetNode": "n_1thu_040_firstframe"
+  },
+  "bianzi": {
+    "name": "小辫子",
+    "role": "一年级学生·统计员兼磨铝片",
+    "line": "deep",
+    "credit": "取材于真实人物",
+    "affinity": { "value": 0, "stageThresholds": [4, 10, 18], "stages": ["戒备", "认可", "信任", "托付"] },
+    "firstMeetNode": "n_1thu_040_firstframe"
+  },
+  "zhao": {
+    "name": "赵师傅",
+    "role": "金工车间钣金工长",
+    "line": "deep",
+    "credit": "取材于真实人物（钣金师傅与突击队长事迹融合）",
+    "affinity": { "value": 0, "stageThresholds": [4, 10, 18], "stages": ["戒备", "认可", "信任", "托付"] },
+    "firstMeetNode": "n_1thu_040_firstframe"
+  },
+  "fang": {
+    "name": "方岩",
+    "role": "机身工段党支部书记",
+    "line": "mid",
+    "credit": "取材于真实人物",
+    "affinity": { "value": 0, "stageThresholds": [8], "stages": ["戒备", "信任"] },
+    "firstMeetNode": "n_1thu_030_towshop"
+  },
+  "wang": {
+    "name": "小王",
+    "role": "二年级学生·机身工段生产准备工",
+    "line": "mid",
+    "credit": "取材于真实人物",
+    "affinity": { "value": 0, "stageThresholds": [8], "stages": ["戒备", "信任"] },
+    "firstMeetNode": "n_1thu_010_landing"
+  },
+  "jiwen": {
+    "name": "季文",
+    "role": "学生检验员",
+    "line": "deep",
+    "credit": "取材于真实人物",
+    "affinity": { "value": -2, "stageThresholds": [4, 10, 18], "stages": ["戒备", "认可", "信任", "托付"] },
+    "firstMeetNode": null
+  },
+  "laowang": {
+    "name": "老王",
+    "role": "材料组管理员",
+    "line": "extra",
+    "credit": "取材于真实人物"
+  },
+  "xiaolin": {
+    "name": "小林",
+    "role": "一年级学生·钳工",
+    "line": "extra",
+    "credit": "取材于真实人物"
+  },
+  "xiaozheng": {
+    "name": "小郑",
+    "role": "一年级学生·钳工",
+    "line": "extra",
+    "credit": "取材于真实人物"
+  },
+  "feng": {
+    "name": "冯工",
+    "role": "副总工艺师",
+    "line": "mid",
+    "credit": "取材于真实人物（书中职务，未具名）",
+    "affinity": { "value": 0, "stageThresholds": [8], "stages": ["戒备", "信任"] },
+    "firstMeetNode": null
+  },
+  "cheng": {
+    "name": "程秉",
+    "role": "二年级学生·检验工",
+    "line": "extra",
+    "credit": "取材于真实人物（原型改名换姓）"
+  }
+}

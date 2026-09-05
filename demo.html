@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23bf3528%27/%3E%3Crect x=%278%27 y=%2714%27 width=%2716%27 height=%274%27 rx=%271%27 fill=%27%23f4ecd8%27/%3E%3C/svg%3E">
+    <meta name="theme-color" content="#2b3a4a">
+    <title>一程山路 - 北京一号短篇探索</title>
+    <!-- 短篇垂直切片入口：四次危机处理与北京一号首飞结算。 -->
+    <!-- 字体已本地化（assets/fonts/lxgw/），断网环境不受影响。 -->
+    <link rel="stylesheet" href="assets/fonts/lxgw/font.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/props.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body class="mode-archive">
+    <!-- 主游戏容器 -->
+    <div id="game-container">
+
+        <!-- 顶部日期时间显示（静态默认值 = 演示开场场景，进入游戏后被节点数据覆盖） -->
+        <header id="game-header">
+            <div class="date-display">
+                <span id="current-date">2026年8月27日</span>
+                <span class="separator">·</span>
+                <span id="current-time">闭馆前十分钟</span>
+            </div>
+            <div class="location-display" id="current-location">北航校史馆修复室</div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main id="game-main">
+
+            <!-- 文本显示区 -->
+            <section id="story-section">
+                <div id="scene-description" class="scene-text"></div>
+                <div id="narrative-text" class="narrative-text"></div>
+            </section>
+
+            <!-- 选项区 -->
+            <section id="choices-section">
+                <!-- 动态生成选项按钮 -->
+            </section>
+
+            <!-- 属性变化反馈卡片 -->
+            <div id="feedback-card" class="feedback-card hidden">
+                <div class="feedback-content"></div>
+            </div>
+
+        </main>
+
+        <!-- 右侧属性面板 -->
+        <aside id="attribute-panel">
+            <h3>本次记录</h3>
+
+            <!-- 核心属性 -->
+            <div class="attribute-group">
+                <div class="attribute-item">
+                    <label>工期余量</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="stamina-bar"></div>
+                        <span class="progress-text" id="stamina-text">4/4</span>
+                    </div>
+                </div>
+
+                <div class="attribute-item">
+                    <label>危机完成</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="integration-bar"></div>
+                        <span class="progress-text" id="integration-text">0/4</span>
+                    </div>
+                </div>
+
+                <div class="attribute-item">
+                    <label>历史偏离</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="deviation-bar"></div>
+                        <span class="progress-text" id="deviation-text">0/4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NPC关系 -->
+            <div class="npc-group">
+                <h4>现场人物</h4>
+                <div id="npc-relations">
+                    <!-- 动态生成NPC关系 -->
+                </div>
+            </div>
+
+            <!-- 控制按钮 -->
+             <div class="control-buttons">
+                <button id="save-btn" class="control-btn">记录</button>
+                <button id="load-btn" class="control-btn">恢复</button>
+                <button id="menu-btn" class="control-btn">重置</button>
+                <button id="mute-btn" class="control-btn" title="声音开启">🔊</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 存档/读档模态框 -->
+    <div id="save-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">存档</h2>
+            <div class="save-slots">
+                <div class="save-slot" data-slot="auto">
+                    <div class="slot-header">自动存档（周结算）</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="1">
+                    <div class="slot-header">存档位 1</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="2">
+                    <div class="slot-header">存档位 2</div>
+                    <div class="slot-info">空</div>
+                </div>
+                <div class="save-slot" data-slot="3">
+                    <div class="slot-header">存档位 3</div>
+                    <div class="slot-info">空</div>
+                </div>
+            </div>
+            <button id="modal-close" class="control-btn">关闭</button>
+        </div>
+    </div>
+
+    <!-- 开始菜单 -->
+    <div id="start-menu" class="modal">
+        <div class="modal-content start-menu-content">
+            <div id="opening-film" class="opening-film hidden" aria-label="北京一号开题过渡视频">
+                <video id="opening-film-video" muted playsinline preload="metadata"></video>
+                <button id="opening-film-skip" class="opening-film-skip" type="button">跳过过渡</button>
+            </div>
+            <h1 class="game-title">一程山路</h1>
+            <p class="game-subtitle">北航1958 · 北京一号短篇探索</p>
+            <div class="start-buttons">
+                <button id="new-game-btn" class="start-btn">翻开笔记本</button>
+                <button id="continue-game-btn" class="start-btn">继续记录</button>
+            </div>
+            <p class="game-info">约 12-15 分钟 | 多节点危机 · 跨幕关系 · 首飞结算</p>
+        </div>
+    </div>
+
+    <!-- 短篇切片仍复用基础引擎，但不加载周循环扩展内容。 -->
+    <script src="js/core/AudioManager.js?v=1"></script>
+    <script src="js/core/BootNotice.js?v=1"></script>
+    <script src="js/core/AttributeManager.js?v=1"></script>
+    <script src="js/core/ConditionEvaluator.js?v=1"></script>
+    <script src="js/core/SaveManager.js?v=1"></script>
+    <script src="js/core/LoopController.js?v=1"></script>
+    <script src="js/core/CardManager.js?v=1"></script>
+    <script src="js/core/ContentLoader.js?v=1"></script>
+    <script src="js/core/StoryEngine.js?v=1"></script>
+    <script src="js/core/DebugPanel.js?v=1"></script>
+    <script src="js/core/SlideRule.js?v=1"></script>
+    <script src="js/ui/UIManager.js?v=1"></script>
+    <script src="js/ui/SkinFilters.js?v=1"></script>
+    <script src="js/demo_main.js?v=1"></script>
+</body>
+</html>

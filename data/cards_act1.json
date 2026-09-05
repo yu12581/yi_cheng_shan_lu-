@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "id": "card_chentao_xujing",
+      "name": "衬套虚惊",
+      "tier": "heavy",
+      "window": { "fromWeek": 3, "fromDay": "mon", "toWeek": 3, "toDay": "wed" },
+      "consumable": true,
+      "acquire": { "exploreTag": "explore_inspect_station" },
+      "onPlay": { "mode": "portal", "goto": "card_chentao_xujing_portal" },
+      "onSeal": {
+        "witnessFlag": "f_witness_chentao",
+        "confidence": -1,
+        "historyText": "无人知晓。检验站通宵磁力探伤，清晨合格证送到，按史实发生。"
+      },
+      "credit": "取材于素材库§2.6（小辫子摔衬套，改名换姓后为挚友组事件）"
+    },
+    {
+      "id": "card_static_test",
+      "name": "静力试验隐患",
+      "tier": "light",
+      "window": { "fromWeek": 4, "fromDay": "mon", "toWeek": 4, "toDay": "fri" },
+      "consumable": true,
+      "acquire": { "exploreTag": "explore_archive" },
+      "onPlay": { "mode": "instant", "effects": { "confidence": 1, "deviation": 1 } },
+      "onSeal": {
+        "witnessFlag": "f_witness_static",
+        "confidence": -1,
+        "historyText": "无人言语。静力试验照原方案进行，加载到百分之八十五时，左翼接头出现可见变形，返工两周。按史实发生。"
+      },
+      "credit": "取材于素材库§2.5危机周技术隐患（虚构化预知点，取材于真实人物）"
+    }
+  ]
+}

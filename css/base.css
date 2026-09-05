@@ -1,0 +1,119 @@
+/* ============================================================
+   base.css —— 全局基座（2026-08-25 皮肤接线版）
+   配色/字体/质感全部消费 tokens.css 词汇表（D3 规则）。
+   旧变量名保留为 token 别名，防止未迁移引用炸裂。
+   ============================================================ */
+
+:root {
+    /* ---- 旧名别名（指向 tokens，仅兼容用，新代码禁用） ---- */
+    --bg-cream:        var(--bg-page);
+    --surface-light:   var(--paper-bright);
+    --surface-white:   var(--bg-sheet);
+    --border-hairline: var(--frame);
+    --ink-dark:        var(--fg-body);
+    --text-muted:      var(--fg-muted);
+    --accent-terracotta: var(--accent);
+    --accent-hover:    var(--stamp-red-deep);
+    --accent-tint:     rgba(191, 53, 40, 0.08);
+    --charcoal:        var(--ink);
+    --font-serif:      var(--font-song);
+    --shadow-soft:     var(--shadow-paper);
+    --shadow-medium:   var(--shadow-paper-lift);
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-song);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--fg-body);
+    background: var(--bg-page);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-kai);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+/* 键盘焦点可见（翻页笔/Tab 演示的前提）；鼠标点击不显示 */
+button:focus-visible {
+    outline: 2px solid var(--accent, #bf3528);
+    outline-offset: 2px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* 滚动条（墨色系） */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--paper-dim);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ink-faint);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-soft);
+}
+
+/* 工具类 */
+.hidden {
+    display: none !important;
+}
+
+.text-muted {
+    color: var(--fg-muted);
+}
+
+.text-accent {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* 纸纹覆盖层（token 驱动，随模式切换） */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: var(--tex-paper);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#game-container {
+    position: relative;
+    z-index: 2;
+}

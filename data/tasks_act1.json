@@ -1,0 +1,110 @@
+{
+  "tasks": [
+    {
+      "id": "task_w1_teach_frame",
+      "week": 1,
+      "kind": "teaching",
+      "name": "支线浓度·熟悉车间",
+      "issuer": "fang",
+      "flavor": "黑板上你的名字后面画了个空格，先学会把活拿起来。",
+      "target": 2,
+      "progressFrom": [
+        "work_frame",
+        "explore_shop"
+      ],
+      "deadline": {
+        "week": 1,
+        "day": "sun"
+      },
+      "rewards": {
+        "integration": 1
+      }
+    },
+    {
+      "id": "task_w2_main_weiduankuang",
+      "week": 2,
+      "kind": "main",
+      "name": "苦战五昼夜·尾段框",
+      "issuer": "fang",
+      "flavor": "比武条件写在黑板上，红笔描了三遍，提前两天全部交出尾段框。",
+      "target": 8,
+      "progressFrom": [
+        "work_frame",
+        "overtime_default"
+      ],
+      "deadline": {
+        "week": 2,
+        "day": "sun"
+      },
+      "rewards": {
+        "confidence": 1,
+        "integration": 1
+      },
+      "onMiss": {
+        "crisisChain": "crisis_w2_main"
+      }
+    },
+    {
+      "id": "task_w2_side_quench",
+      "week": 2,
+      "kind": "side",
+      "name": "淬火件一趟清",
+      "issuer": "wang",
+      "flavor": "小王的送件路线图画在烟壳纸上，模具组、样板库、检验台、热处理串成一条线。",
+      "target": 2,
+      "progressFrom": [
+        "errand_quench"
+      ],
+      "deadline": {
+        "week": 2,
+        "day": "sat"
+      },
+      "rewards": {
+        "integration": 1,
+        "stamina": 0
+      }
+    },
+    {
+      "id": "task_w2_side_liaoyuan",
+      "week": 2,
+      "kind": "side",
+      "name": "三十号料寻源",
+      "issuer": "laowang",
+      "flavor": "「坐飞机火车也得把料找回来。」材料组留下的空牌位，谁有线索谁填。",
+      "target": 1,
+      "progressFrom": [
+        "explore_dispatch",
+        "explore_archive"
+      ],
+      "deadline": {
+        "week": 2,
+        "day": "sun"
+      },
+      "rewards": {
+        "confidence": 1
+      }
+    },
+    {
+      "id": "task_w3_main_jietou",
+      "week": 3,
+      "kind": "main",
+      "name": "保节点·接头攻关",
+      "issuer": "feng",
+      "flavor": "黑板上第一次出现冯工的字，接头不过关，一切等于零。数字后面没有画红线。他不敢画。",
+      "target": 7,
+      "progressFrom": [
+        "work_frame",
+        "overtime_default",
+        "explore_dispatch"
+      ],
+      "deadline": {
+        "week": 3,
+        "day": "sun"
+      },
+      "rewards": {
+        "confidence": 1,
+        "integration": 1
+      }
+    }
+  ]
+}

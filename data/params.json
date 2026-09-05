@@ -1,0 +1,10 @@
+{
+  "weeks": {
+    "tutorial": { "apPerDay": 1, "nightChoiceUnlocked": false, "crisisChainEnabled": false, "mainTaskEnabled": false },
+    "full": { "apPerDay": 2, "nightChoiceUnlocked": true, "crisisChainEnabled": true, "mainTaskEnabled": true }
+  },
+  "stamina": { "max": 10, "morningRecovery": 1, "restBonus": 2, "overtimeStaminaCost": 2, "lowThreshold": 2, "zeroCollapse": true },
+  "workProgressBase": 1, "slideRulePerfectBonus": 1,
+  "deviation": { "thresholds": { "warning": 3, "drift": 6, "check": 9, "erase": 10 }, "naturalDecay": 3, "cardCostLight": 1, "cardCostDeep": 3 },
+  "taskDefaults": { "mainTargetMin": 7, "mainTargetMax": 9 }
+}
