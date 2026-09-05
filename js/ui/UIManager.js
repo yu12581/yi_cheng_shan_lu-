@@ -1555,6 +1555,7 @@ ${gate.ok ? '' : `<div class="block-reason">${gate.reason}</div>`}
         v.autoplay = true;
         v.volume = 0.75;
         v.playsInline = true;
+        v.poster = 'assets/scenes/launch.jpg';
         const skip = document.createElement('button');
         skip.className = 'ef-skip';
         skip.textContent = '跳过 · 点击任意处继续';
@@ -1568,10 +1569,11 @@ ${gate.ok ? '' : `<div class="block-reason">${gate.reason}</div>`}
             if (this.audioManager) this.audioManager.playPaperFlip();
         };
         v.addEventListener('ended', close, { once: true });
+        v.addEventListener('click', (e) => e.stopPropagation());
         ov.addEventListener('click', close, { once: true });
-        const p = v.play();
-        if (p && p.catch) p.catch(() => close());
         document.body.appendChild(ov);
+        const p = v.play();
+        if (p && p.catch) p.catch(() => { v.controls = true; });
     }
 
     /**

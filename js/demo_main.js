@@ -453,11 +453,11 @@
         const video = document.getElementById('opening-film-video');
         const skip = document.getElementById('opening-film-skip');
         if (!wrap || !video) return;
-        // 每次会话只播一次：重访/刷新直达菜单（23MB 视频，反复看很烦）
+        // 每次会话只播一次：只有真正开始播放后才记为已看。
         let seen = false;
-        try { seen = sessionStorage.getItem('ycsl_opening_seen') === '1'; } catch (e) {}
+        try { seen = sessionStorage.getItem('ycsl_opening_seen_v2') === '1'; } catch (e) {}
         if (seen) { wrap.classList.add('poster-mode'); return; }
-        const markSeen = () => { try { sessionStorage.setItem('ycsl_opening_seen', '1'); } catch (e) {} };
+        const markSeen = () => { try { sessionStorage.setItem('ycsl_opening_seen_v2', '1'); } catch (e) {} };
         video.poster = 'assets/scenes/start-poster.jpg';
         // 开场视频缺失时直接显示开始菜单（error 回退保留给未来替换素材）。
         video.src = 'assets/video/bj1-opening.mp4';
@@ -467,18 +467,35 @@
             video.pause();
             wrap.classList.add('poster-mode');
         };
-        video.addEventListener('canplay', () => {
-            wrap.classList.remove('hidden');
+        const play = () => {
+            video.muted = true;
+            const attempt = video.play();
+            if (attempt && attempt.catch) {
+                attempt.catch(() => {
+                    // iOS 低电量/省流量模式可能禁止静音自动播放，保留点击播放入口。
+                    wrap.classList.remove('hidden', 'poster-mode');
+                    if (skip) skip.textContent = '播放片头';
+                });
+            }
+        };
+        wrap.classList.remove('hidden');
+        video.addEventListener('playing', () => {
             started = true;
             markSeen();
-            const play = video.play();
-            if (play && play.catch) play.catch(() => close());
+            if (skip) skip.textContent = '跳过过渡';
+        });
+        video.addEventListener('canplay', () => {
+            if (!started) play();
         }, { once: true });
         video.addEventListener('ended', close, { once: true });
         video.addEventListener('error', () => {
             wrap.classList.add('hidden');
         });
-        if (skip) skip.addEventListener('click', () => { markSeen(); close(); });
+        if (skip) skip.addEventListener('click', () => {
+            if (started) close();
+            else play();
+        });
+        video.load();
     }
 
     if (document.readyState === 'loading') {
